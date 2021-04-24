@@ -42,3 +42,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 3311633373
+    locked: 0
+  - name: Trails
+    uniqueID: 3032523393
+    locked: 0
+  - name: Game
+    uniqueID: 1563320517
+    locked: 0
