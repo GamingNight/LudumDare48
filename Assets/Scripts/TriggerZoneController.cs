@@ -33,26 +33,11 @@ public class TriggerZoneController : MonoBehaviour
         }
 	}
 
-	public void TriggerAction(string lastDir)
+	public void TriggerAction(ProjectileMove.Direction lastDir)
 	{
 		foreach(ProjectileMove projectile in projectileList)
 		{
-    		if (lastDir == "right")
-    		{
-    			projectile.HitProjectile(ProjectileMove.Direction.RIGHT);
-    		}
-    		if (lastDir == "left")
-    		{
-    			projectile.HitProjectile(ProjectileMove.Direction.LEFT);
-    		}
-    		if (lastDir == "up")
-	    	{
-	    		projectile.HitProjectile(ProjectileMove.Direction.UP);
-	    	}
-	    	if (lastDir == "down")
-	    	{
-	    		projectile.HitProjectile(ProjectileMove.Direction.DOWN);
-	    	}
+			projectile.HitProjectile(lastDir);
 		}
 	}
 }

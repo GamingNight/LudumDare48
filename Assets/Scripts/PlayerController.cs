@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+	public enum Direction
+    {
+        UP, DOWN, LEFT, RIGHT, NONE
+    }
+
 	public float Speed=10f;
 	public TriggerZoneController triggerZone;
 
-	private string lastDir = "Right";
+	public ProjectileMove.Direction lastDir = ProjectileMove.Direction.RIGHT;
 
     // Start is called before the first frame update
     void Start()
@@ -19,41 +24,41 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            if (lastDir != "right")
+            if (lastDir != ProjectileMove.Direction.RIGHT)
             {
             	Back2Normal();
-            	lastDir = "right";
+            	lastDir = ProjectileMove.Direction.RIGHT;
             }
             transform.Translate(Vector3.right*Time.deltaTime*Speed);
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            if (lastDir != "left")
+            if (lastDir != ProjectileMove.Direction.LEFT)
             {
             	Back2Normal();
             	transform.Rotate(0.0f, 0.0f, -180.0f, Space.Self);
-            	lastDir = "left";
+            	lastDir =  ProjectileMove.Direction.LEFT;
             }
             transform.Translate(Vector3.right*Time.deltaTime*Speed);
-            
+
         }
         if (Input.GetKey(KeyCode.UpArrow))
         {  
-            if (lastDir != "up")
+            if (lastDir != ProjectileMove.Direction.UP)
             {
             	Back2Normal();
             	transform.Rotate(0.0f, 0.0f, 90.0f, Space.Self);
-            	lastDir = "up";
+            	lastDir = ProjectileMove.Direction.UP;
             }
             transform.Translate(Vector3.right*Time.deltaTime*Speed);
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            if (lastDir != "down")
+            if (lastDir != ProjectileMove.Direction.DOWN)
             {
             	Back2Normal();
             	transform.Rotate(0.0f, 0.0f, -90.0f, Space.Self);
-            	lastDir = "down";
+            	lastDir = ProjectileMove.Direction.DOWN;
             }
             transform.Translate(Vector3.right*Time.deltaTime*Speed);
         }
@@ -65,18 +70,18 @@ public class PlayerController : MonoBehaviour
 
     private void Back2Normal()
     {
-    	if (lastDir == "left")
+    	if (lastDir == ProjectileMove.Direction.LEFT)
     	{
     		transform.Rotate(0.0f, 0.0f, 180.0f, Space.Self);
     	}
-    	if (lastDir == "up")
+    	if (lastDir == ProjectileMove.Direction.UP)
     	{
     		transform.Rotate(0.0f, 0.0f, -90.0f, Space.Self);
     	}
-    	if (lastDir == "down")
+    	if (lastDir == ProjectileMove.Direction.DOWN)
     	{
     		transform.Rotate(0.0f, 0.0f, 90.0f, Space.Self);
     	}
-    	lastDir = "Right";
+    	lastDir = ProjectileMove.Direction.RIGHT;
     }
 }
