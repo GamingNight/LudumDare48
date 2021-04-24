@@ -56,10 +56,12 @@ public class ProjectileMove : MonoBehaviour
         hitLock = false;
     }
 
-    void Update() {
+    void FixedUpdate() {
 
         if (firstUpdate) {
             initVelocity = rgbd.velocity;
+            if (initVelocity == Vector2.zero)
+                return;
             firstUpdate = false;
         }
 
@@ -137,8 +139,8 @@ public class ProjectileMove : MonoBehaviour
             Direction oProjectileHitDirection = collision.gameObject.GetComponent<ProjectileMove>().GetHitDirection();
             if (oProjectileHitDirection != Direction.NONE) {
                 Direction relativeDirectionToOther = Direction.NONE;
-                float distY =  transform.position.y - oProjectilePosition.y;
-                float distX =  transform.position.x - oProjectilePosition.x;
+                float distY = transform.position.y - oProjectilePosition.y;
+                float distX = transform.position.x - oProjectilePosition.x;
                 if (distY > 0 && Mathf.Abs(distY) >= Mathf.Abs(distX))
                     relativeDirectionToOther = Direction.UP;
                 else if (distY < 0 && Mathf.Abs(distY) >= Mathf.Abs(distX))
