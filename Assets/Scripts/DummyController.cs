@@ -18,8 +18,8 @@ public class DummyController : MonoBehaviour
 
     public void Pop(Vector3 pos)
     {
-    	gameObject.SetActive(true);
     	transform.position = pos;
+    	gameObject.SetActive(true);
     }
 
     public void Depop()

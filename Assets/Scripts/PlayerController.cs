@@ -13,8 +13,6 @@ public class PlayerController : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
     private int previousLayerIndex;
-    private Vector3 dummyController0_pos = new Vector3(-1, -1, -1);
-    private Vector3 dummyController1_pos = new Vector3(-1, -1, -1);
 
     // Start is called before the first frame update
     void Start() {
@@ -31,11 +29,9 @@ public class PlayerController : MonoBehaviour
 
             if (previousLayerIndex < currentLayerIndex) {
                 if (currentLayerIndex == 1) {
-                    dummyController0_pos = transform.position;
-                    dummyController0.Pop(dummyController0_pos);
+                    dummyController0.Pop(transform.position);
                 } else if (currentLayerIndex == 2) {
-                    dummyController1_pos = transform.position;
-                    dummyController1.Pop(dummyController1_pos);
+                    dummyController1.Pop(transform.position);
                 }
 
 
@@ -46,10 +42,10 @@ public class PlayerController : MonoBehaviour
                 // delete child dummy player
                 // translate saved pos
                 if (currentLayerIndex == 0) {
-                    transform.position = dummyController0_pos;
+                    transform.position = dummyController0.transform.position;
                     dummyController0.Depop();
                 } else if (currentLayerIndex == 1) {
-                    transform.position = dummyController1_pos;
+                    transform.position = dummyController1.transform.position;
                     dummyController1.Depop();
                 }
             }
