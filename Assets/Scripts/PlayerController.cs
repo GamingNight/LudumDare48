@@ -11,12 +11,14 @@ public class PlayerController : MonoBehaviour
     public DummyController dummyController0;
     public DummyController dummyController1;
 
-    private SpriteRenderer spriteRenderer;
     private int previousLayerIndex;
+    private SpriteRenderer spriteRenderer;
+    ParticleSystem.MainModule particleMainModule;
 
     // Start is called before the first frame update
     void Start() {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        particleMainModule = GetComponent<ParticleSystem>().main;
         previousLayerIndex = -1;
     }
 
@@ -29,8 +31,10 @@ public class PlayerController : MonoBehaviour
 
             if (previousLayerIndex < currentLayerIndex) {
                 if (currentLayerIndex == 1) {
+                    SetPlayerColor(new Color(0, 1, 1));
                     dummyController0.Pop(transform.position);
                 } else if (currentLayerIndex == 2) {
+                    SetPlayerColor(new Color(1, 1, 0));
                     dummyController1.Pop(transform.position);
                 }
 
@@ -42,9 +46,11 @@ public class PlayerController : MonoBehaviour
                 // delete child dummy player
                 // translate saved pos
                 if (currentLayerIndex == 0) {
+                    SetPlayerColor(new Color(1, 1, 1));
                     transform.position = dummyController0.transform.position;
                     dummyController0.Depop();
                 } else if (currentLayerIndex == 1) {
+                    SetPlayerColor(new Color(0, 1, 1));
                     transform.position = dummyController1.transform.position;
                     dummyController1.Depop();
                 }
@@ -69,6 +75,14 @@ public class PlayerController : MonoBehaviour
             transform.Translate(new Vector3(0, -1, 0) * Time.deltaTime * Speed);
             spriteRenderer.flipY = false;
         }
+    }
+
+    private void SetPlayerColor(Color c) {
+        spriteRenderer.color = c;
+        particleMainModule.startColor = c;
+    }
+    public int GetPreviousLayerIndex() {
+        return previousLayerIndex;
     }
 
 }
