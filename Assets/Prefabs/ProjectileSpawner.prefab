@@ -98,6 +98,6 @@ MonoBehaviour:
   active: 1
   projectilePrefab: {fileID: 7509096055051915986, guid: 550a122c90ba22f4ca1e479309e9711b, type: 3}
   spawnFrequency: 2
-  spawnAtStart: 1
+  spawnOffsetInSeconds: 2
   layerData: {fileID: 11400000, guid: 5eda72367ca2c7849a5125f3f52a8123, type: 2}
   globalGameData: {fileID: 11400000, guid: 3adb5f1c9bbdc0a42b037bc093611954, type: 2}

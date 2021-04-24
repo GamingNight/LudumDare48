@@ -8,18 +8,17 @@ public class ProjectileSpawner : MonoBehaviour
     public bool active = true;
     public GameObject projectilePrefab;
     public float spawnFrequency;
-    public bool spawnAtStart = true;
+    public float spawnOffsetInSeconds;
     public LayerData layerData;
     public GlobalGameData globalGameData;
 
     private float timeSinceLastSpawn;
+    private float timeSinceStart;
 
     // Start is called before the first frame update
     void Start() {
-        timeSinceLastSpawn = 0;
-        if (spawnAtStart) {
-            InstantiateProjectile();
-        }
+        timeSinceStart = 0;
+        timeSinceLastSpawn = 1f / spawnFrequency; //in order to spawn immediatly after the offset
     }
 
     // Update is called once per frame
@@ -28,8 +27,13 @@ public class ProjectileSpawner : MonoBehaviour
         int currentLayerIndex = globalGameData.GetCurrentLayerIndex();
         int projectileLayerIndex = layerData.layerIndex;
         float speedFactor = globalGameData.allLayers[currentLayerIndex].layerSpeedFactors[projectileLayerIndex];
+        
+        timeSinceStart += (Time.deltaTime * speedFactor);
+        if (timeSinceStart < spawnOffsetInSeconds)
+            return;
+
         timeSinceLastSpawn += (Time.deltaTime * speedFactor);
-        if (timeSinceLastSpawn > 1f / spawnFrequency) {
+        if (timeSinceLastSpawn >= 1f / spawnFrequency) {
             InstantiateProjectile();
             timeSinceLastSpawn = 0;
         }
