@@ -241,7 +241,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3085804231566685777, guid: 32ef5d4e2943fb54eb3422ba6dd14b79, type: 3}
       propertyPath: Speed
-      value: 3
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3085804231566685777, guid: 32ef5d4e2943fb54eb3422ba6dd14b79, type: 3}
       propertyPath: dummyController0
@@ -635,8 +635,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpawnerPrefab: {fileID: 8217823277699247230, guid: 65b648ba0c52bfc48929d8e7359a3986, type: 3}
-  spawnDelayInSecond: 0.3
-  InstantiateDelayInSecond: 6
+  spawnDelayInSecond: 0
+  InstantiateDelayInSecond: 2
   spawnerFrequency: 0.01
   spawnerShift: {x: 0, y: -2.5, z: 0}
   N: 8
