@@ -5,13 +5,13 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 	public float Speed=10f;
+	public TriggerZoneController triggerZone;
 
 	private string lastDir = "Right";
 
     // Start is called before the first frame update
     void Start()
     {
-
     }
 
     // Update is called once per frame
@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour
             	lastDir = "left";
             }
             transform.Translate(Vector3.right*Time.deltaTime*Speed);
+            
         }
         if (Input.GetKey(KeyCode.UpArrow))
         {  
@@ -56,9 +57,13 @@ public class PlayerController : MonoBehaviour
             }
             transform.Translate(Vector3.right*Time.deltaTime*Speed);
         }
+        if (Input.GetKey(KeyCode.Space))
+        {
+            triggerZone.TriggerAction(lastDir);
+        }
     }
 
-    void Back2Normal()
+    private void Back2Normal()
     {
     	if (lastDir == "left")
     	{
