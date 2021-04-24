@@ -12,6 +12,7 @@ public class PlayerDeath : MonoBehaviour
 
             LayerData projectileLayer = collision.gameObject.GetComponent<ProjectileMove>().layerData;
             if(projectileLayer.layerIndex == layer.layerIndex) {
+                Debug.Log("Game Over by " + gameObject.name);
             }
         }
     }
