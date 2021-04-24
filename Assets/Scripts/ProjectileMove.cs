@@ -121,7 +121,6 @@ public class ProjectileMove : MonoBehaviour
 
         if (hitLock)
             return;
-        Debug.Log(gameObject.name + " moving " + direction);
         hitDirection = direction;
         hitTranslationLength = 0;
         velocityBeforeHit = rgbd.velocity;
