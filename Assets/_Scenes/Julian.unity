@@ -443,14 +443,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1558726192}
     m_Modifications:
-    - target: {fileID: -2944555342534171801, guid: 32ef5d4e2943fb54eb3422ba6dd14b79, type: 3}
-      propertyPath: m_BodyType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 336989227, guid: 32ef5d4e2943fb54eb3422ba6dd14b79, type: 3}
-      propertyPath: useRigidbodyForVelocity
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1702463609388389509, guid: 32ef5d4e2943fb54eb3422ba6dd14b79, type: 3}
       propertyPath: m_RootOrder
       value: 1
