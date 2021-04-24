@@ -16,13 +16,13 @@ public class DummyController : MonoBehaviour
         
     }
 
-    public void pop(Vector3 pos)
+    public void Pop(Vector3 pos)
     {
-    	gameObject.SetActive(true);
     	transform.position = pos;
+    	gameObject.SetActive(true);
     }
 
-    public void depop()
+    public void Depop()
     {
     				
     	gameObject.SetActive(false);
