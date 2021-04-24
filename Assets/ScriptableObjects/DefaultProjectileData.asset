@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05cd303e6dec56847be42edffb579f6c, type: 3}
   m_Name: DefaultProjectileData
   m_EditorClassIdentifier: 
-  initForceFactor: 200
+  initForceFactor: 600
   hitTranslationSpeed: 4
   hitTranslationLenght: 1
