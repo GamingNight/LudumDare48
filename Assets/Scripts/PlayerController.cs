@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-/*    	int currentLayerIndex = globalGameData.GetCurrentLayerIndex();
+    	int currentLayerIndex = globalGameData.GetCurrentLayerIndex();
     	if (currentLayerIndex != previousLayerIndex) {
     		if (previousLayerIndex > currentLayerIndex)
     		{
@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
     			// translate saved pos
     		}
     		previousLayerIndex = currentLayerIndex;
-    	}*/
+    	}
         if (Input.GetKey(KeyCode.RightArrow))
         {
             transform.Translate(Vector3.right*Time.deltaTime*Speed);
