@@ -53,13 +53,14 @@ public class TriggerZoneController : MonoBehaviour
             	lastDir = ProjectileMove.Direction.DOWN;
             }
         }
-        if (Input.GetKey(KeyCode.Space))
-        {
+
+        //if (Input.GetKey(KeyCode.Space))
+        //{
 		    foreach(ProjectileMove projectile in projectileList)
 		    {
 			    projectile.HitProjectile(lastDir);
 		    }
-        }
+        //}
     }
 
 	void OnTriggerEnter2D(Collider2D collision)
