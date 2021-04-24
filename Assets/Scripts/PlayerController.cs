@@ -6,30 +6,72 @@ public class PlayerController : MonoBehaviour
 {
 	public float Speed=10f;
 
+	private string lastDir = "Right";
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            transform.Translate(-Vector3.right*Time.deltaTime*Speed);
-        }
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            transform.Translate(-Vector3.left*Time.deltaTime*Speed);
+            if (lastDir != "right")
+            {
+            	Back2Normal();
+            	lastDir = "right";
+            }
+            transform.Translate(Vector3.right*Time.deltaTime*Speed);
+        }
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            if (lastDir != "left")
+            {
+            	Back2Normal();
+            	transform.Rotate(0.0f, 0.0f, -180.0f, Space.Self);
+            	lastDir = "left";
+            }
+            transform.Translate(Vector3.right*Time.deltaTime*Speed);
         }
         if (Input.GetKey(KeyCode.UpArrow))
-        {
-            transform.Translate(new Vector3(0,1,0)*Time.deltaTime*Speed);
+        {  
+            if (lastDir != "up")
+            {
+            	Back2Normal();
+            	transform.Rotate(0.0f, 0.0f, 90.0f, Space.Self);
+            	lastDir = "up";
+            }
+            transform.Translate(Vector3.right*Time.deltaTime*Speed);
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            transform.Translate(new Vector3(0,-1,0)*Time.deltaTime*Speed);
+            if (lastDir != "down")
+            {
+            	Back2Normal();
+            	transform.Rotate(0.0f, 0.0f, -90.0f, Space.Self);
+            	lastDir = "down";
+            }
+            transform.Translate(Vector3.right*Time.deltaTime*Speed);
         }
+    }
+
+    void Back2Normal()
+    {
+    	if (lastDir == "left")
+    	{
+    		transform.Rotate(0.0f, 0.0f, 180.0f, Space.Self);
+    	}
+    	if (lastDir == "up")
+    	{
+    		transform.Rotate(0.0f, 0.0f, -90.0f, Space.Self);
+    	}
+    	if (lastDir == "down")
+    	{
+    		transform.Rotate(0.0f, 0.0f, 90.0f, Space.Self);
+    	}
+    	lastDir = "Right";
     }
 }
