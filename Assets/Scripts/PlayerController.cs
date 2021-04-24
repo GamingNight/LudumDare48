@@ -4,19 +4,15 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-	public enum Direction
-    {
-        UP, DOWN, LEFT, RIGHT, NONE
-    }
 
 	public float Speed=10f;
-	public TriggerZoneController triggerZone;
 
-	public ProjectileMove.Direction lastDir = ProjectileMove.Direction.RIGHT;
+	private SpriteRenderer spriteRenderer;
 
     // Start is called before the first frame update
     void Start()
     {
+    	spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -24,64 +20,26 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            if (lastDir != ProjectileMove.Direction.RIGHT)
-            {
-            	Back2Normal();
-            	lastDir = ProjectileMove.Direction.RIGHT;
-            }
             transform.Translate(Vector3.right*Time.deltaTime*Speed);
+            spriteRenderer.flipX = false;
+            spriteRenderer.flipY = false;
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            if (lastDir != ProjectileMove.Direction.LEFT)
-            {
-            	Back2Normal();
-            	transform.Rotate(0.0f, 0.0f, -180.0f, Space.Self);
-            	lastDir =  ProjectileMove.Direction.LEFT;
-            }
-            transform.Translate(Vector3.right*Time.deltaTime*Speed);
-
+            transform.Translate(Vector3.left*Time.deltaTime*Speed);
+            spriteRenderer.flipX = true;
+            spriteRenderer.flipY = false;
         }
         if (Input.GetKey(KeyCode.UpArrow))
         {  
-            if (lastDir != ProjectileMove.Direction.UP)
-            {
-            	Back2Normal();
-            	transform.Rotate(0.0f, 0.0f, 90.0f, Space.Self);
-            	lastDir = ProjectileMove.Direction.UP;
-            }
-            transform.Translate(Vector3.right*Time.deltaTime*Speed);
+            transform.Translate(new Vector3(0,1,0)*Time.deltaTime*Speed);
+            spriteRenderer.flipY = true;
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            if (lastDir != ProjectileMove.Direction.DOWN)
-            {
-            	Back2Normal();
-            	transform.Rotate(0.0f, 0.0f, -90.0f, Space.Self);
-            	lastDir = ProjectileMove.Direction.DOWN;
-            }
-            transform.Translate(Vector3.right*Time.deltaTime*Speed);
-        }
-        if (Input.GetKey(KeyCode.Space))
-        {
-            triggerZone.TriggerAction(lastDir);
+            transform.Translate(new Vector3(0,-1,0)*Time.deltaTime*Speed);
+            spriteRenderer.flipY = false;
         }
     }
 
-    private void Back2Normal()
-    {
-    	if (lastDir == ProjectileMove.Direction.LEFT)
-    	{
-    		transform.Rotate(0.0f, 0.0f, 180.0f, Space.Self);
-    	}
-    	if (lastDir == ProjectileMove.Direction.UP)
-    	{
-    		transform.Rotate(0.0f, 0.0f, -90.0f, Space.Self);
-    	}
-    	if (lastDir == ProjectileMove.Direction.DOWN)
-    	{
-    		transform.Rotate(0.0f, 0.0f, 90.0f, Space.Self);
-    	}
-    	lastDir = ProjectileMove.Direction.RIGHT;
-    }
 }
