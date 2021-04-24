@@ -10,7 +10,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.6588291, y: -0.0087019205}
@@ -134,7 +134,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -263,6 +263,8 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 706801442, guid: 550a122c90ba22f4ca1e479309e9711b, type: 3}
     - {fileID: 6435395781105885025, guid: 550a122c90ba22f4ca1e479309e9711b, type: 3}
+    - {fileID: 866881493286807024, guid: 550a122c90ba22f4ca1e479309e9711b, type: 3}
+    - {fileID: 6354696774233248581, guid: 550a122c90ba22f4ca1e479309e9711b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 550a122c90ba22f4ca1e479309e9711b, type: 3}
 --- !u!1 &4820911582054578222 stripped
 GameObject:
