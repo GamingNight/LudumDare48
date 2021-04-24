@@ -13,7 +13,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.8394207, y: 0.019515634}
+  m_Offset: {x: 0.76, y: 0.019515634}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -49,8 +49,8 @@ GameObject:
   - component: {fileID: 1702463609388389509}
   - component: {fileID: 2798198514638143056}
   - component: {fileID: 8331066419666830529}
-  - component: {fileID: 3085804231566685776}
   - component: {fileID: 3085804231566685777}
+  - component: {fileID: 994787099}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -134,7 +134,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.26524407, y: 0.022574186}
@@ -150,27 +150,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.1150742, y: 1.1715093}
   m_EdgeRadius: 0
---- !u!50 &3085804231566685776
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4820911583298865522}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!114 &3085804231566685777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,6 +164,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 10
   triggerZone: {fileID: 3085804231421455097}
+  lastDir: 3
+--- !u!114 &994787099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4820911583298865522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e8768800e0bee946b120eddb641a46b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layer: {fileID: 11400000, guid: 5eda72367ca2c7849a5125f3f52a8123, type: 2}
 --- !u!1001 &3085804231421455100
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -214,7 +207,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4427785245993963301, guid: 550a122c90ba22f4ca1e479309e9711b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.59
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4427785245993963301, guid: 550a122c90ba22f4ca1e479309e9711b, type: 3}
       propertyPath: m_LocalPosition.y

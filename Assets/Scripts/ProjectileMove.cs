@@ -70,7 +70,6 @@ public class ProjectileMove : MonoBehaviour
             float speedFactor = globalGameData.allLayers[currentLayerIndex].layerSpeedFactors[projectileLayerIndex];
             if (speedFactor != -1) {
                 spriteRenderer.enabled = true;
-                Debug.Log("update velocity");
                 rgbd.velocity = initVelocity * speedFactor;
             } else {
                 spriteRenderer.enabled = false;

@@ -8,4 +8,5 @@ public class LayerData : ScriptableObject
 
     public int layerIndex;
     public float[] layerSpeedFactors;
+    public Sprite playerSprite;
 }
