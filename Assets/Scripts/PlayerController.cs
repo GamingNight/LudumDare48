@@ -32,10 +32,10 @@ public class PlayerController : MonoBehaviour
             if (previousLayerIndex < currentLayerIndex) {
                 if (currentLayerIndex == 1) {
                     dummyController0_pos = transform.position;
-                    dummyController0.pop(dummyController0_pos);
+                    dummyController0.Pop(dummyController0_pos);
                 } else if (currentLayerIndex == 2) {
                     dummyController1_pos = transform.position;
-                    dummyController1.pop(dummyController1_pos);
+                    dummyController1.Pop(dummyController1_pos);
                 }
 
 
@@ -47,10 +47,10 @@ public class PlayerController : MonoBehaviour
                 // translate saved pos
                 if (currentLayerIndex == 0) {
                     transform.position = dummyController0_pos;
-                    dummyController0.depop();
+                    dummyController0.Depop();
                 } else if (currentLayerIndex == 1) {
                     transform.position = dummyController1_pos;
-                    dummyController1.depop();
+                    dummyController1.Depop();
                 }
             }
             previousLayerIndex = currentLayerIndex;
