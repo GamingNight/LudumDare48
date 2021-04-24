@@ -7,17 +7,28 @@ public class GlobalGameData : ScriptableObject
 {
     public LayerData[] allLayers;
     private int currentLayerIndex = 0;
+    private int maxIndex = 2;
 
     public void InitLayer() {
         currentLayerIndex = 0;
     }
 
-    public void IncLayer() {
-        currentLayerIndex = (currentLayerIndex + 1) % allLayers.Length;
+    public void IncLayer(bool force = false) {
+        int newIndex = (currentLayerIndex + 1);
+        if (!force && (newIndex >  maxIndex))
+        {
+            return;
+        }
+        currentLayerIndex = newIndex % allLayers.Length;
     }
 
-    public void DecLayer() {
-        currentLayerIndex = currentLayerIndex - 1;
+    public void DecLayer(bool force = false) {
+        int newIndex = (currentLayerIndex - 1);
+        if (!force && (newIndex <  0))
+        {
+            return;
+        }
+        currentLayerIndex = newIndex;
         if (currentLayerIndex == -1)
             currentLayerIndex = allLayers.Length - 1;
     }
