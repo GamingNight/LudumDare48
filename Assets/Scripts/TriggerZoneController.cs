@@ -21,7 +21,8 @@ public class TriggerZoneController : MonoBehaviour
         {
             if (lastDir != ProjectileMove.Direction.RIGHT)
             {
-            	Back2Normal();
+            	float angle = Back2NormalAngle();
+            	transform.Rotate(0.0f, 0.0f, angle, Space.Self);
             	lastDir = ProjectileMove.Direction.RIGHT;
             }
         }
@@ -29,8 +30,8 @@ public class TriggerZoneController : MonoBehaviour
         {
             if (lastDir != ProjectileMove.Direction.LEFT)
             {
-            	Back2Normal();
-            	transform.Rotate(0.0f, 0.0f, 180.0f, Space.Self);
+            	float angle = Back2NormalAngle() + 180.0f;
+            	transform.Rotate(0.0f, 0.0f, angle, Space.Self);
             	lastDir =  ProjectileMove.Direction.LEFT;
             }
         }
@@ -38,8 +39,8 @@ public class TriggerZoneController : MonoBehaviour
         {  
             if (lastDir != ProjectileMove.Direction.UP)
             {
-            	Back2Normal();
-            	transform.Rotate(0.0f, 0.0f, 90.0f, Space.Self);
+            	float angle = Back2NormalAngle() + 90.0f;
+            	transform.Rotate(0.0f, 0.0f, angle, Space.Self);
             	lastDir = ProjectileMove.Direction.UP;
             }
         }
@@ -47,8 +48,8 @@ public class TriggerZoneController : MonoBehaviour
         {
             if (lastDir != ProjectileMove.Direction.DOWN)
             {
-            	Back2Normal();
-            	transform.Rotate(0.0f, 0.0f, -90.0f, Space.Self);
+            	float angle = Back2NormalAngle() - 90.0f;
+            	transform.Rotate(0.0f, 0.0f, angle, Space.Self);
             	lastDir = ProjectileMove.Direction.DOWN;
             }
         }
@@ -74,21 +75,21 @@ public class TriggerZoneController : MonoBehaviour
             projectileList.Remove(collision.gameObject.GetComponent<ProjectileMove>());
         }
 	}
-    private void Back2Normal()
+    private float Back2NormalAngle()
     {
     	//return;
     	if (lastDir == ProjectileMove.Direction.LEFT)
     	{
-    		transform.Rotate(0.0f, 0.0f, -180.0f, Space.Self);
+    		return -180.0f;
     	}
     	if (lastDir == ProjectileMove.Direction.UP)
     	{
-    		transform.Rotate(0.0f, 0.0f, -90.0f, Space.Self);
+    		return -90.0f;
     	}
     	if (lastDir == ProjectileMove.Direction.DOWN)
     	{
-    		transform.Rotate(0.0f, 0.0f, 90.0f, Space.Self);
+    		return 90.0f;
     	}
-    	lastDir = ProjectileMove.Direction.RIGHT;
+    	return 0.0f;
     }
 }
