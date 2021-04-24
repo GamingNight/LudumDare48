@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8978290449032149907}
   - component: {fileID: 8978290449032149909}
   - component: {fileID: 8978290449032149908}
+  - component: {fileID: 1468608306}
   m_Layer: 0
   m_Name: FX
   m_TagString: Untagged
@@ -87,3 +88,16 @@ MonoBehaviour:
   vignetteColor: {r: 0, g: 0, b: 0, a: 0}
   chromAbIntensity: 0
   lensDistIntensity: 0
+--- !u!114 &1468608306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8978290449032149904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bb247bf1786cac45939ce7c827afccc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  globalGameDate: {fileID: 11400000, guid: 3adb5f1c9bbdc0a42b037bc093611954, type: 2}
