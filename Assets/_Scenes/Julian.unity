@@ -748,25 +748,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8217823277699247225, guid: 65b648ba0c52bfc48929d8e7359a3986, type: 3}
-      propertyPath: layerData
-      value: 
-      objectReference: {fileID: 11400000, guid: 5eda72367ca2c7849a5125f3f52a8123, type: 2}
-    - target: {fileID: 8217823277699247225, guid: 65b648ba0c52bfc48929d8e7359a3986, type: 3}
-      propertyPath: globalGameData
-      value: 
-      objectReference: {fileID: 11400000, guid: 3adb5f1c9bbdc0a42b037bc093611954, type: 2}
-    - target: {fileID: 8217823277699247225, guid: 65b648ba0c52bfc48929d8e7359a3986, type: 3}
-      propertyPath: spawnFrequency
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 8217823277699247230, guid: 65b648ba0c52bfc48929d8e7359a3986, type: 3}
       propertyPath: m_Name
       value: ProjectileSpawner
-      objectReference: {fileID: 0}
-    - target: {fileID: 8217823277699247230, guid: 65b648ba0c52bfc48929d8e7359a3986, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65b648ba0c52bfc48929d8e7359a3986, type: 3}
