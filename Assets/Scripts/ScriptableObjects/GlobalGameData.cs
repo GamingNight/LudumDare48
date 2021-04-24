@@ -16,6 +16,12 @@ public class GlobalGameData : ScriptableObject
         currentLayerIndex = (currentLayerIndex + 1) % allLayers.Length;
     }
 
+    public void DecLayer() {
+        currentLayerIndex = currentLayerIndex - 1;
+        if (currentLayerIndex == -1)
+            currentLayerIndex = allLayers.Length - 1;
+    }
+
     public int GetCurrentLayerIndex() {
         return currentLayerIndex;
     }
