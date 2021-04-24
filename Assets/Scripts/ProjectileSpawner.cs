@@ -43,7 +43,7 @@ public class ProjectileSpawner : MonoBehaviour
     private void InstantiateProjectile() {
 
         GameObject clone = Instantiate(projectilePrefab, transform.position, transform.rotation, transform);
-        clone.transform.localPosition = new Vector3(clone.transform.localPosition.x + 1f, clone.transform.localPosition.y, clone.transform.localPosition.z);
+        clone.transform.localPosition = new Vector3(clone.transform.localPosition.x, clone.transform.localPosition.y, clone.transform.localPosition.z);
         if (transform.eulerAngles.z == 0) {
             clone.GetComponent<ProjectileMove>().direction = ProjectileMove.Direction.RIGHT;
         } else if (transform.eulerAngles.z == 90) {
