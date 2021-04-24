@@ -6,5 +6,6 @@ using UnityEngine;
 public class LayerData : ScriptableObject
 {
 
-    public int layer;
+    public int layerIndex;
+    public float[] layerSpeedFactors;
 }

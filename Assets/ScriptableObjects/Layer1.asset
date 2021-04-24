@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56522a43b7f56ea4aa306ceb369c69d9, type: 3}
   m_Name: Layer1
   m_EditorClassIdentifier: 
-  layer: 1
+  layerIndex: 1
+  layerSpeedFactors:
+  - 0.5
+  - 1
+  - -1
