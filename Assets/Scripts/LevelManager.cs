@@ -28,6 +28,12 @@ public class LevelManager : MonoBehaviour
     	currentLevel.gameObject.SetActive(false);
         resetLevel(currentLevel);
 
+        if (index < -1)
+        {
+            SpecialAction(index);
+            return;
+        }
+
         if (index != -1)
         {
             currentIndex = index;
@@ -64,5 +70,23 @@ public class LevelManager : MonoBehaviour
     public void resetLevel()
     {
     	resetLevel(gameObject);
+    }
+
+    private void SpecialAction(int index)
+    {
+        if (index == -100)
+        {
+            if (selectionLevelLevel == null)
+            {
+                ActiveNextLevel(0);
+                return;
+            }
+            currentLevel = selectionLevelLevel;
+            currentLevel.SetActive(true);
+        }
+        if (index == -200)
+        {
+            Application.Quit();
+        }
     }
 }
