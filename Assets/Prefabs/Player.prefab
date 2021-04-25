@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc81cb83db506b7448bf1a942237b8b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 10
+  Speed: 2
   layerData: {fileID: 11400000, guid: 5eda72367ca2c7849a5125f3f52a8123, type: 2}
   globalGameData: {fileID: 11400000, guid: 3adb5f1c9bbdc0a42b037bc093611954, type: 2}
   dummyController0: {fileID: 0}
