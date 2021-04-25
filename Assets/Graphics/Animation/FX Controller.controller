@@ -66,13 +66,13 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 3041449023405141406}
-    m_Position: {x: 30, y: 310, z: 0}
+    m_Position: {x: 30, y: 240, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8830102082661848691}
-    m_Position: {x: 30, y: 410, z: 0}
+    m_Position: {x: 30, y: 340, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8033914510892187058}
-    m_Position: {x: 30, y: 550, z: 0}
+    m_Position: {x: 30, y: 440, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -80,7 +80,7 @@ AnimatorStateMachine:
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 310, y: 110, z: 0}
   m_EntryPosition: {x: 50, y: 120, z: 0}
-  m_ExitPosition: {x: 50, y: 680, z: 0}
+  m_ExitPosition: {x: 50, y: 540, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 3041449023405141406}
 --- !u!1101 &-7005480524580584323
@@ -186,8 +186,8 @@ AnimatorController:
   m_Name: FX Controller
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: LevelWin
-    m_Type: 4
+  - m_Name: Layer Number
+    m_Type: 3
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
