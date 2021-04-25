@@ -986,10 +986,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 881666438751935006, guid: 7975d0cdd04cf034db281fc772fa049a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3083686943003890264, guid: 7975d0cdd04cf034db281fc772fa049a, type: 3}
       propertyPath: m_Name
       value: Audio
@@ -1277,50 +1273,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5800584070119914899, guid: 324df8d3623d3b943b9364dfcfc7e81b, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5800584071271319655, guid: 324df8d3623d3b943b9364dfcfc7e81b, type: 3}
-      propertyPath: m_Positions.Array.data[0].x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5800584071271319655, guid: 324df8d3623d3b943b9364dfcfc7e81b, type: 3}
-      propertyPath: m_Positions.Array.data[0].y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5800584071271319655, guid: 324df8d3623d3b943b9364dfcfc7e81b, type: 3}
-      propertyPath: m_Positions.Array.data[1].x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5800584071271319655, guid: 324df8d3623d3b943b9364dfcfc7e81b, type: 3}
-      propertyPath: m_Positions.Array.data[1].y
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 5800584071271319655, guid: 324df8d3623d3b943b9364dfcfc7e81b, type: 3}
-      propertyPath: m_Positions.Array.data[2].x
-      value: 12.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 5800584071271319655, guid: 324df8d3623d3b943b9364dfcfc7e81b, type: 3}
-      propertyPath: m_Positions.Array.data[2].y
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 5800584071271319655, guid: 324df8d3623d3b943b9364dfcfc7e81b, type: 3}
-      propertyPath: m_Positions.Array.data[3].x
-      value: 12.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 5800584071271319655, guid: 324df8d3623d3b943b9364dfcfc7e81b, type: 3}
-      propertyPath: m_Positions.Array.data[3].y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5800584071271319655, guid: 324df8d3623d3b943b9364dfcfc7e81b, type: 3}
-      propertyPath: m_Positions.Array.data[4].x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5800584071271319655, guid: 324df8d3623d3b943b9364dfcfc7e81b, type: 3}
-      propertyPath: m_Positions.Array.data[4].y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5800584071490065249, guid: 324df8d3623d3b943b9364dfcfc7e81b, type: 3}
       propertyPath: m_Name
       value: Background
