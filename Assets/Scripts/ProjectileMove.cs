@@ -104,7 +104,7 @@ public class ProjectileMove : MonoBehaviour
                     break;
             }
 
-            float translationValue = projectileData.hitTranslationSpeed * Time.deltaTime;
+            float translationValue = projectileData.hitTranslationSpeedPerLayer[globalGameData.GetCurrentLayerIndex()] * Time.deltaTime;
             rgbd.transform.Translate(directionVector * translationValue, Space.World);
 
             hitTranslationLength += translationValue;

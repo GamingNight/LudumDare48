@@ -66,16 +66,18 @@ public class PlayerController : MonoBehaviour
             }
             previousLayerIndex = currentLayerIndex;
         }
-        if (Input.GetKey(KeyCode.RightArrow)) {
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        float vertical = Input.GetAxisRaw("Vertical");
+        if (horizontal > 0) {
             transform.Translate(Vector3.right * Time.deltaTime * Speed);
         }
-        if (Input.GetKey(KeyCode.LeftArrow)) {
+        if (horizontal < 0) {
             transform.Translate(Vector3.left * Time.deltaTime * Speed);
         }
-        if (Input.GetKey(KeyCode.UpArrow)) {
+        if (vertical > 0) {
             transform.Translate(new Vector3(0, 1, 0) * Time.deltaTime * Speed);
         }
-        if (Input.GetKey(KeyCode.DownArrow)) {
+        if (vertical < 0) {
             transform.Translate(new Vector3(0, -1, 0) * Time.deltaTime * Speed);
         }
     }

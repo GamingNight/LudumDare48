@@ -11,12 +11,13 @@ public class ProjectileDefaultData : ScriptableObject
     public float initForceFactor;
 
     /// <summary>
-    /// Translation speed in units per second when projectile is hit by the player
+    /// For each layer, translation speed in units per second when projectile is hit by the player
     /// </summary>
-    public float hitTranslationSpeed;
+    public float[] hitTranslationSpeedPerLayer;
 
     /// <summary>
     /// How much in units the projectile is moved when it is hit by the player
     /// </summary>
     public float hitTranslationLenght;
+
 }

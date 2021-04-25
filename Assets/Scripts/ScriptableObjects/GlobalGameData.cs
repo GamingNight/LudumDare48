@@ -9,6 +9,11 @@ public class GlobalGameData : ScriptableObject
     private int currentLayerIndex = 0;
     private int maxIndex = 2;
 
+    public KeyCode[] playerLeftKeyCodes;
+    public KeyCode[] playerRightKeyCodes;
+    public KeyCode[] playerUpKeyCodes;
+    public KeyCode[] playerDownKeyCodes;
+
     public void InitLayer() {
         currentLayerIndex = 0;
     }
