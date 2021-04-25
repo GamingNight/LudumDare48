@@ -14,29 +14,39 @@ public class SpawnerGenerator : MonoBehaviour
     public GlobalGameData globalGameData;
 
     private float timeSinceStart;
-    private bool Instantiated;
+    private bool instantiated;
     private Vector3 firstSpawnerAtOrigin = new Vector3(0.318f, 0.318f, 0);
     // Start is called before the first frame update
-    void Start() {
+    void Start()
+    {
+        Init();
+    }
+
+    public void Init()
+    {
         timeSinceStart = 0;
-        Instantiated = false;
+        instantiated = false;
     }
 
     // Update is called once per frame
-    void Update() {
+    void Update()
+    {
         int currentLayerIndex = globalGameData.GetCurrentLayerIndex();
         int projectileLayerIndex = layerData.layerIndex;
         float speedFactor = globalGameData.allLayers[currentLayerIndex].layerSpeedFactors[projectileLayerIndex];
         timeSinceStart += (Time.deltaTime * speedFactor);
-        if (timeSinceStart < InstantiateDelayInSecond || Instantiated == true)
+        if (timeSinceStart < InstantiateDelayInSecond || instantiated == true)
             return;
-        else {
+        else
+        {
             InstantiateSpawner();
-            Instantiated = true;
+            instantiated = true;
         }
     }
-    private void InstantiateSpawner() {
-        for (int i = 0; i < N; i++) {
+    private void InstantiateSpawner()
+    {
+        for (int i = 0; i < N; i++)
+        {
             GameObject spawner = Instantiate(projectileSpawnerPrefab, transform.position, transform.rotation, transform);
             spawner.transform.localPosition = new Vector3(spawner.transform.localPosition.x, spawner.transform.localPosition.y, spawner.transform.localPosition.z) + i * spawnerShift + firstSpawnerAtOrigin;
             ProjectileSpawner projectileSpawner = spawner.GetComponent<ProjectileSpawner>();
