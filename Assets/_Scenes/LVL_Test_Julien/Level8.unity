@@ -1125,6 +1125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levels:
   - {fileID: 1558726191}
+  selectionLevelLevel: {fileID: 0}
   globalGameData: {fileID: 11400000, guid: 3adb5f1c9bbdc0a42b037bc093611954, type: 2}
 --- !u!4 &248120015
 Transform:
@@ -4203,7 +4204,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1250526495}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.318, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 584404553}
@@ -4716,7 +4717,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1702463609388389509, guid: a92463060be8906429b08211ad6addf6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.5
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 1702463609388389509, guid: a92463060be8906429b08211ad6addf6, type: 3}
       propertyPath: m_LocalPosition.z
