@@ -12,13 +12,15 @@ public class ProjectileSpawner : MonoBehaviour
     public LayerData layerData;
     public GlobalGameData globalGameData;
 
+    private bool fromGenerator;
+
     private float timeSinceLastSpawn;
     private float timeSinceStart;
 
     // Start is called before the first frame update
     void Start() {
-        timeSinceStart = 0;
-        timeSinceLastSpawn = 1f / spawnFrequency; //in order to spawn immediatly after the offset
+        Init();
+        fromGenerator = false;
     }
 
     // Update is called once per frame
@@ -27,7 +29,7 @@ public class ProjectileSpawner : MonoBehaviour
         int currentLayerIndex = globalGameData.GetCurrentLayerIndex();
         int projectileLayerIndex = layerData.layerIndex;
         float speedFactor = globalGameData.allLayers[currentLayerIndex].layerSpeedFactors[projectileLayerIndex];
-        
+
         timeSinceStart += (Time.deltaTime * speedFactor);
         if (timeSinceStart < spawnOffsetInSeconds)
             return;
@@ -43,7 +45,7 @@ public class ProjectileSpawner : MonoBehaviour
     private void InstantiateProjectile() {
 
         GameObject clone = Instantiate(projectilePrefab, transform.position, transform.rotation, transform);
-        clone.transform.localPosition = new Vector3(clone.transform.localPosition.x+0.2f, clone.transform.localPosition.y, clone.transform.localPosition.z);
+        clone.transform.localPosition = new Vector3(clone.transform.localPosition.x + 0.2f, clone.transform.localPosition.y, clone.transform.localPosition.z);
         if (transform.eulerAngles.z == 0) {
             clone.GetComponent<ProjectileMove>().direction = ProjectileMove.Direction.RIGHT;
         } else if (transform.eulerAngles.z == 90) {
@@ -55,7 +57,16 @@ public class ProjectileSpawner : MonoBehaviour
         }
     }
 
-    public void Restart() {
-        Start();
+    public void Init() {
+        timeSinceStart = 0;
+        timeSinceLastSpawn = 1f / spawnFrequency; //in order to spawn immediatly after the offset
+    }
+
+    public bool IsFromGenerator() {
+        return fromGenerator;
+    }
+
+    public void SetFromGenerator(bool b) {
+        fromGenerator = b;
     }
 }

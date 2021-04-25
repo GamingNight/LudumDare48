@@ -58,11 +58,11 @@ public class LevelManager : MonoBehaviour
             player.ResetPosition();
         }
         foreach (ProjectileSpawner spawner in level.GetComponentsInChildren<ProjectileSpawner>()) {
-            spawner.Restart();
+            spawner.Init();
         }
         foreach (ProjectileMove projectile in level.GetComponentsInChildren<ProjectileMove>()) {
-        	// FIXME Destroy(projectile.gameObject);
-        	projectile.gameObject.SetActive(false);
+        	Destroy(projectile.gameObject);
+        	//projectile.gameObject.SetActive(false);
         }
         globalGameData.InitLayer();
     }
