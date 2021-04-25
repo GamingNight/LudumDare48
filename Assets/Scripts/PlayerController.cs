@@ -19,16 +19,23 @@ public class PlayerController : MonoBehaviour
     private Vector3 initPosition;
     ParticleSystem.MainModule particleMainModule;
 
+    private bool lockController;
+
     // Start is called before the first frame update
     void Start() {
         spriteRenderer = playerSprite.GetComponent<SpriteRenderer>();
         particleMainModule = GetComponent<ParticleSystem>().main;
         previousLayerIndex = -1;
         initPosition = transform.position;
+        lockController = false;
     }
 
     // Update is called once per frame
     void Update() {
+
+        if (lockController)
+            return;
+        
         int currentLayerIndex = globalGameData.GetCurrentLayerIndex();
         if (currentLayerIndex != previousLayerIndex) {
             //Update this player layer
@@ -87,6 +94,14 @@ public class PlayerController : MonoBehaviour
         transform.position = initPosition;
         dummyController0.transform.position = initPosition;
         dummyController1.transform.position = initPosition;
+    }
+
+    public void LockController() {
+        lockController = true;
+    }
+
+    public void UnlockController() {
+        lockController = false;
     }
 
 }

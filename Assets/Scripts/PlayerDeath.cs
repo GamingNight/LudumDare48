@@ -27,6 +27,7 @@ public class PlayerDeath : MonoBehaviour
                     }
 
                 }
+                GetComponent<PlayerController>().LockController();
                 GetComponent<Animator>().SetBool("Dead", true);
 
             }
@@ -37,5 +38,6 @@ public class PlayerDeath : MonoBehaviour
     private void ResetLevel() {
         levelManager.resetLevel();
         GetComponent<Animator>().SetBool("Dead", false);
+        GetComponent<PlayerController>().UnlockController();
     }
 }
