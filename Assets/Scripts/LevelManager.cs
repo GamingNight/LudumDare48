@@ -5,6 +5,7 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour
 {
 	public GameObject[] levels;
+    public GameObject selectionLevelLevel;
 	public GlobalGameData globalGameData;
 	private GameObject currentLevel;
 	private int currentIndex;
@@ -22,15 +23,25 @@ public class LevelManager : MonoBehaviour
         
     }
 
-    public void ActiveNextLevel()
+    public void ActiveNextLevel(int index = -1)
     {
     	currentLevel.gameObject.SetActive(false);
         resetLevel(currentLevel);
-    	currentIndex = currentIndex + 1;
-    	if (currentIndex == levels.Length)
-    	{
-    		currentIndex = 0;
-    	}
+
+        if (index != -1)
+        {
+            currentIndex = index;
+        }
+        else
+        {
+            currentIndex = currentIndex + 1;
+        }
+
+        if (currentIndex >= levels.Length)
+        {
+            currentIndex = 0;
+        }	
+
     	currentLevel = levels[currentIndex];
         currentLevel.SetActive(true);
     }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FinisherController : MonoBehaviour
 {
+    public int sceneIndexTarget = -1;
     private LevelManager levelManager;
 
     // Start is called before the first frame update
@@ -39,7 +40,7 @@ public class FinisherController : MonoBehaviour
                     }
                     
                 }
-                levelManager.ActiveNextLevel();
+                levelManager.ActiveNextLevel(sceneIndexTarget);
 
         	}
             
