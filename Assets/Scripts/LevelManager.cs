@@ -58,7 +58,7 @@ public class LevelManager : MonoBehaviour
             player.ResetPosition();
         }
         foreach (ProjectileSpawner spawner in level.GetComponentsInChildren<ProjectileSpawner>()) {
-            if (!spawner.IsFromGenerator())
+            if (spawner.IsFromGenerator())
             {
                 Destroy(spawner.gameObject);
             } else {
