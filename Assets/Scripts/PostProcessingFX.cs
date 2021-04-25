@@ -22,6 +22,7 @@ public class PostProcessingFX : MonoBehaviour
 
     LensDistortion lensDist;
     public float lensDistIntensity;
+    public float lensDistScale;
 
 
     void Start()
@@ -40,5 +41,6 @@ public class PostProcessingFX : MonoBehaviour
         vignette.color.value = vignetteColor;
         chromAb.intensity.value = chromAbIntensity;
         lensDist.intensity.value = lensDistIntensity;
+        lensDist.scale.value = lensDistScale;
     }
 }
