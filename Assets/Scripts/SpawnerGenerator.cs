@@ -15,6 +15,7 @@ public class SpawnerGenerator : MonoBehaviour
 
     private float timeSinceStart;
     private bool Instantiated;
+    private Vector3 firstSpawnerAtOrigin = new Vector3(0.318f, 0.318f, 0);
     // Start is called before the first frame update
     void Start()
     {
@@ -42,7 +43,7 @@ public class SpawnerGenerator : MonoBehaviour
         for (int i = 0; i<N; i++)
         {
             GameObject spawner = Instantiate(projectileSpawnerPrefab, transform.position, transform.rotation, transform);
-            spawner.transform.localPosition = new Vector3(spawner.transform.localPosition.x, spawner.transform.localPosition.y, spawner.transform.localPosition.z) + i * spawnerShift;
+            spawner.transform.localPosition = new Vector3(spawner.transform.localPosition.x, spawner.transform.localPosition.y, spawner.transform.localPosition.z) + i/2* (-i%2) * spawnerShift + firstSpawnerAtOrigin;
             spawner.GetComponent<ProjectileSpawner>().spawnOffsetInSeconds = i * spawnDelayInSecond;
             spawner.GetComponent<ProjectileSpawner>().spawnFrequency = spawnerFrequency;
         }
