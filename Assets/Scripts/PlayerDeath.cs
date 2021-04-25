@@ -9,11 +9,11 @@ public class PlayerDeath : MonoBehaviour
     private LevelManager levelManager;
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        
-        if(collision.gameObject.tag == "Projectile") {
+
+        if (collision.gameObject.tag == "Projectile") {
 
             LayerData projectileLayer = collision.gameObject.GetComponent<ProjectileMove>().layerData;
-            if(projectileLayer.layerIndex == layer.layerIndex) {
+            if (projectileLayer.layerIndex == layer.layerIndex) {
 
                 Transform t = transform;
                 int count = 0;
@@ -21,17 +21,21 @@ public class PlayerDeath : MonoBehaviour
                     t = t.parent;
                     levelManager = t.GetComponent<LevelManager>();
                     count = count + 1;
-                    if (count > 20)
-                    {
+                    if (count > 20) {
                         Debug.Log("infinit loop (deeper and deeper)");
                         return;
                     }
-                    
+
                 }
                 levelManager.resetLevel();
+                //GetComponent<Animator>().SetBool("", true);
 
             }
         }
 
+    }
+
+    private void ResetLevel() {
+        levelManager.resetLevel();
     }
 }

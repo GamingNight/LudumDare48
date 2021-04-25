@@ -669,7 +669,7 @@ MonoBehaviour:
   InstantiateDelayInSecond: 0
   spawnerFrequency: 0.4
   spawnerShift: {x: 0, y: 0.636, z: 0}
-  N: 1
+  N: 20
   layerData: {fileID: 11400000, guid: 5eda72367ca2c7849a5125f3f52a8123, type: 2}
   globalGameData: {fileID: 11400000, guid: 3adb5f1c9bbdc0a42b037bc093611954, type: 2}
 --- !u!4 &70290246
@@ -1870,10 +1870,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Audio
       objectReference: {fileID: 0}
-    - target: {fileID: 3083686943003890264, guid: 7975d0cdd04cf034db281fc772fa049a, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3083686943003890266, guid: 7975d0cdd04cf034db281fc772fa049a, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -2184,7 +2180,7 @@ MonoBehaviour:
   InstantiateDelayInSecond: 0
   spawnerFrequency: 0.4
   spawnerShift: {x: 0, y: 0.636, z: 0}
-  N: 1
+  N: 11
   layerData: {fileID: 11400000, guid: 5eda72367ca2c7849a5125f3f52a8123, type: 2}
   globalGameData: {fileID: 11400000, guid: 3adb5f1c9bbdc0a42b037bc093611954, type: 2}
 --- !u!1001 &389489565
@@ -2339,7 +2335,7 @@ MonoBehaviour:
   InstantiateDelayInSecond: 5
   spawnerFrequency: 0.01
   spawnerShift: {x: 0, y: 0.636, z: 0}
-  N: 1
+  N: 5
   layerData: {fileID: 11400000, guid: 5eda72367ca2c7849a5125f3f52a8123, type: 2}
   globalGameData: {fileID: 11400000, guid: 3adb5f1c9bbdc0a42b037bc093611954, type: 2}
 --- !u!4 &413894290
@@ -2854,7 +2850,7 @@ MonoBehaviour:
   InstantiateDelayInSecond: 0
   spawnerFrequency: 0.3
   spawnerShift: {x: 0, y: 0.636, z: 0}
-  N: 1
+  N: 18
   layerData: {fileID: 11400000, guid: 5eda72367ca2c7849a5125f3f52a8123, type: 2}
   globalGameData: {fileID: 11400000, guid: 3adb5f1c9bbdc0a42b037bc093611954, type: 2}
 --- !u!4 &545574300
@@ -4163,7 +4159,7 @@ MonoBehaviour:
   InstantiateDelayInSecond: 0
   spawnerFrequency: 0.01
   spawnerShift: {x: 0, y: 0.636, z: 0}
-  N: 1
+  N: 2
   layerData: {fileID: 11400000, guid: 5eda72367ca2c7849a5125f3f52a8123, type: 2}
   globalGameData: {fileID: 11400000, guid: 3adb5f1c9bbdc0a42b037bc093611954, type: 2}
 --- !u!4 &879238545
@@ -4312,7 +4308,7 @@ MonoBehaviour:
   InstantiateDelayInSecond: 0
   spawnerFrequency: 0.3
   spawnerShift: {x: 0, y: 0.636, z: 0}
-  N: 1
+  N: 18
   layerData: {fileID: 11400000, guid: 5eda72367ca2c7849a5125f3f52a8123, type: 2}
   globalGameData: {fileID: 11400000, guid: 3adb5f1c9bbdc0a42b037bc093611954, type: 2}
 --- !u!1001 &946450404
@@ -4720,7 +4716,7 @@ MonoBehaviour:
   InstantiateDelayInSecond: 0
   spawnerFrequency: 0.4
   spawnerShift: {x: 0, y: 0.636, z: 0}
-  N: 1
+  N: 20
   layerData: {fileID: 11400000, guid: 5eda72367ca2c7849a5125f3f52a8123, type: 2}
   globalGameData: {fileID: 11400000, guid: 3adb5f1c9bbdc0a42b037bc093611954, type: 2}
 --- !u!1001 &1019629255
@@ -5223,7 +5219,7 @@ MonoBehaviour:
   InstantiateDelayInSecond: 0
   spawnerFrequency: 0.4
   spawnerShift: {x: 0, y: 0.636, z: 0}
-  N: 1
+  N: 11
   layerData: {fileID: 11400000, guid: 5eda72367ca2c7849a5125f3f52a8123, type: 2}
   globalGameData: {fileID: 11400000, guid: 3adb5f1c9bbdc0a42b037bc093611954, type: 2}
 --- !u!4 &1194316935
@@ -5500,7 +5496,7 @@ MonoBehaviour:
   InstantiateDelayInSecond: 0
   spawnerFrequency: 0.4
   spawnerShift: {x: 0, y: 0.636, z: 0}
-  N: 1
+  N: 11
   layerData: {fileID: 11400000, guid: 5eda72367ca2c7849a5125f3f52a8123, type: 2}
   globalGameData: {fileID: 11400000, guid: 3adb5f1c9bbdc0a42b037bc093611954, type: 2}
 --- !u!4 &1227914872
@@ -6692,7 +6688,7 @@ MonoBehaviour:
   InstantiateDelayInSecond: 0
   spawnerFrequency: 0.4
   spawnerShift: {x: 0, y: 0.636, z: 0}
-  N: 1
+  N: 20
   layerData: {fileID: 11400000, guid: 5eda72367ca2c7849a5125f3f52a8123, type: 2}
   globalGameData: {fileID: 11400000, guid: 3adb5f1c9bbdc0a42b037bc093611954, type: 2}
 --- !u!4 &1637755104
@@ -7003,7 +6999,7 @@ MonoBehaviour:
   InstantiateDelayInSecond: 0
   spawnerFrequency: 0.4
   spawnerShift: {x: 0, y: 0.636, z: 0}
-  N: 1
+  N: 20
   layerData: {fileID: 11400000, guid: 5eda72367ca2c7849a5125f3f52a8123, type: 2}
   globalGameData: {fileID: 11400000, guid: 3adb5f1c9bbdc0a42b037bc093611954, type: 2}
 --- !u!114 &1754965691 stripped
@@ -7202,7 +7198,7 @@ MonoBehaviour:
   InstantiateDelayInSecond: 0
   spawnerFrequency: 0.4
   spawnerShift: {x: 0, y: 0.636, z: 0}
-  N: 1
+  N: 11
   layerData: {fileID: 11400000, guid: 5eda72367ca2c7849a5125f3f52a8123, type: 2}
   globalGameData: {fileID: 11400000, guid: 3adb5f1c9bbdc0a42b037bc093611954, type: 2}
 --- !u!1 &2003950583

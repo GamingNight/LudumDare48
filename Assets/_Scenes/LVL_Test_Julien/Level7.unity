@@ -2744,7 +2744,7 @@ MonoBehaviour:
   InstantiateDelayInSecond: 0
   spawnerFrequency: 0.3
   spawnerShift: {x: 0, y: 0.636, z: 0}
-  N: 15
+  N: 16
   layerData: {fileID: 11400000, guid: 5eda72367ca2c7849a5125f3f52a8123, type: 2}
   globalGameData: {fileID: 11400000, guid: 3adb5f1c9bbdc0a42b037bc093611954, type: 2}
 --- !u!4 &1637755104
