@@ -79,6 +79,8 @@ public class PlayerController : MonoBehaviour
 
     public void ResetPosition() {
         transform.position = initPosition;
+        dummyController0.transform.position = initPosition;
+        dummyController1.transform.position = initPosition;
     }
 
 }
