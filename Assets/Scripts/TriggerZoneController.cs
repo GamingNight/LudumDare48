@@ -6,7 +6,6 @@ public class TriggerZoneController : MonoBehaviour
 {
 
     private List<ProjectileMove> projectileList;
-    private ProjectileMove.Direction lastDir = ProjectileMove.Direction.RIGHT;
 
     private float previousRotation;
 
@@ -21,7 +20,6 @@ public class TriggerZoneController : MonoBehaviour
 
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
-
         if (horizontal > 0) {
             if (vertical > 0) {
                 transform.Rotate(0f, 0f, -previousRotation + 45, Space.Self);
@@ -57,7 +55,20 @@ public class TriggerZoneController : MonoBehaviour
         //if (Input.GetKey(KeyCode.Space))
         //{
         foreach (ProjectileMove projectile in projectileList) {
-            projectile.HitProjectile(lastDir);
+            ProjectileMove.Direction projectileDirection = ProjectileMove.Direction.NONE;
+            Vector3 projectilePos = projectile.transform.position;
+            float distX = projectilePos.x - transform.position.x;
+            float distY = projectilePos.y - transform.position.y;
+            if (distX > 0 && Mathf.Abs(distX) >= Mathf.Abs(distY)) {
+                projectileDirection = ProjectileMove.Direction.RIGHT;
+            } else if (distX < 0 && Mathf.Abs(distX) >= Mathf.Abs(distY)) {
+                projectileDirection = ProjectileMove.Direction.LEFT;
+            } else if (distY > 0 && Mathf.Abs(distY) >= Mathf.Abs(distX)) {
+                projectileDirection = ProjectileMove.Direction.UP;
+            } else if (distY < 0 && Mathf.Abs(distY) >= Mathf.Abs(distX)) {
+                projectileDirection = ProjectileMove.Direction.DOWN;
+            }
+            projectile.HitProjectile(projectileDirection);
         }
         //}
     }
