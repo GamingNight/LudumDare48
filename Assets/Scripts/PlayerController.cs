@@ -38,13 +38,8 @@ public class PlayerController : MonoBehaviour
                     dummyController1.Pop(transform.position);
                 }
 
-
-                // create new dummy player
-                // save pos for the respown
-
             } else {
-                // delete child dummy player
-                // translate saved pos
+
                 if (currentLayerIndex == 0) {
                     SetPlayerColor(new Color(1, 1, 1));
                     transform.position = dummyController0.transform.position;
