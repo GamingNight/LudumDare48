@@ -8,6 +8,7 @@ public class PauseUINavigation : MonoBehaviour
 
 	public GameObject pauseCanvas;
 	public GameObject selector;
+	public LevelManager levelManager;
     public Text restart;
     public Text levelList;
     public Text quit;
@@ -64,15 +65,27 @@ public class PauseUINavigation : MonoBehaviour
     }
 
     public void Restart() {
+    	if (levelManager != null)
+    	{
+    		levelManager.ActiveNextLevel(0);
+    	}
         pauseManager.ResumeGame();
     }
 
     public void LevelSelection() {
-        pauseManager.ResumeGame();
+        if (levelManager != null)
+    	{
+    		levelManager.ActiveNextLevel(-100);
+    	}
+    	pauseManager.ResumeGame();
     }
 
     public void Quit() {
-        Application.Quit();
+        if (levelManager != null)
+    	{
+    		levelManager.ActiveNextLevel(-200);
+    	}
+    	pauseManager.ResumeGame();
     }
 
     public void FocusCursorOnvalue(int value) {
