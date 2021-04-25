@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public DummyController dummyController0;
     public DummyController dummyController1;
     public GameObject playerSprite;
+    public GameObject shield;
 
     private int previousLayerIndex;
     private SpriteRenderer spriteRenderer;
@@ -31,6 +32,7 @@ public class PlayerController : MonoBehaviour
         if (currentLayerIndex != previousLayerIndex) {
             //Update this player layer
             GetComponent<PlayerDeath>().layer = globalGameData.allLayers[currentLayerIndex];
+            shield.SetActive(currentLayerIndex != 0);
 
             if (previousLayerIndex < currentLayerIndex) {
                 if (currentLayerIndex == 1) {
@@ -72,6 +74,7 @@ public class PlayerController : MonoBehaviour
     private void SetPlayerColor(Color c) {
         spriteRenderer.color = c;
         particleMainModule.startColor = c;
+        shield.GetComponent<SpriteRenderer>().color = c;
     }
     public int GetPreviousLayerIndex() {
         return previousLayerIndex;
