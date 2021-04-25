@@ -396,6 +396,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Finisher
       objectReference: {fileID: 0}
+    - target: {fileID: 8331066419666830529, guid: a92463060be8906429b08211ad6addf6, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 0.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331066419666830529, guid: a92463060be8906429b08211ad6addf6, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 0.91
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a92463060be8906429b08211ad6addf6, type: 3}
 --- !u!1 &197989432
@@ -1054,6 +1062,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levels: []
+  selectionLevelLevel: {fileID: 0}
   globalGameData: {fileID: 0}
 --- !u!114 &505947073 stripped
 MonoBehaviour:
@@ -2052,6 +2061,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b5519c8f9b9abd4982f9e7228b7e765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneIndexTarget: -1
 --- !u!1 &947819648
 GameObject:
   m_ObjectHideFlags: 0
@@ -2899,6 +2909,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levels: []
+  selectionLevelLevel: {fileID: 0}
   globalGameData: {fileID: 0}
 --- !u!1 &1601960207
 GameObject:
@@ -3222,6 +3233,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Finisher
       objectReference: {fileID: 0}
+    - target: {fileID: 8331066419666830529, guid: a92463060be8906429b08211ad6addf6, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 0.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331066419666830529, guid: a92463060be8906429b08211ad6addf6, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 0.91
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a92463060be8906429b08211ad6addf6, type: 3}
 --- !u!1001 &1675106971
@@ -3530,14 +3549,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3083686942545312050, guid: 7975d0cdd04cf034db281fc772fa049a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3083686942691969326, guid: 7975d0cdd04cf034db281fc772fa049a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3083686943003890264, guid: 7975d0cdd04cf034db281fc772fa049a, type: 3}
       propertyPath: m_Name
       value: Audio
@@ -3585,26 +3596,6 @@ PrefabInstance:
     - target: {fileID: 3083686943003890266, guid: 7975d0cdd04cf034db281fc772fa049a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4998181112076809237, guid: 7975d0cdd04cf034db281fc772fa049a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5851326025329220079, guid: 7975d0cdd04cf034db281fc772fa049a, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9028032924300479035, guid: 7975d0cdd04cf034db281fc772fa049a, type: 3}
-      propertyPath: Loop
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9028032924300479035, guid: 7975d0cdd04cf034db281fc772fa049a, type: 3}
-      propertyPath: m_Pitch
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9028032924300479035, guid: 7975d0cdd04cf034db281fc772fa049a, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7975d0cdd04cf034db281fc772fa049a, type: 3}

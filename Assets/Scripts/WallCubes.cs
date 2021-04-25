@@ -11,8 +11,8 @@ public class WallCubes : MonoBehaviour
     void Start()
     {
 
-        zPosition = Random.Range(0.9f, 1.3f);
-        transform.position = new Vector3(transform.position.x, transform.position.y, zPosition);
+        zPosition = Random.Range(0f, -0.2f);
+        transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + zPosition);
 
         Animator anim = GetComponentInChildren<Animator>();
         AnimatorStateInfo state = anim.GetCurrentAnimatorStateInfo(0);
