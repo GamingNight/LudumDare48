@@ -43,7 +43,7 @@ public class SpawnerGenerator : MonoBehaviour
         for (int i = 0; i<N; i++)
         {
             GameObject spawner = Instantiate(projectileSpawnerPrefab, transform.position, transform.rotation, transform);
-            spawner.transform.localPosition = new Vector3(spawner.transform.localPosition.x, spawner.transform.localPosition.y, spawner.transform.localPosition.z) + i/2* (-i%2) * spawnerShift + firstSpawnerAtOrigin;
+            spawner.transform.localPosition = new Vector3(spawner.transform.localPosition.x, spawner.transform.localPosition.y, spawner.transform.localPosition.z) + i * spawnerShift + firstSpawnerAtOrigin;
             spawner.GetComponent<ProjectileSpawner>().spawnOffsetInSeconds = i * spawnDelayInSecond;
             spawner.GetComponent<ProjectileSpawner>().spawnFrequency = spawnerFrequency;
         }

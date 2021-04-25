@@ -110,7 +110,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5800584070119914896
 Transform:
   m_ObjectHideFlags: 0
@@ -719,11 +719,11 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 7, z: 0}
-  - {x: 12.7, y: 7, z: 0}
-  - {x: 12.7, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
+  - {x: -8.45, y: -3.45, z: 0}
+  - {x: -8.45, y: 3.45, z: 0}
+  - {x: 3.45, y: 3.45, z: 0}
+  - {x: 3.45, y: -3.45, z: 0}
+  - {x: -8.45, y: -3.45, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
