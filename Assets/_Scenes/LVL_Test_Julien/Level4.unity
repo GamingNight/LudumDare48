@@ -785,7 +785,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &545574299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -803,7 +803,7 @@ MonoBehaviour:
   InstantiateDelayInSecond: 0
   spawnerFrequency: 0.3
   spawnerShift: {x: 0, y: -0.636, z: 0}
-  N: 18
+  N: 16
   layerData: {fileID: 11400000, guid: 5eda72367ca2c7849a5125f3f52a8123, type: 2}
   globalGameData: {fileID: 11400000, guid: 3adb5f1c9bbdc0a42b037bc093611954, type: 2}
 --- !u!4 &545574300
@@ -1751,7 +1751,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1637755103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1769,7 +1769,7 @@ MonoBehaviour:
   InstantiateDelayInSecond: 0
   spawnerFrequency: 0.4
   spawnerShift: {x: 0, y: 0.636, z: 0}
-  N: 18
+  N: 20
   layerData: {fileID: 11400000, guid: 5eda72367ca2c7849a5125f3f52a8123, type: 2}
   globalGameData: {fileID: 11400000, guid: 3adb5f1c9bbdc0a42b037bc093611954, type: 2}
 --- !u!4 &1637755104
@@ -1857,7 +1857,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1702463609388389509, guid: a92463060be8906429b08211ad6addf6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.83
+      value: 11.97
       objectReference: {fileID: 0}
     - target: {fileID: 1702463609388389509, guid: a92463060be8906429b08211ad6addf6, type: 3}
       propertyPath: m_LocalPosition.y
