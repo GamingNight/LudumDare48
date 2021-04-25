@@ -6,6 +6,8 @@ public class PlayerDeath : MonoBehaviour
 {
     public LayerData layer;
 
+    private LevelManager levelManager;
+
     private void OnTriggerEnter2D(Collider2D collision) {
         
         if(collision.gameObject.tag == "Projectile") {
@@ -13,7 +15,24 @@ public class PlayerDeath : MonoBehaviour
             LayerData projectileLayer = collision.gameObject.GetComponent<ProjectileMove>().layerData;
             if(projectileLayer.layerIndex == layer.layerIndex) {
                 Debug.Log("Game Over by " + gameObject.name);
+
+                Transform t = transform;
+                int count = 0;
+                while (levelManager == null) {
+                    t = t.parent;
+                    levelManager = t.GetComponent<LevelManager>();
+                    count = count + 1;
+                    if (count > 20)
+                    {
+                        Debug.Log("infinit loop (deeper and deeper)");
+                        return;
+                    }
+                    
+                }
+                levelManager.resetLevel();
+
             }
         }
+
     }
 }

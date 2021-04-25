@@ -32,7 +32,7 @@ public class FinisherController : MonoBehaviour
                     t = t.parent;
                     levelManager = t.GetComponent<LevelManager>();
                     count = count + 1;
-                    if (count > 5)
+                    if (count > 20)
                     {
                         Debug.Log("infinit loop (deeper and deeper)");
                         return;
