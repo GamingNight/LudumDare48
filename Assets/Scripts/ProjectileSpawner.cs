@@ -54,4 +54,8 @@ public class ProjectileSpawner : MonoBehaviour
             clone.GetComponent<ProjectileMove>().direction = ProjectileMove.Direction.DOWN;
         }
     }
+
+    public void Restart() {
+        Start();
+    }
 }

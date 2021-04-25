@@ -21,5 +21,14 @@ public class LevelManager : MonoBehaviour
     {
     	gameObject.SetActive(false);
     	nextLevel.SetActive(true);
+        foreach (PlayerController player in gameObject.GetComponentsInChildren<PlayerController>()) {
+            player.ResetPosition();
+        }
+        foreach (ProjectileSpawner spawner in gameObject.GetComponentsInChildren<ProjectileSpawner>()) {
+            spawner.Restart();
+        }
+        foreach (ProjectileMove projectile in gameObject.GetComponentsInChildren<ProjectileMove>()) {
+            projectile.gameObject.SetActive(false);
+        }
     }
 }

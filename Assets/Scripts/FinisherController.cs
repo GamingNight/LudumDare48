@@ -20,9 +20,9 @@ public class FinisherController : MonoBehaviour
 
 	void OnTriggerEnter2D(Collider2D collision)
 	{
-		Debug.Log("collision.gameObject.tag = " + collision.gameObject.tag);
         if (collision.gameObject.tag == "Player") {
-        	int index = collision.gameObject.GetComponent<PlayerController>().GetPreviousLayerIndex();
+            PlayerController player = collision.gameObject.GetComponent<PlayerController>();
+        	int index = player.GetPreviousLayerIndex();
         	
         	if (index == 0)
         	{
@@ -35,12 +35,10 @@ public class FinisherController : MonoBehaviour
                     if (count > 5)
                     {
                         Debug.Log("infinit loop (deeper and deeper)");
-                        Debug.Log(count);
                         return;
                     }
                     
                 }
-
                 levelManager.ActiveNextLevel();
 
         	}

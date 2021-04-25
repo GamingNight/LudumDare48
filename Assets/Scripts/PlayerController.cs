@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
 
     private int previousLayerIndex;
     private SpriteRenderer spriteRenderer;
+    private Vector3 initPosition;
     ParticleSystem.MainModule particleMainModule;
 
     // Start is called before the first frame update
@@ -21,6 +22,7 @@ public class PlayerController : MonoBehaviour
         spriteRenderer = playerSprite.GetComponent<SpriteRenderer>();
         particleMainModule = GetComponent<ParticleSystem>().main;
         previousLayerIndex = -1;
+        initPosition = transform.position;
     }
 
     // Update is called once per frame
@@ -73,6 +75,10 @@ public class PlayerController : MonoBehaviour
     }
     public int GetPreviousLayerIndex() {
         return previousLayerIndex;
+    }
+
+    public void ResetPosition() {
+        transform.position = initPosition;
     }
 
 }
