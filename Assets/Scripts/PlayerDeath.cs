@@ -13,8 +13,15 @@ public class PlayerDeath : MonoBehaviour
 
         if (collision.gameObject.tag == "Projectile") {
 
-            LayerData projectileLayer = collision.gameObject.GetComponent<ProjectileMove>().layerData;
-            if (projectileLayer.layerIndex == layer.layerIndex) {
+        	ProjectileMove projectileMove = collision.gameObject.GetComponent<ProjectileMove>();
+        	int ProjectileKillerlayerIndex = projectileMove.GetKillerLayer();
+
+        	// Old style
+/*            LayerData projectileLayer = ProjectileMove.layerData;
+            if (projectileLayer.layerIndex == layer.layerIndex) {*/
+
+            if (ProjectileKillerlayerIndex >= layer.layerIndex) {
+
 
                 Transform t = transform;
                 int count = 0;

@@ -24,6 +24,7 @@ public class ProjectileMove : MonoBehaviour
     private float hitTranslationLength;
     private Vector2 velocityBeforeHit;
     private bool hitLock;
+    private int killerLayer = 0;
 
     // Start is called before the first frame update
     void Start() {
@@ -56,6 +57,14 @@ public class ProjectileMove : MonoBehaviour
         hitDirection = Direction.NONE;
         hitTranslationLength = 0;
         hitLock = false;
+        if (killerLayer == 1)
+        {
+            spriteRenderer.color = Color.blue;
+        }
+        if (killerLayer  > 1)
+        {
+            spriteRenderer.color = Color.yellow;
+        }
     }
 
     void FixedUpdate() {
@@ -177,5 +186,13 @@ public class ProjectileMove : MonoBehaviour
         if (collision.gameObject.tag == "Wall") {
             Destroy(gameObject);
         }
+    }
+
+    public void SetKillerLayer(int index) {
+        killerLayer = index;
+    }
+
+    public int GetKillerLayer() {
+        return killerLayer;
     }
 }
