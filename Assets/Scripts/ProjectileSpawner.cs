@@ -27,18 +27,17 @@ public class ProjectileSpawner : MonoBehaviour
 
         int currentLayerIndex = globalGameData.GetCurrentLayerIndex();
         int projectileLayerIndex = layerData.layerIndex;
-        float speedFactor = globalGameData.allLayers[currentLayerIndex].layerSpeedFactors[projectileLayerIndex];
-
+        float speedFactor = 1;
+        if (currentLayerIndex >= projectileLayerIndex)
+            speedFactor = globalGameData.allLayers[currentLayerIndex].layerSpeedFactors[projectileLayerIndex];
         timeSinceStart += (Time.deltaTime * speedFactor);
         if (timeSinceStart < spawnOffsetInSeconds)
             return;
-
         timeSinceLastSpawn += (Time.deltaTime * speedFactor);
         if (timeSinceLastSpawn >= 1f / spawnFrequency) {
             InstantiateProjectile();
             timeSinceLastSpawn = 0;
         }
-
     }
 
     private void InstantiateProjectile() {
@@ -53,10 +52,6 @@ public class ProjectileSpawner : MonoBehaviour
             clone.GetComponent<ProjectileMove>().direction = ProjectileMove.Direction.LEFT;
         } else if (transform.eulerAngles.z == 270) {
             clone.GetComponent<ProjectileMove>().direction = ProjectileMove.Direction.DOWN;
-        }
-        if (gameObject.name == "ProjectileSpawner Deeper")
-        {
-            Debug.Log("InstatiateProjectile");
         }
     }
 
