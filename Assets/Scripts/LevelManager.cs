@@ -9,6 +9,7 @@ public class LevelManager : MonoBehaviour
 	public GlobalGameData globalGameData;
 	private GameObject currentLevel;
 	private int currentIndex;
+    private IEnumerator coroutine;
     // Start is called before the first frame update
     void Start()
     {
@@ -54,7 +55,9 @@ public class LevelManager : MonoBehaviour
 
     public void resetLevel(GameObject level)
     {
-    	foreach (PlayerController player in level.GetComponentsInChildren<PlayerController>()) {
+        coroutine = WaitUnlockCommand(10.0f);
+        StartCoroutine(coroutine);
+        foreach (PlayerController player in level.GetComponentsInChildren<PlayerController>()) {
             player.ResetPosition();
         }
         foreach (ProjectileSpawner spawner in level.GetComponentsInChildren<ProjectileSpawner>()) {
@@ -73,6 +76,14 @@ public class LevelManager : MonoBehaviour
         	//projectile.gameObject.SetActive(false);
         }
         globalGameData.InitLayer();
+    }
+    private IEnumerator WaitUnlockCommand(float waitTime)
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(waitTime);
+            globalGameData.UnlockInputs();
+        }
     }
 
     public void resetLevel()

@@ -38,7 +38,7 @@ public class PlayerDeath : MonoBehaviour
 
     private void ResetLevel() {
         levelManager.resetLevel();
-        globalGameData.UnlockInputs();
+        //globalGameData.UnlockInputs();
         GetComponent<Animator>().SetBool("Dead", false);
     }
 }
