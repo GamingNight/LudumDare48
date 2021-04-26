@@ -93,6 +93,8 @@ public class PlayerController : MonoBehaviour
 
     public void ResetPosition() {
         transform.position = initPosition;
+        dummyController0.Depop();
+        dummyController1.Depop();
         dummyController0.transform.position = initPosition;
         dummyController1.transform.position = initPosition;
     }

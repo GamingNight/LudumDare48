@@ -58,6 +58,11 @@ public class ProjectileMove : MonoBehaviour
         hitDirection = Direction.NONE;
         hitTranslationLength = 0;
         hitLock = false;
+
+        int currentLayerIndex = globalGameData.GetCurrentLayerIndex();
+        int projectileLayerIndex = layerData.layerIndex;
+        float speedFactor = globalGameData.allLayers[currentLayerIndex].layerSpeedFactors[projectileLayerIndex];
+        ManageSpeedFactor(speedFactor);
     }
 
     void FixedUpdate() {
@@ -74,18 +79,7 @@ public class ProjectileMove : MonoBehaviour
             int currentLayerIndex = globalGameData.GetCurrentLayerIndex();
             int projectileLayerIndex = layerData.layerIndex;
             float speedFactor = globalGameData.allLayers[currentLayerIndex].layerSpeedFactors[projectileLayerIndex];
-            if (speedFactor != -1) {
-                spriteRenderer.enabled = true;
-                particleEmission.enabled = true;
-                rgbd.velocity = initVelocity * speedFactor;
-                //Update also particle speed
-                particleMain.simulationSpeed = particleMain.simulationSpeed * speedFactor;
-            } else {
-                spriteRenderer.enabled = false;
-                //rgbd.velocity = initVelocity * 0;
-                particleEmission.enabled = false;
-            }
-
+            ManageSpeedFactor(speedFactor);
 
             previousLayerIndex = currentLayerIndex;
         }
@@ -125,6 +119,20 @@ public class ProjectileMove : MonoBehaviour
                 rgbd.velocity = velocityBeforeHit;
                 hitLock = false;
             }
+        }
+    }
+
+    private void ManageSpeedFactor(float speedFactor) {
+        if (speedFactor != -1) {
+            spriteRenderer.enabled = true;
+            particleEmission.enabled = true;
+            rgbd.velocity = initVelocity * speedFactor;
+            //Update also particle speed
+            particleMain.simulationSpeed = particleMain.simulationSpeed * speedFactor;
+        } else {
+            spriteRenderer.enabled = false;
+            //rgbd.velocity = initVelocity * 0;
+            particleEmission.enabled = false;
         }
     }
 
