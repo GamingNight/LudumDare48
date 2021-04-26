@@ -16,5 +16,5 @@ MonoBehaviour:
   hitTranslationSpeedPerLayer:
   - 4
   - 4
-  - 2
+  - 0.4
   hitTranslationLenght: 1
