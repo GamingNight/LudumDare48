@@ -13,6 +13,7 @@ public class LevelManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.visible = false;
         currentIndex = 0;
         currentLevel = levels[currentIndex];
         currentLevel.SetActive(true);
