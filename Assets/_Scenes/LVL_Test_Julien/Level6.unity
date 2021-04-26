@@ -963,6 +963,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   globalGameData: {fileID: 11400000, guid: 3adb5f1c9bbdc0a42b037bc093611954, type: 2}
+  normalIndicator: {fileID: 0}
+  deeperIndicator: {fileID: 0}
+  deeperAndDeeperIndicator: {fileID: 0}
 --- !u!1 &1994681751
 GameObject:
   m_ObjectHideFlags: 0
@@ -1122,6 +1125,10 @@ PrefabInstance:
     - target: {fileID: 2560902521392820021, guid: cb2347d7a308d2e4b81de6f92f75f6b4, type: 3}
       propertyPath: m_Name
       value: Level6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5873175489362012984, guid: cb2347d7a308d2e4b81de6f92f75f6b4, type: 3}
+      propertyPath: spawnFrequency
+      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb2347d7a308d2e4b81de6f92f75f6b4, type: 3}
