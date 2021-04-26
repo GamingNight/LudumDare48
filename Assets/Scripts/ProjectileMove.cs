@@ -127,6 +127,10 @@ public class ProjectileMove : MonoBehaviour
         velocityBeforeHit = rgbd.velocity;
     }
 
+    public void ExplodeProjectile() {
+        GetComponent<Animator>().SetBool("Death", true);
+    }
+
     public Direction GetHitDirection() {
 
         return hitDirection;
@@ -135,24 +139,37 @@ public class ProjectileMove : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision) {
 
         if (collision.gameObject.tag == "Projectile") {
-            Vector2 oProjectilePosition = collision.gameObject.transform.position;
-            Direction oProjectileHitDirection = collision.gameObject.GetComponent<ProjectileMove>().GetHitDirection();
-            if (oProjectileHitDirection != Direction.NONE) {
-                Direction relativeDirectionToOther = Direction.NONE;
-                float distY = transform.position.y - oProjectilePosition.y;
-                float distX = transform.position.x - oProjectilePosition.x;
-                if (distY > 0 && Mathf.Abs(distY) >= Mathf.Abs(distX))
-                    relativeDirectionToOther = Direction.UP;
-                else if (distY < 0 && Mathf.Abs(distY) >= Mathf.Abs(distX))
-                    relativeDirectionToOther = Direction.DOWN;
-                else if (distX > 0 && Mathf.Abs(distX) >= Mathf.Abs(distY))
-                    relativeDirectionToOther = Direction.RIGHT;
-                else if (distX < 0 && Mathf.Abs(distX) >= Mathf.Abs(distY))
-                    relativeDirectionToOther = Direction.LEFT;
+            //Vector2 oProjectilePosition = collision.gameObject.transform.position;
+            //Direction oProjectileHitDirection = collision.gameObject.GetComponent<ProjectileMove>().GetHitDirection();
+            //if (oProjectileHitDirection != Direction.NONE) {
+            //    Direction relativeDirectionToOther = Direction.NONE;
+            //    float distY = transform.position.y - oProjectilePosition.y;
+            //    float distX = transform.position.x - oProjectilePosition.x;
+            //    if (distY > 0 && Mathf.Abs(distY) >= Mathf.Abs(distX))
+            //        relativeDirectionToOther = Direction.UP;
+            //    else if (distY < 0 && Mathf.Abs(distY) >= Mathf.Abs(distX))
+            //        relativeDirectionToOther = Direction.DOWN;
+            //    else if (distX > 0 && Mathf.Abs(distX) >= Mathf.Abs(distY))
+            //        relativeDirectionToOther = Direction.RIGHT;
+            //    else if (distX < 0 && Mathf.Abs(distX) >= Mathf.Abs(distY))
+            //        relativeDirectionToOther = Direction.LEFT;
 
-                if (oProjectileHitDirection == relativeDirectionToOther)
-                    HitProjectile(oProjectileHitDirection);
-            }
+            //    if (oProjectileHitDirection == relativeDirectionToOther)
+            //        HitProjectile(oProjectileHitDirection);
+            //}
+            collision.gameObject.GetComponent<ProjectileMove>().ExplodeProjectile();
+            ExplodeProjectile();
+        }
+    }
+
+    public void DestroyProjectile() {
+        Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+
+        if (collision.gameObject.tag == "Wall") {
+            Destroy(gameObject);
         }
     }
 }
