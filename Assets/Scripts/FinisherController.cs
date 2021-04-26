@@ -7,13 +7,11 @@ public class FinisherController : MonoBehaviour
     public int sceneIndexTarget = -1;
     private LevelManager levelManager;
 
-    public GameObject loader;
-    private Animator loaderAnim;
 
     // Start is called before the first frame update
     void Start()
     {
-        loaderAnim = loader.GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
@@ -46,9 +44,6 @@ public class FinisherController : MonoBehaviour
                 levelManager.ActiveNextLevel(sceneIndexTarget);
 
         	}
-
-            //Loader
-            loaderAnim.SetBool("Loading", true);
 
         }
 	}
