@@ -5118,6 +5118,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 11400000, guid: 5eda72367ca2c7849a5125f3f52a8123, type: 2}
   globalGameData: {fileID: 11400000, guid: 3adb5f1c9bbdc0a42b037bc093611954, type: 2}
+  shield: {fileID: 0}
+  shieldCircle: {fileID: 0}
 --- !u!1 &6207230072716173115
 GameObject:
   m_ObjectHideFlags: 0
@@ -10048,8 +10050,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1563320517
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 548fcc721165ac94eb595e0b7e87b448, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
