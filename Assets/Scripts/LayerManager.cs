@@ -21,7 +21,7 @@ public class LayerManager : MonoBehaviour
 
     void Update() {
         if (globalGameData.GetIncLayerButtonDown()) {
-            globalGameData.IncLayer(true);
+            globalGameData.IncLayer();
         }
         if (globalGameData.GetDecLayerButtonDown()) {
             globalGameData.DecLayer();
