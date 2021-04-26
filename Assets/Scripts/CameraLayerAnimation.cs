@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CAMERATESTLEO : MonoBehaviour
+public class CameraLayerAnimation : MonoBehaviour
 {
+
     public GlobalGameData globalGameData;
     public Animator anim;
 
@@ -42,4 +43,5 @@ public class CAMERATESTLEO : MonoBehaviour
             }
         }
     }
+
 }
