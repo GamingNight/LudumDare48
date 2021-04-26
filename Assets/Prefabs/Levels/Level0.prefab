@@ -318,6 +318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layer: {fileID: 11400000, guid: 5eda72367ca2c7849a5125f3f52a8123, type: 2}
+  globalGameData: {fileID: 0}
 --- !u!114 &2875276756759149556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -331,6 +332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layer: {fileID: 11400000, guid: 8e7db0481878b4846b3df3a30371d53e, type: 2}
+  globalGameData: {fileID: 0}
 --- !u!1001 &2410209545706045965
 PrefabInstance:
   m_ObjectHideFlags: 0

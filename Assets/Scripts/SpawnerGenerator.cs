@@ -14,7 +14,7 @@ public class SpawnerGenerator : MonoBehaviour
     public GlobalGameData globalGameData;
 
     private float timeSinceStart;
-    private bool instantiated;
+    private bool instantiated = false;
     private Vector3 firstSpawnerAtOrigin = new Vector3(0.318f, 0.318f, 0);
     // Start is called before the first frame update
     void Start()

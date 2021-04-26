@@ -60,6 +60,7 @@ public class LevelManager : MonoBehaviour
         foreach (ProjectileSpawner spawner in level.GetComponentsInChildren<ProjectileSpawner>()) {
             if (spawner.IsFromGenerator())
             {
+                Debug.Log(spawner.IsFromGenerator());
                 Destroy(spawner.gameObject);
             } else {
                 spawner.Init();
