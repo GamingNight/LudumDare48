@@ -189,7 +189,7 @@ public class ProjectileMove : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision) {
 
         if (collision.gameObject.tag == "Wall") {
-            Destroy(gameObject);
+            Destroy(gameObject, 2f);
         }
     }
 }

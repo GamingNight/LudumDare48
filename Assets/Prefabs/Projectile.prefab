@@ -237,7 +237,7 @@ ParticleSystemRenderer:
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
-  m_MaskInteraction: 0
+  m_MaskInteraction: 1
 --- !u!198 &5693638593206697319
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -5019,8 +5019,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1563320517
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ba753701a7198f549b40c85d14c03c91, type: 3}
   m_Color: {r: 1, g: 0, b: 1, a: 1}
@@ -5031,7 +5031,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 1
   m_SpriteSortPoint: 0
 --- !u!114 &706801442
 MonoBehaviour:
@@ -5049,8 +5049,6 @@ MonoBehaviour:
   projectileData: {fileID: 11400000, guid: 618a51e836313c24ca71f9eb97569075, type: 2}
   direction: 3
   globalGameData: {fileID: 11400000, guid: 3adb5f1c9bbdc0a42b037bc093611954, type: 2}
-  spriteRendererDepper: {fileID: 8565704627501872084, guid: 9e25dc6b002f947479a7e62643b4676a, type: 3}
-  spriteRendererDepperAndDepper: {fileID: 8565704627501872084, guid: 35b0e77cbd47227429d7e3480dc5e8f8, type: 3}
 --- !u!50 &6354696774233248581
 Rigidbody2D:
   serializedVersion: 4
@@ -5167,7 +5165,7 @@ ParticleSystemRenderer:
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
-  m_MaskInteraction: 0
+  m_MaskInteraction: 1
 --- !u!198 &682611117
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -10023,7 +10021,7 @@ ParticleSystemRenderer:
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
-  m_MaskInteraction: 0
+  m_MaskInteraction: 1
 --- !u!198 &3432467074324459315
 ParticleSystem:
   m_ObjectHideFlags: 0
