@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f54148ef7d09af419d89f9d2b447ae1, type: 3}
   m_Name: HorizontalAxis
   m_EditorClassIdentifier: 
+  lockInput: 0
   axis: Horizontal
+  button: 
   keyCode: 0

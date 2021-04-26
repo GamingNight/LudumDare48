@@ -10,7 +10,6 @@ public class PlayerInput : ScriptableObject
     public string button;
     public KeyCode keyCode;
 
-
     public bool GetKeyDown() {
         if (lockInput)
             return false;

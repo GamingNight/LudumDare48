@@ -19,22 +19,16 @@ public class PlayerController : MonoBehaviour
     private Vector3 initPosition;
     ParticleSystem.MainModule particleMainModule;
 
-    private bool lockController;
-
     // Start is called before the first frame update
     void Start() {
         spriteRenderer = playerSprite.GetComponent<SpriteRenderer>();
         particleMainModule = GetComponent<ParticleSystem>().main;
         previousLayerIndex = -1;
         initPosition = transform.position;
-        lockController = false;
     }
 
     // Update is called once per frame
     void Update() {
-
-        if (lockController)
-            return;
 
         int currentLayerIndex = globalGameData.GetCurrentLayerIndex();
         if (currentLayerIndex != previousLayerIndex) {
@@ -66,8 +60,8 @@ public class PlayerController : MonoBehaviour
             }
             previousLayerIndex = currentLayerIndex;
         }
-        float horizontal = globalGameData.GetPlayerHorizontalMove();//Input.GetAxisRaw("Horizontal");
-        float vertical = globalGameData.GetPlayerVerticalMove();//Input.GetAxisRaw("Vertical");
+        float horizontal = globalGameData.GetPlayerHorizontalMove();
+        float vertical = globalGameData.GetPlayerVerticalMove();
         if (horizontal > 0) {
             transform.Translate(Vector3.right * Time.deltaTime * Speed);
         }
@@ -97,13 +91,4 @@ public class PlayerController : MonoBehaviour
         dummyController0.transform.position = initPosition;
         dummyController1.transform.position = initPosition;
     }
-
-    public void LockController() {
-        lockController = true;
-    }
-
-    public void UnlockController() {
-        lockController = false;
-    }
-
 }
