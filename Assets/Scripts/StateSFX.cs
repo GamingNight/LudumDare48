@@ -4,32 +4,38 @@ using UnityEngine;
 
 public class StateSFX : MonoBehaviour
 {
+    public GlobalGameData globalGameData;
 
-    public AudioSource transitionSFX;
+    private AudioSource transitionSFX;
+    private int previousLayerIndex;
+    private bool previousSwitchWasDeeper;
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            if (!transitionSFX.isPlaying)
-            {
-                transitionSFX.timeSamples = GetComponent<AudioSource>().clip.samples;
-                transitionSFX.pitch = 1;
-                transitionSFX.Play();
-            }
+    void Start() {
+
+        transitionSFX = GetComponent<AudioSource>();
+        previousLayerIndex = 0;
+        previousSwitchWasDeeper = false;
+    }
+
+    void Update() {
+
+        int currentLayerIndex = globalGameData.GetCurrentLayerIndex();
+        if (currentLayerIndex > previousLayerIndex) { //deeper
             transitionSFX.pitch = 1;
-        }
-
-        if (Input.GetKeyDown(KeyCode.V))
-        {
-            if (!transitionSFX.isPlaying)
-            {
-                transitionSFX.timeSamples = GetComponent<AudioSource>().clip.samples - 1;
-                transitionSFX.pitch = -1.3f;
+            if (!transitionSFX.isPlaying || previousSwitchWasDeeper) {
+                transitionSFX.timeSamples = 0;
                 transitionSFX.Play();
             }
+            previousSwitchWasDeeper = true;
+        } else if (currentLayerIndex < previousLayerIndex) {  //shallower
             transitionSFX.pitch = -1.3f;
+            if (!transitionSFX.isPlaying || !previousSwitchWasDeeper) {
+                transitionSFX.timeSamples = transitionSFX.clip.samples - 1;
+                transitionSFX.Play();
+            }
+            previousSwitchWasDeeper = false;
         }
+        previousLayerIndex = currentLayerIndex;
     }
 
 }

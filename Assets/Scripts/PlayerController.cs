@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
         if (currentLayerIndex != previousLayerIndex) {
             //Update this player layer
             GetComponent<PlayerDeath>().layer = globalGameData.allLayers[currentLayerIndex];
-            shield.SetActive(currentLayerIndex != 0);
+            shield.SetActive(currentLayerIndex == 1);
             shieldCircle.SetActive(currentLayerIndex != 0);
 
             if (previousLayerIndex < currentLayerIndex) {

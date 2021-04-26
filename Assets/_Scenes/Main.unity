@@ -480,6 +480,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 881666438751935006, guid: 7975d0cdd04cf034db281fc772fa049a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618840042058674275, guid: 7975d0cdd04cf034db281fc772fa049a, type: 3}
+      propertyPath: globalGameData
+      value: 
+      objectReference: {fileID: 11400000, guid: 3adb5f1c9bbdc0a42b037bc093611954, type: 2}
+    - target: {fileID: 3083686942545312050, guid: 7975d0cdd04cf034db281fc772fa049a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3083686942691969326, guid: 7975d0cdd04cf034db281fc772fa049a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3083686943003890264, guid: 7975d0cdd04cf034db281fc772fa049a, type: 3}
       propertyPath: m_Name
       value: Audio
@@ -530,6 +546,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3083686943003890266, guid: 7975d0cdd04cf034db281fc772fa049a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998181112076809237, guid: 7975d0cdd04cf034db281fc772fa049a, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
