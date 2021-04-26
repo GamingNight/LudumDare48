@@ -131,7 +131,7 @@ MonoBehaviour:
   InstantiateDelayInSecond: 0
   spawnerFrequency: 0.3
   spawnerShift: {x: 0, y: -0.636, z: 0}
-  N: 18
+  N: 16
   layerData: {fileID: 11400000, guid: 5eda72367ca2c7849a5125f3f52a8123, type: 2}
   globalGameData: {fileID: 11400000, guid: 3adb5f1c9bbdc0a42b037bc093611954, type: 2}
 --- !u!1 &2239731618271950012
@@ -302,7 +302,7 @@ MonoBehaviour:
   InstantiateDelayInSecond: 0
   spawnerFrequency: 0.3
   spawnerShift: {x: 0, y: 0.636, z: 0}
-  N: 18
+  N: 16
   layerData: {fileID: 11400000, guid: 5eda72367ca2c7849a5125f3f52a8123, type: 2}
   globalGameData: {fileID: 11400000, guid: 3adb5f1c9bbdc0a42b037bc093611954, type: 2}
 --- !u!114 &2239731617960838519
@@ -652,7 +652,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1702463609388389509, guid: a92463060be8906429b08211ad6addf6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.71
+      value: 12.08
       objectReference: {fileID: 0}
     - target: {fileID: 1702463609388389509, guid: a92463060be8906429b08211ad6addf6, type: 3}
       propertyPath: m_LocalPosition.y

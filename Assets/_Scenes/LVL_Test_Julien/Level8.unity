@@ -1068,6 +1068,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   globalGameData: {fileID: 11400000, guid: 3adb5f1c9bbdc0a42b037bc093611954, type: 2}
+  normalIndicator: {fileID: 0}
+  deeperIndicator: {fileID: 0}
+  deeperAndDeeperIndicator: {fileID: 0}
 --- !u!1001 &3539884392752399139
 PrefabInstance:
   m_ObjectHideFlags: 0

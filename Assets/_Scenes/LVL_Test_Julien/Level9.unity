@@ -1020,6 +1020,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   globalGameData: {fileID: 11400000, guid: 3adb5f1c9bbdc0a42b037bc093611954, type: 2}
+  normalIndicator: {fileID: 0}
+  deeperIndicator: {fileID: 0}
+  deeperAndDeeperIndicator: {fileID: 0}
 --- !u!1 &1870613839
 GameObject:
   m_ObjectHideFlags: 0
