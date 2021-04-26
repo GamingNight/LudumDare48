@@ -63,7 +63,7 @@ public class ProjectileMove : MonoBehaviour
         }
         if (killerLayer  > 1)
         {
-            spriteRenderer.color = Color.yellow;
+            spriteRenderer.color = Color.blue;
         }
     }
 

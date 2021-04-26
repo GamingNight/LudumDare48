@@ -5049,6 +5049,8 @@ MonoBehaviour:
   projectileData: {fileID: 11400000, guid: 618a51e836313c24ca71f9eb97569075, type: 2}
   direction: 3
   globalGameData: {fileID: 11400000, guid: 3adb5f1c9bbdc0a42b037bc093611954, type: 2}
+  spriteRendererDepper: {fileID: 8565704627501872084, guid: 9e25dc6b002f947479a7e62643b4676a, type: 3}
+  spriteRendererDepperAndDepper: {fileID: 8565704627501872084, guid: 35b0e77cbd47227429d7e3480dc5e8f8, type: 3}
 --- !u!50 &6354696774233248581
 Rigidbody2D:
   serializedVersion: 4
