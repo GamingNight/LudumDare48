@@ -20152,6 +20152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ced956a9bdd234945b986100083d8e14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  globalGameData: {fileID: 11400000, guid: 3adb5f1c9bbdc0a42b037bc093611954, type: 2}
 --- !u!60 &8884874849919773161
 PolygonCollider2D:
   m_ObjectHideFlags: 0

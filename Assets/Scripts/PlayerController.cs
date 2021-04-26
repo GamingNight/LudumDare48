@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
 
         if (lockController)
             return;
-        
+
         int currentLayerIndex = globalGameData.GetCurrentLayerIndex();
         if (currentLayerIndex != previousLayerIndex) {
             //Update this player layer
@@ -66,8 +66,8 @@ public class PlayerController : MonoBehaviour
             }
             previousLayerIndex = currentLayerIndex;
         }
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
+        float horizontal = globalGameData.GetPlayerHorizontalMove();//Input.GetAxisRaw("Horizontal");
+        float vertical = globalGameData.GetPlayerVerticalMove();//Input.GetAxisRaw("Vertical");
         if (horizontal > 0) {
             transform.Translate(Vector3.right * Time.deltaTime * Speed);
         }

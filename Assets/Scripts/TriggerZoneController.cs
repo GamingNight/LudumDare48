@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TriggerZoneController : MonoBehaviour
 {
+    public GlobalGameData globalGameData;
 
     private List<ProjectileMove> projectileList;
 
@@ -18,8 +19,8 @@ public class TriggerZoneController : MonoBehaviour
     // Update is called once per frame
     void Update() {
 
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
+        float horizontal = globalGameData.GetPlayerHorizontalMove();
+        float vertical = globalGameData.GetPlayerVerticalMove();
         if (horizontal > 0) {
             if (vertical > 0) {
                 transform.Rotate(0f, 0f, -previousRotation + 45, Space.Self);

@@ -16,7 +16,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5eda72367ca2c7849a5125f3f52a8123, type: 2}
   - {fileID: 11400000, guid: 8e7db0481878b4846b3df3a30371d53e, type: 2}
   - {fileID: 11400000, guid: c6e9ead4d3f5b5747bc4eef8d470632c, type: 2}
-  playerLeftKeyCodes: 0000000000000000
-  playerRightKeyCodes: 
-  playerUpKeyCodes: 
-  playerDownKeyCodes: 
+  horizontalInput: {fileID: 11400000, guid: bb4d9da33fe05684c8dc7e3d9e8c52c9, type: 2}
+  verticalInput: {fileID: 11400000, guid: 88b37f892a8549e4ca03610478f3203d, type: 2}
+  incLayerInput: {fileID: 11400000, guid: 5fb9293a787769843a910b2000c73321, type: 2}
+  decLayerInput: {fileID: 11400000, guid: 83065a852a3f8b247ae826b608946fbf, type: 2}
