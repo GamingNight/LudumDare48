@@ -5,6 +5,9 @@ using UnityEngine;
 public class LayerManager : MonoBehaviour
 {
     public GlobalGameData globalGameData;
+    public GameObject normalIndicator;
+    public GameObject deeperIndicator;
+    public GameObject deeperAndDeeperIndicator;
 
     private void Awake() {
         globalGameData.InitLayer();
