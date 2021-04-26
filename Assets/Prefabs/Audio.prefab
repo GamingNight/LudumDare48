@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &916849846591819200
 Transform:
   m_ObjectHideFlags: 0
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c4d6186a6540e40a3fc6aa198d9707, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionSFX: {fileID: 315170152143974058}
+  globalGameData: {fileID: 11400000, guid: 3adb5f1c9bbdc0a42b037bc093611954, type: 2}
 --- !u!1 &3083686942545312050
 GameObject:
   m_ObjectHideFlags: 0
