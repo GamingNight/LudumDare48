@@ -5005,7 +5005,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.292, y: 0.172}
+    oldSize: {x: 0.368, y: 0.248}
     newSize: {x: 1.86, y: 2.08}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -5013,11 +5013,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.05971598, y: -0.111523524}
-      - {x: 0.1248211, y: 0.00027791597}
-      - {x: 0.06379064, y: 0.10567381}
-      - {x: -0.11941264, y: 0.104966596}
-      - {x: -0.12692043, y: -0.11032991}
+    - - {x: 0.07737707, y: -0.109346636}
+      - {x: 0.16335401, y: 0.0014082212}
+      - {x: 0.07536816, y: 0.10277922}
+      - {x: -0.15567407, y: 0.10402344}
+      - {x: -0.15996821, y: -0.10656406}
 --- !u!199 &682611118
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -5719,7 +5719,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: -0.03, y: 0, z: 0}
     m_Rotation: {x: 0, y: 90, z: 90}
-    m_Scale: {x: 0.1, y: 0, z: 0.14}
+    m_Scale: {x: 0.16, y: 0, z: 0.2}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
