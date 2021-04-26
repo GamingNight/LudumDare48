@@ -77,26 +77,21 @@ public class TriggerZoneController : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision) {
 
         if (collision.gameObject.tag == "Projectile") {
-        	ProjectileMove projectileMove = collision.gameObject.GetComponent<ProjectileMove>();
-        	int layerIndex = globalGameData.GetCurrentLayerIndex();
-        	if ((projectileMove.GetKillerLayer() + 1) == layerIndex)
-        	{
-        		projectileList.Add(projectileMove);
-        	}
-            
+            ProjectileMove projectileMove = collision.gameObject.GetComponent<ProjectileMove>();
+            int layerIndex = globalGameData.GetCurrentLayerIndex();
+            if (layerIndex == projectileMove.layerData.layerIndex + 1)
+                projectileList.Add(projectileMove);
+
         }
     }
 
     void OnTriggerExit2D(Collider2D collision) {
 
         if (collision.gameObject.tag == "Projectile") {
-        	ProjectileMove projectileMove = collision.gameObject.GetComponent<ProjectileMove>();
-        	int layerIndex = globalGameData.GetCurrentLayerIndex();
-        	if ((projectileMove.GetKillerLayer() + 1) == layerIndex)
-        	{
-        		projectileList.Remove(projectileMove);
-        	}
-            
+            ProjectileMove projectileMove = collision.gameObject.GetComponent<ProjectileMove>();
+            int layerIndex = globalGameData.GetCurrentLayerIndex();
+            if (layerIndex == projectileMove.layerData.layerIndex + 1)
+                projectileList.Remove(projectileMove);
         }
     }
 }

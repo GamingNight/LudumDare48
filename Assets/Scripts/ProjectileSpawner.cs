@@ -11,7 +11,6 @@ public class ProjectileSpawner : MonoBehaviour
     public float spawnOffsetInSeconds;
     public LayerData layerData;
     public GlobalGameData globalGameData;
-    public int killerLayer = 0;
 
     private bool fromGenerator = false;
 
@@ -55,7 +54,6 @@ public class ProjectileSpawner : MonoBehaviour
         } else if (transform.eulerAngles.z == 270) {
             clone.GetComponent<ProjectileMove>().direction = ProjectileMove.Direction.DOWN;
         }
-        clone.GetComponent<ProjectileMove>().SetKillerLayer(killerLayer);
     }
 
     public void Init() {

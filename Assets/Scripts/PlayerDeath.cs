@@ -13,15 +13,11 @@ public class PlayerDeath : MonoBehaviour
 
         if (collision.gameObject.tag == "Projectile") {
 
-        	ProjectileMove projectileMove = collision.gameObject.GetComponent<ProjectileMove>();
-        	int ProjectileKillerlayerIndex = projectileMove.GetKillerLayer();
+            ProjectileMove projectileMove = collision.gameObject.GetComponent<ProjectileMove>();
 
-        	// Old style
-/*            LayerData projectileLayer = ProjectileMove.layerData;
-            if (projectileLayer.layerIndex == layer.layerIndex) {*/
-
-            if (ProjectileKillerlayerIndex >= layer.layerIndex) {
-
+            // Old style
+            LayerData projectileLayer = projectileMove.layerData;
+            if (projectileLayer.layerIndex == layer.layerIndex) {
 
                 Transform t = transform;
                 int count = 0;
@@ -45,7 +41,7 @@ public class PlayerDeath : MonoBehaviour
 
     private void ResetLevel() {
         levelManager.resetLevel();
-        //globalGameData.UnlockInputs();
+        globalGameData.UnlockInputs();
         GetComponent<Animator>().SetBool("Dead", false);
     }
 }

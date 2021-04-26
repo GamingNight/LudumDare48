@@ -6,7 +6,6 @@ public class PlayerController : MonoBehaviour
 {
 
     public float Speed = 10f;
-    public LayerData layerData;
     public GlobalGameData globalGameData;
     public DummyController dummyController0;
     public DummyController dummyController1;
