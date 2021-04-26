@@ -18,6 +18,7 @@ public class ProjectileMove : MonoBehaviour
     private Vector2 initVelocity;
     private int previousLayerIndex;
     private bool firstUpdate;
+    private ParticleSystem.EmissionModule particleEmission;
     private ParticleSystem.MainModule particleMain;
 
     private Direction hitDirection;
@@ -51,6 +52,7 @@ public class ProjectileMove : MonoBehaviour
         rgbd.AddForce(initForce * projectileData.initForceFactor);
         previousLayerIndex = -1;
         firstUpdate = true;
+        particleEmission = GetComponent<ParticleSystem>().emission;
         particleMain = GetComponent<ParticleSystem>().main;
 
         hitDirection = Direction.NONE;
@@ -74,12 +76,14 @@ public class ProjectileMove : MonoBehaviour
             float speedFactor = globalGameData.allLayers[currentLayerIndex].layerSpeedFactors[projectileLayerIndex];
             if (speedFactor != -1) {
                 spriteRenderer.enabled = true;
+                particleEmission.enabled = true;
                 rgbd.velocity = initVelocity * speedFactor;
                 //Update also particle speed
                 particleMain.simulationSpeed = particleMain.simulationSpeed * speedFactor;
             } else {
                 spriteRenderer.enabled = false;
-                rgbd.velocity = initVelocity * 0;
+                //rgbd.velocity = initVelocity * 0;
+                particleEmission.enabled = false;
             }
 
 
