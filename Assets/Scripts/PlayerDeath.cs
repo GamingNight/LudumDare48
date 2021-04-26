@@ -6,6 +6,8 @@ public class PlayerDeath : MonoBehaviour
 {
     public LayerData layer;
     public GlobalGameData globalGameData;
+    public GameObject shield;
+    public GameObject shieldCircle;
 
     private LevelManager levelManager;
 
@@ -33,7 +35,10 @@ public class PlayerDeath : MonoBehaviour
                 }
                 globalGameData.LockInputs();
                 GetComponent<Animator>().SetBool("Dead", true);
-
+                if (shield != null) {
+                    shield.SetActive(false);
+                    shieldCircle.SetActive(false);
+                }
             }
         }
 

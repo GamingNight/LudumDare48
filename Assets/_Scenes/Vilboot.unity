@@ -11965,6 +11965,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 11400000, guid: 5eda72367ca2c7849a5125f3f52a8123, type: 2}
   globalGameData: {fileID: 11400000, guid: 3adb5f1c9bbdc0a42b037bc093611954, type: 2}
+  shield: {fileID: 4965053308902379418}
+  shieldCircle: {fileID: 2428369996010856415}
 --- !u!58 &2893138246265624555
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -12500,6 +12502,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 11400000, guid: 8e7db0481878b4846b3df3a30371d53e, type: 2}
   globalGameData: {fileID: 11400000, guid: 3adb5f1c9bbdc0a42b037bc093611954, type: 2}
+  shield: {fileID: 0}
+  shieldCircle: {fileID: 0}
 --- !u!114 &3958564630140806905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12514,6 +12518,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 11400000, guid: 5eda72367ca2c7849a5125f3f52a8123, type: 2}
   globalGameData: {fileID: 11400000, guid: 3adb5f1c9bbdc0a42b037bc093611954, type: 2}
+  shield: {fileID: 0}
+  shieldCircle: {fileID: 0}
 --- !u!1 &3973060295938282796
 GameObject:
   m_ObjectHideFlags: 0
