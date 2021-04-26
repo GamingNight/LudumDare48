@@ -54,6 +54,10 @@ public class ProjectileSpawner : MonoBehaviour
         } else if (transform.eulerAngles.z == 270) {
             clone.GetComponent<ProjectileMove>().direction = ProjectileMove.Direction.DOWN;
         }
+        if (gameObject.name == "ProjectileSpawner Deeper")
+        {
+            Debug.Log("InstatiateProjectile");
+        }
     }
 
     public void Init() {
