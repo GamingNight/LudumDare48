@@ -35,9 +35,7 @@ public class PlayerDeath : MonoBehaviour
                 }
                 globalGameData.LockInputs();
                 GetComponent<Animator>().SetBool("Dead", true);
-                Debug.Log("Deactivate shield by death");
                 if (shield != null) {
-                    Debug.Log("B Deactivate shield by death");
                     shield.SetActive(false);
                     shieldCircle.SetActive(false);
                 }
