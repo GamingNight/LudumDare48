@@ -905,7 +905,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8217823277699247225, guid: 65b648ba0c52bfc48929d8e7359a3986, type: 3}
       propertyPath: spawnFrequency
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 8217823277699247230, guid: 65b648ba0c52bfc48929d8e7359a3986, type: 3}
       propertyPath: m_Name
