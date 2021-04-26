@@ -11,7 +11,7 @@ public class RandomPitch : MonoBehaviour
     {
         
         audioSource = GetComponent<AudioSource>();
-        audioSource.pitch = (Random.Range(-1f, 1f));
+        audioSource.pitch = (Random.Range(0.9f, 1.1f));
         audioSource.Play();
 
     }
