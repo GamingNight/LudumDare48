@@ -77,7 +77,8 @@ public class PlayerController : MonoBehaviour
         if (horizontal == 0 && vertical == 0) {
             moveAudioSource.Stop();
         } else {
-            moveAudioSource.Play();
+            if (!moveAudioSource.isPlaying)
+                moveAudioSource.Play();
         }
     }
 
