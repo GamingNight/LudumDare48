@@ -344,7 +344,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8217823277699247225, guid: 65b648ba0c52bfc48929d8e7359a3986, type: 3}
       propertyPath: spawnOffsetInSeconds
-      value: 2.1
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 8217823277699247230, guid: 65b648ba0c52bfc48929d8e7359a3986, type: 3}
       propertyPath: m_Name
@@ -1511,7 +1511,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8217823277699247225, guid: 65b648ba0c52bfc48929d8e7359a3986, type: 3}
       propertyPath: spawnOffsetInSeconds
-      value: 12
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8217823277699247230, guid: 65b648ba0c52bfc48929d8e7359a3986, type: 3}
       propertyPath: m_Name
@@ -2615,7 +2615,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8217823277699247225, guid: 65b648ba0c52bfc48929d8e7359a3986, type: 3}
       propertyPath: spawnOffsetInSeconds
-      value: 12.1
+      value: 8.1
       objectReference: {fileID: 0}
     - target: {fileID: 8217823277699247230, guid: 65b648ba0c52bfc48929d8e7359a3986, type: 3}
       propertyPath: m_Name
@@ -2751,7 +2751,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8217823277699247225, guid: 65b648ba0c52bfc48929d8e7359a3986, type: 3}
       propertyPath: spawnOffsetInSeconds
-      value: 2.4
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 8217823277699247230, guid: 65b648ba0c52bfc48929d8e7359a3986, type: 3}
       propertyPath: m_Name
@@ -3497,7 +3497,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8217823277699247225, guid: 65b648ba0c52bfc48929d8e7359a3986, type: 3}
       propertyPath: spawnOffsetInSeconds
-      value: 12
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8217823277699247230, guid: 65b648ba0c52bfc48929d8e7359a3986, type: 3}
       propertyPath: m_Name
@@ -3917,7 +3917,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8217823277699247225, guid: 65b648ba0c52bfc48929d8e7359a3986, type: 3}
       propertyPath: spawnOffsetInSeconds
-      value: 12.2
+      value: 8.2
       objectReference: {fileID: 0}
     - target: {fileID: 8217823277699247230, guid: 65b648ba0c52bfc48929d8e7359a3986, type: 3}
       propertyPath: m_Name
@@ -3991,7 +3991,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8217823277699247225, guid: 65b648ba0c52bfc48929d8e7359a3986, type: 3}
       propertyPath: spawnOffsetInSeconds
-      value: 12.1
+      value: 8.1
       objectReference: {fileID: 0}
     - target: {fileID: 8217823277699247230, guid: 65b648ba0c52bfc48929d8e7359a3986, type: 3}
       propertyPath: m_Name
