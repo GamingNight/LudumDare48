@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public GameObject playerSprite;
     public GameObject shield;
     public GameObject shieldCircle;
+    public AudioSource moveAudioSource;
 
     private int previousLayerIndex;
     private SpriteRenderer spriteRenderer;
@@ -64,15 +65,19 @@ public class PlayerController : MonoBehaviour
         float vertical = globalGameData.GetPlayerVerticalMove();
         if (horizontal > 0) {
             transform.Translate(Vector3.right * Time.deltaTime * Speed);
-        }
-        if (horizontal < 0) {
+        } else if (horizontal < 0) {
             transform.Translate(Vector3.left * Time.deltaTime * Speed);
         }
         if (vertical > 0) {
             transform.Translate(new Vector3(0, 1, 0) * Time.deltaTime * Speed);
-        }
-        if (vertical < 0) {
+        } else if (vertical < 0) {
             transform.Translate(new Vector3(0, -1, 0) * Time.deltaTime * Speed);
+        }
+
+        if (horizontal == 0 && vertical == 0) {
+            moveAudioSource.Stop();
+        } else {
+            moveAudioSource.Play();
         }
     }
 
