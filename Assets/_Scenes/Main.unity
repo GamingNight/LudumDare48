@@ -1557,6 +1557,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   globalGameData: {fileID: 11400000, guid: 3adb5f1c9bbdc0a42b037bc093611954, type: 2}
+  normalIndicator: {fileID: 729218383}
+  deeperIndicator: {fileID: 729218382}
+  deeperAndDeeperIndicator: {fileID: 729218382}
 --- !u!1001 &305456216
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2981,6 +2984,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a36f2441cab61904ab5edf59c4add88d, type: 3}
+--- !u!1 &729218382 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2040583237962821233, guid: a36f2441cab61904ab5edf59c4add88d, type: 3}
+  m_PrefabInstance: {fileID: 729218381}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &729218383 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2040583237758911852, guid: a36f2441cab61904ab5edf59c4add88d, type: 3}
+  m_PrefabInstance: {fileID: 729218381}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &735248038
 GameObject:
   m_ObjectHideFlags: 0

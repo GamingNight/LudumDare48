@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2146672051824990668}
   m_Layer: 0
-  m_Name: Layer Selector
+  m_Name: Layer Selection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40,6 +40,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2146672051824990668}
     m_Modifications:
+    - target: {fileID: 7337900011555684872, guid: bc3ff12f6058ad343ab3879c580b60cf, type: 3}
+      propertyPath: m_Name
+      value: ONDepperAndDepper
+      objectReference: {fileID: 0}
     - target: {fileID: 7337900011555684879, guid: bc3ff12f6058ad343ab3879c580b60cf, type: 3}
       propertyPath: m_Color.b
       value: 0
@@ -110,6 +114,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2146672051824990668}
     m_Modifications:
+    - target: {fileID: 7337900011555684872, guid: bc3ff12f6058ad343ab3879c580b60cf, type: 3}
+      propertyPath: m_Name
+      value: ONNormal
+      objectReference: {fileID: 0}
     - target: {fileID: 7337900012125741660, guid: bc3ff12f6058ad343ab3879c580b60cf, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -172,6 +180,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2146672051824990668}
     m_Modifications:
+    - target: {fileID: 7337900011555684872, guid: bc3ff12f6058ad343ab3879c580b60cf, type: 3}
+      propertyPath: m_Name
+      value: ONDepper
+      objectReference: {fileID: 0}
     - target: {fileID: 7337900011555684879, guid: bc3ff12f6058ad343ab3879c580b60cf, type: 3}
       propertyPath: m_Color.r
       value: 0
