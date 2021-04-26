@@ -1979,7 +1979,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 2
-  layerData: {fileID: 11400000, guid: 5eda72367ca2c7849a5125f3f52a8123, type: 2}
   globalGameData: {fileID: 11400000, guid: 3adb5f1c9bbdc0a42b037bc093611954, type: 2}
   dummyController0: {fileID: 8718970553104235058}
   dummyController1: {fileID: 8718970551555605694}
@@ -12499,7 +12498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8768800e0bee946b120eddb641a46b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  layer: {fileID: 11400000, guid: 5eda72367ca2c7849a5125f3f52a8123, type: 2}
+  layer: {fileID: 11400000, guid: 8e7db0481878b4846b3df3a30371d53e, type: 2}
   globalGameData: {fileID: 11400000, guid: 3adb5f1c9bbdc0a42b037bc093611954, type: 2}
 --- !u!114 &3958564630140806905
 MonoBehaviour:
