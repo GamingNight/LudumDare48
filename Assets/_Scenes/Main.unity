@@ -1073,6 +1073,7 @@ MonoBehaviour:
   - {fileID: 294666661}
   - {fileID: 1082456175}
   - {fileID: 168487252}
+  - {fileID: 839466053}
   selectionLevelLevel: {fileID: 1064837440}
   globalGameData: {fileID: 11400000, guid: 3adb5f1c9bbdc0a42b037bc093611954, type: 2}
 --- !u!1 &565436787
@@ -1207,6 +1208,11 @@ Animator:
 Animator:
   m_CorrespondingSourceObject: {fileID: 2040583237758911850, guid: a36f2441cab61904ab5edf59c4add88d, type: 3}
   m_PrefabInstance: {fileID: 729218381}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &839466053 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1743086754102557696, guid: 29f5f53f59af73540b3c70acb11e0510, type: 3}
+  m_PrefabInstance: {fileID: 187054911}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &842676935
 PrefabInstance:
