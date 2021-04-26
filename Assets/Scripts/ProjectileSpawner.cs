@@ -12,7 +12,7 @@ public class ProjectileSpawner : MonoBehaviour
     public LayerData layerData;
     public GlobalGameData globalGameData;
 
-    private bool fromGenerator;
+    private bool fromGenerator = false;
 
     private float timeSinceLastSpawn;
     private float timeSinceStart;
@@ -20,7 +20,6 @@ public class ProjectileSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start() {
         Init();
-        fromGenerator = false;
     }
 
     // Update is called once per frame
