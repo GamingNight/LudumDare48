@@ -15,5 +15,5 @@ MonoBehaviour:
   layerIndex: 2
   layerSpeedFactors:
   - 0
-  - 0.5
+  - 0.1
   - 1
