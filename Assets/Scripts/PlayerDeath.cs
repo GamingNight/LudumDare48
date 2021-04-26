@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerDeath : MonoBehaviour
 {
     public LayerData layer;
+    public GlobalGameData globalGameData;
 
     private LevelManager levelManager;
 
@@ -27,8 +28,7 @@ public class PlayerDeath : MonoBehaviour
                     }
 
                 }
-                if (GetComponent<PlayerController>() != null)
-                    GetComponent<PlayerController>().LockController();
+                globalGameData.LockInputs();
                 GetComponent<Animator>().SetBool("Dead", true);
 
             }
@@ -38,8 +38,7 @@ public class PlayerDeath : MonoBehaviour
 
     private void ResetLevel() {
         levelManager.resetLevel();
-        if (GetComponent<PlayerController>() != null)
-            GetComponent<PlayerController>().UnlockController();
+        globalGameData.UnlockInputs();
         GetComponent<Animator>().SetBool("Dead", false);
     }
 }
