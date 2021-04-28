@@ -17,7 +17,6 @@ public class PlayerDeath : MonoBehaviour
 
             ProjectileMove projectileMove = collision.gameObject.GetComponent<ProjectileMove>();
 
-            // Old style
             LayerData projectileLayer = projectileMove.layerData;
             if (projectileLayer.layerIndex == layer.layerIndex) {
 

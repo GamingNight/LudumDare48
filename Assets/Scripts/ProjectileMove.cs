@@ -23,7 +23,6 @@ public class ProjectileMove : MonoBehaviour
 
     private Direction hitDirection;
     private float hitTranslationLength;
-    private Vector2 velocityBeforeHit;
     private bool hitLock;
 
     // Start is called before the first frame update
@@ -59,10 +58,7 @@ public class ProjectileMove : MonoBehaviour
         hitTranslationLength = 0;
         hitLock = false;
 
-        int currentLayerIndex = globalGameData.GetCurrentLayerIndex();
-        int projectileLayerIndex = layerData.layerIndex;
-        float speedFactor = globalGameData.allLayers[currentLayerIndex].layerSpeedFactors[projectileLayerIndex];
-        ManageSpeedFactor(speedFactor);
+        ComputeVelocity();
     }
 
     void FixedUpdate() {
@@ -76,12 +72,9 @@ public class ProjectileMove : MonoBehaviour
 
         //Regular move updated when current layer has changed
         if (globalGameData.GetCurrentLayerIndex() != previousLayerIndex) {
-            int currentLayerIndex = globalGameData.GetCurrentLayerIndex();
-            int projectileLayerIndex = layerData.layerIndex;
-            float speedFactor = globalGameData.allLayers[currentLayerIndex].layerSpeedFactors[projectileLayerIndex];
-            ManageSpeedFactor(speedFactor);
+            ComputeVelocity();
 
-            previousLayerIndex = currentLayerIndex;
+            previousLayerIndex = globalGameData.GetCurrentLayerIndex();
         }
 
         //Move when hit
@@ -116,13 +109,16 @@ public class ProjectileMove : MonoBehaviour
             //end of hit movement
             if (hitTranslationLength >= projectileData.hitTranslationLenght) {
                 hitDirection = Direction.NONE;
-                rgbd.velocity = velocityBeforeHit;
+                ComputeVelocity();
                 hitLock = false;
             }
         }
     }
 
-    private void ManageSpeedFactor(float speedFactor) {
+    private void ComputeVelocity() {
+        int currentLayerIndex = globalGameData.GetCurrentLayerIndex();
+        int projectileLayerIndex = layerData.layerIndex;
+        float speedFactor = globalGameData.allLayers[currentLayerIndex].layerSpeedFactors[projectileLayerIndex];
         if (speedFactor != -1) {
             spriteRenderer.enabled = true;
             particleEmission.enabled = true;
@@ -142,7 +138,6 @@ public class ProjectileMove : MonoBehaviour
             return;
         hitDirection = direction;
         hitTranslationLength = 0;
-        velocityBeforeHit = rgbd.velocity;
     }
 
     public void ExplodeProjectile() {
