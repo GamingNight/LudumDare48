@@ -55,21 +55,26 @@ public class TriggerZoneController : MonoBehaviour
 
         //if (Input.GetKey(KeyCode.Space))
         //{
-        foreach (ProjectileMove projectile in projectileList) {
-            ProjectileMove.Direction projectileDirection = ProjectileMove.Direction.NONE;
-            Vector3 projectilePos = projectile.transform.position;
-            float distX = projectilePos.x - transform.position.x;
-            float distY = projectilePos.y - transform.position.y;
-            if (distX > 0 && Mathf.Abs(distX) >= Mathf.Abs(distY)) {
-                projectileDirection = ProjectileMove.Direction.RIGHT;
-            } else if (distX < 0 && Mathf.Abs(distX) >= Mathf.Abs(distY)) {
-                projectileDirection = ProjectileMove.Direction.LEFT;
-            } else if (distY > 0 && Mathf.Abs(distY) >= Mathf.Abs(distX)) {
-                projectileDirection = ProjectileMove.Direction.UP;
-            } else if (distY < 0 && Mathf.Abs(distY) >= Mathf.Abs(distX)) {
-                projectileDirection = ProjectileMove.Direction.DOWN;
+        List<ProjectileMove> _projectileList = new List<ProjectileMove>(projectileList);
+        foreach (ProjectileMove projectile in _projectileList) {
+            if (projectile == null) // happen when the projectile has been destroyed by a collision with another projectile while still in the trigger zone
+                projectileList.Remove(projectile);
+            else {
+                ProjectileMove.Direction projectileDirection = ProjectileMove.Direction.NONE;
+                Vector3 projectilePos = projectile.transform.position;
+                float distX = projectilePos.x - transform.position.x;
+                float distY = projectilePos.y - transform.position.y;
+                if (distX > 0 && Mathf.Abs(distX) >= Mathf.Abs(distY)) {
+                    projectileDirection = ProjectileMove.Direction.RIGHT;
+                } else if (distX < 0 && Mathf.Abs(distX) >= Mathf.Abs(distY)) {
+                    projectileDirection = ProjectileMove.Direction.LEFT;
+                } else if (distY > 0 && Mathf.Abs(distY) >= Mathf.Abs(distX)) {
+                    projectileDirection = ProjectileMove.Direction.UP;
+                } else if (distY < 0 && Mathf.Abs(distY) >= Mathf.Abs(distX)) {
+                    projectileDirection = ProjectileMove.Direction.DOWN;
+                }
+                projectile.HitProjectile(projectileDirection);
             }
-            projectile.HitProjectile(projectileDirection);
         }
         //}
     }
