@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05cd303e6dec56847be42edffb579f6c, type: 3}
   m_Name: DeeperProjectileData
   m_EditorClassIdentifier: 
-  initForceFactor: 400
+  initForceFactor: 200
   hitTranslationSpeedPerLayer:
   - 4
   - 4
