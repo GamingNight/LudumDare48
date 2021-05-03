@@ -209,11 +209,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpawnerPrefab: {fileID: 8217823277699247230, guid: cf136900a39bbe149a68da9b0f9d35b9, type: 3}
-  spawnDelayInSecond: 0.1
-  InstantiateDelayInSecond: 0
-  spawnerFrequency: 0.3
-  spawnerShift: {x: 0, y: 0.636, z: 0}
-  N: 18
+  waveData:
+    position: {x: 0, y: 0}
+    rotation: 0
+    offsetInSeconds: 0
+    nbSpawner: 0
+    spawnerOffsetInSeconds: 0
+    spawnerFrequency: 0
+    spawnerShift: {x: 0, y: 0, z: 0}
   layerData: {fileID: 11400000, guid: 5eda72367ca2c7849a5125f3f52a8123, type: 2}
   globalGameData: {fileID: 11400000, guid: 3adb5f1c9bbdc0a42b037bc093611954, type: 2}
 --- !u!1 &2084330526
@@ -525,11 +528,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpawnerPrefab: {fileID: 8217823277699247230, guid: cf136900a39bbe149a68da9b0f9d35b9, type: 3}
-  spawnDelayInSecond: 0
-  InstantiateDelayInSecond: 0
-  spawnerFrequency: 3
-  spawnerShift: {x: 0, y: 0.636, z: 0}
-  N: 3
+  waveData:
+    position: {x: 0, y: 0}
+    rotation: 0
+    offsetInSeconds: 0
+    nbSpawner: 0
+    spawnerOffsetInSeconds: 0
+    spawnerFrequency: 0
+    spawnerShift: {x: 0, y: 0, z: 0}
   layerData: {fileID: 11400000, guid: 5eda72367ca2c7849a5125f3f52a8123, type: 2}
   globalGameData: {fileID: 11400000, guid: 3adb5f1c9bbdc0a42b037bc093611954, type: 2}
 --- !u!1 &2560902521392820021
@@ -547,7 +553,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2560902521392820010
 Transform:
   m_ObjectHideFlags: 0

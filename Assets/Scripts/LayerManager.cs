@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LayerManager : MonoBehaviour
 {
-    public GlobalGameData globalGameData;
+    public GlobalGameDataSO globalGameData;
     public Animator normalIndicator;
     public Animator deeperIndicator;
     public Animator deeperAndDeeperIndicator;

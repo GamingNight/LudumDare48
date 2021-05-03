@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StateSFX : MonoBehaviour
 {
-    public GlobalGameData globalGameData;
+    public GlobalGameDataSO globalGameData;
 
     private AudioSource transitionSFX;
     private int previousLayerIndex;

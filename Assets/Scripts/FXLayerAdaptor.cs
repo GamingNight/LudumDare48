@@ -5,7 +5,7 @@ using UnityEngine;
 public class FXLayerAdaptor : MonoBehaviour
 {
 
-    public GlobalGameData globalGameDate;
+    public GlobalGameDataSO globalGameDate;
 
     private Animator animator;
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Scriptable Objects/Layer")]
-public class LayerData : ScriptableObject
+public class LayerDataSO : ScriptableObject
 {
 
     public int layerIndex;

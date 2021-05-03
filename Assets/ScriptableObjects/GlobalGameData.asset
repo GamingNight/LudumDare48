@@ -20,3 +20,4 @@ MonoBehaviour:
   verticalInput: {fileID: 11400000, guid: 88b37f892a8549e4ca03610478f3203d, type: 2}
   incLayerInput: {fileID: 11400000, guid: 5fb9293a787769843a910b2000c73321, type: 2}
   decLayerInput: {fileID: 11400000, guid: 83065a852a3f8b247ae826b608946fbf, type: 2}
+  restartInput: {fileID: 11400000, guid: 2b2a801629dabfa42bdbc80cf75b603a, type: 2}

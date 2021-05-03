@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Scriptable Objects/Player Input")]
-public class PlayerInput : ScriptableObject
+public class PlayerInputSO : ScriptableObject
 {
     public bool lockInput;
     public string axis;

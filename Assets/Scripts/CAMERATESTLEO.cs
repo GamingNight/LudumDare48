@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CAMERATESTLEO : MonoBehaviour
 {
-    public GlobalGameData globalGameData;
+    public GlobalGameDataSO globalGameData;
     public Animator anim;
 
     private int lastIndex = -1;

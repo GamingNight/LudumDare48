@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Scriptable Objects/Global Game Data")]
-public class GlobalGameData : ScriptableObject
+public class GlobalGameDataSO : ScriptableObject
 {
-    public LayerData[] allLayers;
-    public PlayerInput horizontalInput;
-    public PlayerInput verticalInput;
-    public PlayerInput incLayerInput;
-    public PlayerInput decLayerInput;
+    public LayerDataSO[] allLayers;
+    public PlayerInputSO horizontalInput;
+    public PlayerInputSO verticalInput;
+    public PlayerInputSO incLayerInput;
+    public PlayerInputSO decLayerInput;
+    public PlayerInputSO restartInput;
 
     private int currentLayerIndex = 0;
 
@@ -51,11 +52,17 @@ public class GlobalGameData : ScriptableObject
         return decLayerInput.GetButtonDown();
     }
 
+    public bool GetRestartButtonDown() {
+
+        return restartInput.GetButtonDown();
+    }
+
     public void LockInputs() {
         horizontalInput.lockInput = true;
         verticalInput.lockInput = true;
         incLayerInput.lockInput = true;
         decLayerInput.lockInput = true;
+        restartInput.lockInput = true;
     }
 
     public void UnlockInputs() {
@@ -63,5 +70,6 @@ public class GlobalGameData : ScriptableObject
         verticalInput.lockInput = false;
         incLayerInput.lockInput = false;
         decLayerInput.lockInput = false;
+        restartInput.lockInput = false;
     }
 }

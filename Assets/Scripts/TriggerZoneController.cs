@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TriggerZoneController : MonoBehaviour
 {
-    public GlobalGameData globalGameData;
+    public GlobalGameDataSO globalGameData;
 
     private List<ProjectileMove> projectileList;
 

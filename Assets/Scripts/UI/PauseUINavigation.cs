@@ -8,7 +8,7 @@ public class PauseUINavigation : MonoBehaviour
 
 	public GameObject pauseCanvas;
 	public GameObject selector;
-	public LevelManager levelManager;
+	public LevelManagerOld levelManager;
     public Text restart;
     public Text levelList;
     public Text quit;

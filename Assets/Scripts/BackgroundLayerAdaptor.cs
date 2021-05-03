@@ -5,7 +5,7 @@ using UnityEngine;
 public class BackgroundLayerAdaptor : MonoBehaviour
 {
 
-    public GlobalGameData globalGameDate;
+    public GlobalGameDataSO globalGameDate;
 
     private Animator[] allChildrenAnimators;
     // Start is called before the first frame update

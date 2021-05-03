@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d07c7dbf4291d4da164a711897be58, type: 3}
+  m_Name: Level2
+  m_EditorClassIdentifier: 
+  levelIndex: 2
+  playerSpawnPosition:
+    position: {x: 0.76, y: 3.5}
+  switchTileDataList:
+  - position: {x: 9.71, y: 3.5}
+    actionType: 0
+    color: {r: 1, g: 1, b: 1, a: 1}
+    targetLevelIndex: 3
+    textSprite: {fileID: 0}
+    levelDigitSprites: []
+  - position: {x: 0.76, y: 0.76}
+    actionType: 0
+    color: {r: 1, g: 1, b: 1, a: 1}
+    targetLevelIndex: 0
+    textSprite: {fileID: 21300000, guid: 97be15d31f67d5946b69f2d916139217, type: 3}
+    levelDigitSprites: []
+  levelIndicatorSpriteData:
+    sprite: {fileID: 21300000, guid: 699a9dc69488ea749bbdb6084a42f7ca, type: 3}
+  backgroundSpriteData:
+    sprite: {fileID: 21300000, guid: ac5e5a035c011264ebcf4e6442e14613, type: 3}
+  layer0SpawnerDataList:
+  - position: {x: 12.62, y: 0.318}
+    rotation: 180
+    frequency: 0.01
+    offsetInSeconds: 3
+  - position: {x: 12.62, y: 0.954}
+    rotation: 180
+    frequency: 0.01
+    offsetInSeconds: 3
+  - position: {x: 12.62, y: 1.59}
+    rotation: 180
+    frequency: 0.01
+    offsetInSeconds: 3
+  - position: {x: 12.62, y: 2.226}
+    rotation: 180
+    frequency: 0.01
+    offsetInSeconds: 3
+  - position: {x: 12.62, y: 2.862}
+    rotation: 180
+    frequency: 0.01
+    offsetInSeconds: 3
+  - position: {x: 12.62, y: 3.5}
+    rotation: 180
+    frequency: 0.01
+    offsetInSeconds: 3
+  - position: {x: 12.62, y: 4.134}
+    rotation: 180
+    frequency: 0.01
+    offsetInSeconds: 3
+  - position: {x: 12.62, y: 4.77}
+    rotation: 180
+    frequency: 0.01
+    offsetInSeconds: 3
+  - position: {x: 12.62, y: 5.406}
+    rotation: 180
+    frequency: 0.01
+    offsetInSeconds: 3
+  - position: {x: 12.62, y: 6.042}
+    rotation: 180
+    frequency: 0.01
+    offsetInSeconds: 3
+  - position: {x: 12.62, y: 6.678}
+    rotation: 180
+    frequency: 0.01
+    offsetInSeconds: 3
+  layer1SpawnerDataList: []
+  layer2SpawnerDataList: []
+  layer0WaveDataList: []
+  layer1WaveDataList: []
+  layer2WaveDataList: []
+  isEndLevel: 0

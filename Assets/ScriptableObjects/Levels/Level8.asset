@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d07c7dbf4291d4da164a711897be58, type: 3}
+  m_Name: Level8
+  m_EditorClassIdentifier: 
+  levelIndex: 8
+  playerSpawnPosition:
+    position: {x: 0.76, y: 3.5}
+  switchTileDataList:
+  - position: {x: 11.94, y: 3.5}
+    actionType: 0
+    color: {r: 1, g: 1, b: 1, a: 1}
+    targetLevelIndex: 9
+    textSprite: {fileID: 0}
+    levelDigitSprites: []
+  - position: {x: 0.76, y: 0.76}
+    actionType: 0
+    color: {r: 1, g: 1, b: 1, a: 1}
+    targetLevelIndex: 0
+    textSprite: {fileID: 21300000, guid: 97be15d31f67d5946b69f2d916139217, type: 3}
+    levelDigitSprites: []
+  levelIndicatorSpriteData:
+    sprite: {fileID: 21300000, guid: c115822ad77c79d4384c2fbb4515e89f, type: 3}
+  backgroundSpriteData:
+    sprite: {fileID: 0}
+  layer0SpawnerDataList:
+  - position: {x: 9.858, y: 0.08}
+    rotation: 90
+    frequency: 2.5
+    offsetInSeconds: 0
+  layer1SpawnerDataList: []
+  layer2SpawnerDataList: []
+  layer0WaveDataList:
+  - position: {x: 1.59, y: 7.24}
+    rotation: -90
+    offsetInSeconds: 0
+    nbSpawner: 16
+    spawnerOffsetInSeconds: 0.1
+    spawnerFrequency: 0.3
+    spawnerShift: {x: 0, y: 0.636, z: 0}
+  layer1WaveDataList: []
+  layer2WaveDataList: []
+  isEndLevel: 0

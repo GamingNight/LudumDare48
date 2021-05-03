@@ -9,10 +9,10 @@ public class ProjectileMove : MonoBehaviour
         UP, DOWN, LEFT, RIGHT, NONE
     }
 
-    public LayerData layerData;
-    public ProjectileDefaultData projectileData;
+    public LayerDataSO layerData;
+    public ProjectileDefaultDataSO projectileData;
     public Direction direction = Direction.UP;
-    public GlobalGameData globalGameData;
+    public GlobalGameDataSO globalGameData;
     private Rigidbody2D rgbd;
     private SpriteRenderer spriteRenderer;
     private Vector2 initVelocity;
@@ -62,7 +62,6 @@ public class ProjectileMove : MonoBehaviour
     }
 
     void FixedUpdate() {
-
         if (firstUpdate) {
             initVelocity = rgbd.velocity;
             if (initVelocity == Vector2.zero)

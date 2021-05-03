@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Scriptable Objects/Projectile Data")]
-public class ProjectileDefaultData : ScriptableObject
+public class ProjectileDefaultDataSO : ScriptableObject
 {
     /// <summary>
     /// Initial force multiplier impulsed to the projectile in order to make it move.

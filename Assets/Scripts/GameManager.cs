@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public GlobalGameData globalGameData;
+    public GlobalGameDataSO globalGameData;
     void Awake() {
         globalGameData.UnlockInputs();
+        Cursor.visible = false;
     }
 }

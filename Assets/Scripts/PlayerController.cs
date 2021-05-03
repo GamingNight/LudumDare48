@@ -6,30 +6,36 @@ public class PlayerController : MonoBehaviour
 {
 
     public float Speed = 10f;
-    public GlobalGameData globalGameData;
+    public GlobalGameDataSO globalGameData;
     public DummyController dummyController0;
     public DummyController dummyController1;
     public GameObject playerSprite;
     public GameObject shield;
     public GameObject shieldCircle;
     public AudioSource moveAudioSource;
+    public PositionData initPositionData;
 
     private int previousLayerIndex;
     private SpriteRenderer spriteRenderer;
-    private Vector3 initPosition;
     ParticleSystem.MainModule particleMainModule;
+
+    private PositionData previousPositionData;
 
     // Start is called before the first frame update
     void Start() {
         spriteRenderer = playerSprite.GetComponent<SpriteRenderer>();
         particleMainModule = GetComponent<ParticleSystem>().main;
         previousLayerIndex = -1;
-        initPosition = transform.position;
+
+        transform.position = initPositionData.position;
+        previousPositionData = initPositionData.Copy();
+        ResetPosition();
     }
 
     // Update is called once per frame
     void Update() {
 
+        CheckForLevelEditing();
         int currentLayerIndex = globalGameData.GetCurrentLayerIndex();
         if (currentLayerIndex != previousLayerIndex) {
             //Update this player layer
@@ -92,10 +98,16 @@ public class PlayerController : MonoBehaviour
     }
 
     public void ResetPosition() {
-        transform.position = initPosition;
+        transform.position = initPositionData.position;
         dummyController0.Depop();
         dummyController1.Depop();
-        dummyController0.transform.position = initPosition;
-        dummyController1.transform.position = initPosition;
+        dummyController0.transform.position = initPositionData.position;
+        dummyController1.transform.position = initPositionData.position;
+    }
+    private void CheckForLevelEditing() {
+        if (previousPositionData.position != initPositionData.position) {
+            ResetPosition();
+            previousPositionData = initPositionData.Copy();
+        }
     }
 }

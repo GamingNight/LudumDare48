@@ -1,0 +1,139 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d07c7dbf4291d4da164a711897be58, type: 3}
+  m_Name: LevelSelector
+  m_EditorClassIdentifier: 
+  levelIndex: -1
+  playerSpawnPosition:
+    position: {x: 0.61, y: 3.5}
+  switchTileDataList:
+  - position: {x: 0.76, y: 0.76}
+    actionType: 0
+    color: {r: 1, g: 1, b: 1, a: 1}
+    targetLevelIndex: 0
+    textSprite: {fileID: 21300000, guid: 97be15d31f67d5946b69f2d916139217, type: 3}
+    levelDigitSprites: []
+  - position: {x: 3.82, y: 4.53}
+    actionType: 0
+    color: {r: 1, g: 1, b: 1, a: 1}
+    targetLevelIndex: 1
+    textSprite: {fileID: 0}
+    levelDigitSprites:
+    - {fileID: 21300000, guid: bb3fe65054f3db7449250f94ed814d48, type: 3}
+    - {fileID: 21300000, guid: a6c0357d4ba7a8e4499898f56cb5d409, type: 3}
+  - position: {x: 3.82, y: 3.03}
+    actionType: 0
+    color: {r: 1, g: 1, b: 1, a: 1}
+    targetLevelIndex: 2
+    textSprite: {fileID: 0}
+    levelDigitSprites:
+    - {fileID: 21300000, guid: bb3fe65054f3db7449250f94ed814d48, type: 3}
+    - {fileID: 21300000, guid: 16ebce576fc513d4994c9cb57572bbe9, type: 3}
+  - position: {x: 3.82, y: 1.53}
+    actionType: 0
+    color: {r: 1, g: 1, b: 1, a: 1}
+    targetLevelIndex: 3
+    textSprite: {fileID: 0}
+    levelDigitSprites:
+    - {fileID: 21300000, guid: bb3fe65054f3db7449250f94ed814d48, type: 3}
+    - {fileID: 21300000, guid: b98968250294fc340a157f7c352a6fdb, type: 3}
+  - position: {x: 5.32, y: 4.53}
+    actionType: 0
+    color: {r: 1, g: 1, b: 1, a: 1}
+    targetLevelIndex: 4
+    textSprite: {fileID: 0}
+    levelDigitSprites:
+    - {fileID: 21300000, guid: bb3fe65054f3db7449250f94ed814d48, type: 3}
+    - {fileID: 21300000, guid: 9b8c8791dece8904999cde86713dae49, type: 3}
+  - position: {x: 5.32, y: 3.03}
+    actionType: 0
+    color: {r: 1, g: 1, b: 1, a: 1}
+    targetLevelIndex: 5
+    textSprite: {fileID: 0}
+    levelDigitSprites:
+    - {fileID: 21300000, guid: bb3fe65054f3db7449250f94ed814d48, type: 3}
+    - {fileID: 21300000, guid: 52468f42666f925479f4561da7d27d47, type: 3}
+  - position: {x: 5.32, y: 1.53}
+    actionType: 0
+    color: {r: 1, g: 1, b: 1, a: 1}
+    targetLevelIndex: 6
+    textSprite: {fileID: 0}
+    levelDigitSprites:
+    - {fileID: 21300000, guid: bb3fe65054f3db7449250f94ed814d48, type: 3}
+    - {fileID: 21300000, guid: 442bbfbd6a46d134e89e3b3e6e49f230, type: 3}
+  - position: {x: 6.82, y: 4.53}
+    actionType: 0
+    color: {r: 1, g: 1, b: 1, a: 1}
+    targetLevelIndex: 7
+    textSprite: {fileID: 0}
+    levelDigitSprites:
+    - {fileID: 21300000, guid: bb3fe65054f3db7449250f94ed814d48, type: 3}
+    - {fileID: 21300000, guid: 27b1f9ec4094eda46926877bc03fce08, type: 3}
+  - position: {x: 6.82, y: 3.03}
+    actionType: 0
+    color: {r: 1, g: 1, b: 1, a: 1}
+    targetLevelIndex: 8
+    textSprite: {fileID: 0}
+    levelDigitSprites:
+    - {fileID: 21300000, guid: bb3fe65054f3db7449250f94ed814d48, type: 3}
+    - {fileID: 21300000, guid: d70c48d54ffa26848a0424dcf3db8236, type: 3}
+  - position: {x: 6.82, y: 1.53}
+    actionType: 0
+    color: {r: 1, g: 1, b: 1, a: 1}
+    targetLevelIndex: 9
+    textSprite: {fileID: 0}
+    levelDigitSprites:
+    - {fileID: 21300000, guid: bb3fe65054f3db7449250f94ed814d48, type: 3}
+    - {fileID: 21300000, guid: 7cff6e0d2adc78c4d85268cc5f34474f, type: 3}
+  - position: {x: 8.32, y: 4.53}
+    actionType: 0
+    color: {r: 1, g: 1, b: 1, a: 1}
+    targetLevelIndex: 10
+    textSprite: {fileID: 0}
+    levelDigitSprites:
+    - {fileID: 21300000, guid: a6c0357d4ba7a8e4499898f56cb5d409, type: 3}
+    - {fileID: 21300000, guid: bb3fe65054f3db7449250f94ed814d48, type: 3}
+  - position: {x: 8.32, y: 3.03}
+    actionType: 0
+    color: {r: 1, g: 1, b: 1, a: 1}
+    targetLevelIndex: 11
+    textSprite: {fileID: 0}
+    levelDigitSprites:
+    - {fileID: 21300000, guid: a6c0357d4ba7a8e4499898f56cb5d409, type: 3}
+    - {fileID: 21300000, guid: a6c0357d4ba7a8e4499898f56cb5d409, type: 3}
+  - position: {x: 8.32, y: 1.53}
+    actionType: 0
+    color: {r: 1, g: 1, b: 1, a: 1}
+    targetLevelIndex: 12
+    textSprite: {fileID: 0}
+    levelDigitSprites:
+    - {fileID: 21300000, guid: a6c0357d4ba7a8e4499898f56cb5d409, type: 3}
+    - {fileID: 21300000, guid: 16ebce576fc513d4994c9cb57572bbe9, type: 3}
+  - position: {x: 9.82, y: 3.03}
+    actionType: 0
+    color: {r: 1, g: 0, b: 1, a: 1}
+    targetLevelIndex: 13
+    textSprite: {fileID: 0}
+    levelDigitSprites:
+    - {fileID: 21300000, guid: a6c0357d4ba7a8e4499898f56cb5d409, type: 3}
+    - {fileID: 21300000, guid: b98968250294fc340a157f7c352a6fdb, type: 3}
+  levelIndicatorSpriteData:
+    sprite: {fileID: 0}
+  backgroundSpriteData:
+    sprite: {fileID: 21300000, guid: 85b6f3aa97f0d6a4896614e8599d7647, type: 3}
+  layer0SpawnerDataList: []
+  layer1SpawnerDataList: []
+  layer2SpawnerDataList: []
+  layer0WaveDataList: []
+  layer1WaveDataList: []
+  layer2WaveDataList: []
+  isEndLevel: 0
