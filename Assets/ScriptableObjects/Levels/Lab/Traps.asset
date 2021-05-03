@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1d07c7dbf4291d4da164a711897be58, type: 3}
   m_Name: Traps
   m_EditorClassIdentifier: 
-  levelIndex: 0
+  levelIndex: 18
   playerSpawnPosition:
     position: {x: 6, y: 3.5}
   switchTileDataList:
   - position: {x: 10.5, y: 3.5}
     actionType: 0
     color: {r: 1, g: 1, b: 1, a: 1}
-    targetLevelIndex: 0
+    targetLevelIndex: 14
     textSprite: {fileID: 0}
     levelDigitSprites: []
   - position: {x: 9, y: 3.5}
