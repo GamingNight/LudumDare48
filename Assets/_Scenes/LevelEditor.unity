@@ -791,7 +791,7 @@ PrefabInstance:
     - target: {fileID: 7707824868078148992, guid: 154015de86951e54493adf821b83f0ac, type: 3}
       propertyPath: levelDataSOList.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: f2f84fe0988cfb74a9b32f4e8bf84b66, type: 2}
+      objectReference: {fileID: 11400000, guid: 8e3bc1e961e5712479aa9b5554faaaf9, type: 2}
     - target: {fileID: 7707824868078148994, guid: 154015de86951e54493adf821b83f0ac, type: 3}
       propertyPath: m_Name
       value: LevelEditor
@@ -859,7 +859,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc70ef8542be79346bacb604423a5192, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: {fileID: 11400000, guid: f2f84fe0988cfb74a9b32f4e8bf84b66, type: 2}
+  level: {fileID: 11400000, guid: 8e3bc1e961e5712479aa9b5554faaaf9, type: 2}
 --- !u!114 &1434448911 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7707824868078148992, guid: 154015de86951e54493adf821b83f0ac, type: 3}
