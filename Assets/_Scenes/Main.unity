@@ -990,7 +990,7 @@ PrefabInstance:
       objectReference: {fileID: 1407539159}
     - target: {fileID: 7707824868078148992, guid: 154015de86951e54493adf821b83f0ac, type: 3}
       propertyPath: levelDataSOList.Array.size
-      value: 16
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 7707824868078148992, guid: 154015de86951e54493adf821b83f0ac, type: 3}
       propertyPath: levelDataSOList.Array.data[0]
@@ -1056,6 +1056,14 @@ PrefabInstance:
       propertyPath: levelDataSOList.Array.data[15]
       value: 
       objectReference: {fileID: 11400000, guid: b8dc5fc765a3eb94da8a5391be395238, type: 2}
+    - target: {fileID: 7707824868078148992, guid: 154015de86951e54493adf821b83f0ac, type: 3}
+      propertyPath: levelDataSOList.Array.data[16]
+      value: 
+      objectReference: {fileID: 11400000, guid: 6496894a7f072ba47a5293b352b52e92, type: 2}
+    - target: {fileID: 7707824868078148992, guid: 154015de86951e54493adf821b83f0ac, type: 3}
+      propertyPath: levelDataSOList.Array.data[17]
+      value: 
+      objectReference: {fileID: 11400000, guid: f2f84fe0988cfb74a9b32f4e8bf84b66, type: 2}
     - target: {fileID: 7707824868078148994, guid: 154015de86951e54493adf821b83f0ac, type: 3}
       propertyPath: m_Name
       value: LevelManager

@@ -7,7 +7,7 @@ public class SwitchTileData
 {
     public Vector2 position;
     public AbstractSwitchTileAction.ActionType actionType;
-    public Color color = Color.white;
+    public Color color;
     public int targetLevelIndex;
     public Sprite textSprite;
     public Sprite[] levelDigitSprites;

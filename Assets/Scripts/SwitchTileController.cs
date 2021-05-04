@@ -59,10 +59,6 @@ public class SwitchTileController : MonoBehaviour
                 tileData.position = transform.position;
                 previousData = tileData.Copy();
             }
-            if (spriteRenderer.color != tileData.color) {
-                tileData.color = spriteRenderer.color;
-                previousData = tileData.Copy();
-            }
         }
     }
 
