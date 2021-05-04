@@ -22,6 +22,12 @@ MonoBehaviour:
     targetLevelIndex: 0
     textSprite: {fileID: 21300000, guid: 97be15d31f67d5946b69f2d916139217, type: 3}
     levelDigitSprites: []
+  - position: {x: 7.85, y: 0.99}
+    actionType: 0
+    color: {r: 1, g: 0, b: 1, a: 1}
+    targetLevelIndex: 14
+    textSprite: {fileID: 21300000, guid: 1812f383ffccbaa40b1aacd9a4c290d7, type: 3}
+    levelDigitSprites: []
   levelIndicatorSpriteData:
     sprite: {fileID: 0}
   backgroundSpriteData:
