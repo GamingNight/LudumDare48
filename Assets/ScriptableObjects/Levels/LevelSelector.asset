@@ -118,24 +118,24 @@ MonoBehaviour:
     levelDigitSprites:
     - {fileID: 21300000, guid: a6c0357d4ba7a8e4499898f56cb5d409, type: 3}
     - {fileID: 21300000, guid: 16ebce576fc513d4994c9cb57572bbe9, type: 3}
-  - position: {x: 9.82, y: 3.03}
+  - position: {x: 9.82, y: 4.53}
     actionType: 0
-    color: {r: 1, g: 0, b: 1, a: 1}
+    color: {r: 1, g: 1, b: 1, a: 1}
     targetLevelIndex: 13
     textSprite: {fileID: 0}
     levelDigitSprites:
     - {fileID: 21300000, guid: a6c0357d4ba7a8e4499898f56cb5d409, type: 3}
     - {fileID: 21300000, guid: b98968250294fc340a157f7c352a6fdb, type: 3}
-  - position: {x: 11.32, y: 3.03}
+  - position: {x: 9.82, y: 3.03}
     actionType: 0
     color: {r: 1, g: 0, b: 1, a: 1}
     targetLevelIndex: 14
-    textSprite: {fileID: 21300000, guid: 1812f383ffccbaa40b1aacd9a4c290d7, type: 3}
+    textSprite: {fileID: 21300000, guid: 00e70fc5921012d4099de4285fd692d0, type: 3}
     levelDigitSprites: []
   levelIndicatorSpriteData:
     sprite: {fileID: 0}
   backgroundSpriteData:
-    sprite: {fileID: 21300000, guid: 85b6f3aa97f0d6a4896614e8599d7647, type: 3}
+    sprite: {fileID: 21300000, guid: 378703bf8ae953b4a9ba19dad94ae7dc, type: 3}
   layer0SpawnerDataList: []
   layer1SpawnerDataList: []
   layer2SpawnerDataList: []
