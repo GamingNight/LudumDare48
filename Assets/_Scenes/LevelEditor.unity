@@ -790,12 +790,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7707824868078148992, guid: 154015de86951e54493adf821b83f0ac, type: 3}
       propertyPath: levelDataSOList.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7707824868078148992, guid: 154015de86951e54493adf821b83f0ac, type: 3}
       propertyPath: levelDataSOList.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: b8dc5fc765a3eb94da8a5391be395238, type: 2}
+    - target: {fileID: 7707824868078148992, guid: 154015de86951e54493adf821b83f0ac, type: 3}
+      propertyPath: levelDataSOList.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8940b64587f971e4c85bce5fc2b83575, type: 2}
     - target: {fileID: 7707824868078148994, guid: 154015de86951e54493adf821b83f0ac, type: 3}
       propertyPath: m_Name
       value: LevelEditor
@@ -863,7 +867,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc70ef8542be79346bacb604423a5192, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: {fileID: 11400000, guid: b8dc5fc765a3eb94da8a5391be395238, type: 2}
 --- !u!114 &1434448911 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7707824868078148992, guid: 154015de86951e54493adf821b83f0ac, type: 3}

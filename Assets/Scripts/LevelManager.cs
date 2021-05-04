@@ -252,18 +252,8 @@ public class LevelManager : MonoBehaviour
         return res;
     }
 
-    public ProjectileSpawner FindSpawner(SpawnerData data) {
-        ProjectileSpawner spawner = null;
-        int i = 0;
-        bool found = false;
-        while (!found && i < currentLevelSpawnerList.Count) {
-            if (currentLevelSpawnerList[i].spawnerData.Equals(data)) {
-                spawner = currentLevelSpawnerList[i];
-                found = true;
-            }
-            i++;
-        }
+    public LevelDataSO GetCurrentLevelData() {
 
-        return spawner;
+        return FindLevel(currentLevelIndex);
     }
 }
