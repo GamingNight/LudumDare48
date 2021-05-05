@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelIndex: 17
   playerSpawnPosition:
-    position: {x: 1.35, y: 5.78}
+    position: {x: 1.14, y: 6.19}
   switchTileDataList:
   - position: {x: 11.59, y: 0.84}
     actionType: 0
@@ -53,30 +53,30 @@ MonoBehaviour:
     offsetInSeconds: 0
     initForceFactor: 0
   layer1SpawnerDataList:
-  - position: {x: 12.6, y: 4.91}
+  - position: {x: 12.6, y: 5.5}
     rotation: 180
     frequency: 2
     offsetInSeconds: 0
     initForceFactor: 0
-  - position: {x: 12.6, y: 2.65}
+  - position: {x: 12.6, y: 3.2}
     rotation: 180
     frequency: 2
     offsetInSeconds: 0
     initForceFactor: 0
-  - position: {x: 2.33, y: 0.1}
+  - position: {x: 2.3, y: 0.1}
     rotation: 90
     frequency: 2
-    offsetInSeconds: 0.2
+    offsetInSeconds: 0
     initForceFactor: 0
-  - position: {x: 5.96, y: 0.1}
+  - position: {x: 6.12, y: 0.1}
     rotation: 90
     frequency: 2
-    offsetInSeconds: 0.2
+    offsetInSeconds: 0
     initForceFactor: 0
   - position: {x: 8.42, y: 0.1}
     rotation: 90
     frequency: 2
-    offsetInSeconds: 0.2
+    offsetInSeconds: 0
     initForceFactor: 0
   layer2SpawnerDataList: []
   layer0WaveDataList: []
