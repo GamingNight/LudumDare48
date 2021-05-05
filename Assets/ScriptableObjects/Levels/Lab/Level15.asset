@@ -19,7 +19,7 @@ MonoBehaviour:
   - position: {x: 11.94, y: 3.5}
     actionType: 0
     color: {r: 1, g: 1, b: 1, a: 1}
-    targetLevelIndex: -2
+    targetLevelIndex: 16
     textSprite: {fileID: 0}
     levelDigitSprites: []
   - position: {x: 0.76, y: 1.52}
@@ -37,19 +37,23 @@ MonoBehaviour:
     rotation: 90
     frequency: 2.5
     offsetInSeconds: 0
+    initForceFactor: 0
   - position: {x: 1.908, y: 6.92}
     rotation: 270
     frequency: 3
     offsetInSeconds: 0
+    initForceFactor: 0
   - position: {x: 0.081, y: 2.862}
     rotation: 0
     frequency: 3
     offsetInSeconds: 0
+    initForceFactor: 0
   layer1SpawnerDataList:
   - position: {x: 0.081, y: 3.18}
     rotation: 0
     frequency: 4
     offsetInSeconds: 0
+    initForceFactor: 0
   layer2SpawnerDataList: []
   layer0WaveDataList: []
   layer1WaveDataList:
@@ -60,5 +64,6 @@ MonoBehaviour:
     spawnerOffsetInSeconds: 0.1
     spawnerFrequency: 0.3
     spawnerShift: {x: 0, y: 0.636, z: 0}
+    initForceFactor: 0
   layer2WaveDataList: []
   isEndLevel: 0
