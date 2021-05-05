@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1d07c7dbf4291d4da164a711897be58, type: 3}
-  m_Name: GridDeeper
+  m_Name: Level17-GridDeeper
   m_EditorClassIdentifier: 
   levelIndex: 17
   playerSpawnPosition:
@@ -31,43 +31,53 @@ MonoBehaviour:
     rotation: 180
     frequency: 3
     offsetInSeconds: 0
+    initForceFactor: 0
   - position: {x: 12.6, y: 2.25}
     rotation: 180
     frequency: 3
     offsetInSeconds: 0
+    initForceFactor: 0
   - position: {x: 3.5, y: 0.1}
     rotation: 90
     frequency: 3
     offsetInSeconds: 0
+    initForceFactor: 0
   - position: {x: 6.5, y: 0.1}
     rotation: 90
     frequency: 3
     offsetInSeconds: 0
+    initForceFactor: 0
   - position: {x: 9.5, y: 0.1}
     rotation: 90
     frequency: 3
     offsetInSeconds: 0
+    initForceFactor: 0
   layer1SpawnerDataList:
   - position: {x: 12.6, y: 4.91}
     rotation: 180
     frequency: 2
     offsetInSeconds: 0
+    initForceFactor: 0
   - position: {x: 12.6, y: 2.65}
     rotation: 180
     frequency: 2
     offsetInSeconds: 0
+    initForceFactor: 0
   - position: {x: 2.33, y: 0.1}
     rotation: 90
     frequency: 2
     offsetInSeconds: 0.2
+    initForceFactor: 0
   - position: {x: 5.96, y: 0.1}
     rotation: 90
     frequency: 2
     offsetInSeconds: 0.2
+    initForceFactor: 0
   - position: {x: 8.42, y: 0.1}
     rotation: 90
     frequency: 2
     offsetInSeconds: 0.2
+    initForceFactor: 0
   layer2SpawnerDataList: []
   layer0WaveDataList: []
   layer1WaveDataList: []

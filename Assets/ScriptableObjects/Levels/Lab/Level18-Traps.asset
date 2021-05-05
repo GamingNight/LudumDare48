@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1d07c7dbf4291d4da164a711897be58, type: 3}
-  m_Name: Traps
+  m_Name: Level18-Traps
   m_EditorClassIdentifier: 
   levelIndex: 18
   playerSpawnPosition:
@@ -19,7 +19,7 @@ MonoBehaviour:
   - position: {x: 10.5, y: 3.5}
     actionType: 0
     color: {r: 1, g: 1, b: 1, a: 1}
-    targetLevelIndex: 14
+    targetLevelIndex: 19
     textSprite: {fileID: 0}
     levelDigitSprites: []
   - position: {x: 9, y: 3.5}
@@ -95,18 +95,22 @@ MonoBehaviour:
     rotation: 90
     frequency: 1
     offsetInSeconds: 0
+    initForceFactor: 0
   - position: {x: 11.25, y: 0}
     rotation: 90
     frequency: 1
     offsetInSeconds: 0
+    initForceFactor: 0
   - position: {x: 12.58, y: 3}
     rotation: 180
     frequency: 3
     offsetInSeconds: 0
+    initForceFactor: 0
   - position: {x: 12.58, y: 4}
     rotation: 180
     frequency: 3
     offsetInSeconds: 0
+    initForceFactor: 0
   layer1SpawnerDataList: []
   layer2SpawnerDataList: []
   layer0WaveDataList: []

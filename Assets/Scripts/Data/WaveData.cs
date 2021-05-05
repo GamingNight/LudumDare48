@@ -12,6 +12,10 @@ public class WaveData
     public float spawnerOffsetInSeconds;
     public float spawnerFrequency;
     public Vector3 spawnerShift;
+    /// <summary>
+    /// The init force factor of the projectile. Leave it to 0 if you want to use the default force factor.
+    /// </summary>
+    public float initForceFactor;
 
     public WaveData Copy() {
 
@@ -23,6 +27,7 @@ public class WaveData
         clone.spawnerOffsetInSeconds = spawnerOffsetInSeconds;
         clone.spawnerFrequency = spawnerFrequency;
         clone.spawnerShift = spawnerShift;
+        clone.initForceFactor = initForceFactor;
         return clone;
     }
 
@@ -35,6 +40,7 @@ public class WaveData
         equal &= other.spawnerFrequency == spawnerFrequency;
         equal &= other.spawnerShift == spawnerShift;
         equal &= other.nbSpawner == nbSpawner;
+        equal &= other.initForceFactor == initForceFactor;
         return equal;
     }
 }

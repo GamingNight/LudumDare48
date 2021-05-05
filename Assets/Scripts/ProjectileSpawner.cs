@@ -60,6 +60,9 @@ public class ProjectileSpawner : MonoBehaviour
         } else if (transform.eulerAngles.z == 270) {
             projectile.GetComponent<ProjectileMove>().direction = ProjectileMove.Direction.DOWN;
         }
+        if (spawnerData.initForceFactor != 0) {
+            projectile.GetComponent<ProjectileMove>().customData.initForceFactor = spawnerData.initForceFactor;
+        }
         projectiles.Add(projectile);
         CleanProjectileList();
     }

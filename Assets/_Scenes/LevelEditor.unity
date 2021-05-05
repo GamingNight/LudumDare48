@@ -786,7 +786,7 @@ PrefabInstance:
       objectReference: {fileID: 1248935796}
     - target: {fileID: 7707824868078148992, guid: 154015de86951e54493adf821b83f0ac, type: 3}
       propertyPath: defaultLevelIndex
-      value: -2
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7707824868078148992, guid: 154015de86951e54493adf821b83f0ac, type: 3}
       propertyPath: levelDataSOList.Array.size
@@ -795,15 +795,15 @@ PrefabInstance:
     - target: {fileID: 7707824868078148992, guid: 154015de86951e54493adf821b83f0ac, type: 3}
       propertyPath: levelDataSOList.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: b8dc5fc765a3eb94da8a5391be395238, type: 2}
+      objectReference: {fileID: 11400000, guid: 8e3bc1e961e5712479aa9b5554faaaf9, type: 2}
     - target: {fileID: 7707824868078148992, guid: 154015de86951e54493adf821b83f0ac, type: 3}
       propertyPath: levelDataSOList.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 8940b64587f971e4c85bce5fc2b83575, type: 2}
+      objectReference: {fileID: 11400000, guid: 1c3abcc3ac7f71a42a300c118d02c486, type: 2}
     - target: {fileID: 7707824868078148992, guid: 154015de86951e54493adf821b83f0ac, type: 3}
       propertyPath: levelDataSOList.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: 5c2f5301e8a09dc459421ae1de7a1833, type: 2}
+      objectReference: {fileID: 11400000, guid: ec1bccbaafc396246b4d696238cd1144, type: 2}
     - target: {fileID: 7707824868078148994, guid: 154015de86951e54493adf821b83f0ac, type: 3}
       propertyPath: m_Name
       value: LevelEditor

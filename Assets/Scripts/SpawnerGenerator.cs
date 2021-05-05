@@ -46,6 +46,9 @@ public class SpawnerGenerator : MonoBehaviour
             projectileSpawner.spawnerData.offsetInSeconds = waveData.offsetInSeconds + (i * waveData.spawnerOffsetInSeconds);
             projectileSpawner.spawnerData.frequency = waveData.spawnerFrequency;
             projectileSpawner.SetFromGenerator(true);
+            if (waveData.initForceFactor != 0) {
+                projectileSpawner.spawnerData.initForceFactor = waveData.initForceFactor;
+            }
             spawners.Add(projectileSpawner);
         }
     }

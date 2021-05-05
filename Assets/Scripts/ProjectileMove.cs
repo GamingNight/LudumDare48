@@ -10,7 +10,8 @@ public class ProjectileMove : MonoBehaviour
     }
 
     public LayerDataSO layerData;
-    public ProjectileDefaultDataSO projectileData;
+    public ProjectileDefaultDataSO defaultData;
+    public ProjectileData customData;
     public Direction direction = Direction.UP;
     public GlobalGameDataSO globalGameData;
     private Rigidbody2D rgbd;
@@ -48,7 +49,9 @@ public class ProjectileMove : MonoBehaviour
                 initForce = new Vector2(0, 0);
                 break;
         }
-        rgbd.AddForce(initForce * projectileData.initForceFactor);
+        if (customData.initForceFactor == 0)
+            customData.initForceFactor = defaultData.initForceFactor;
+        rgbd.AddForce(initForce * customData.initForceFactor);
         previousLayerIndex = -1;
         firstUpdate = true;
         particleEmission = GetComponent<ParticleSystem>().emission;
@@ -100,13 +103,13 @@ public class ProjectileMove : MonoBehaviour
                     break;
             }
 
-            float translationValue = projectileData.hitTranslationSpeedPerLayer[globalGameData.GetCurrentLayerIndex()] * Time.deltaTime;
+            float translationValue = defaultData.hitTranslationSpeedPerLayer[globalGameData.GetCurrentLayerIndex()] * Time.deltaTime;
             rgbd.transform.Translate(directionVector * translationValue, Space.World);
 
             hitTranslationLength += translationValue;
 
             //end of hit movement
-            if (hitTranslationLength >= projectileData.hitTranslationLenght) {
+            if (hitTranslationLength >= defaultData.hitTranslationLenght) {
                 hitDirection = Direction.NONE;
                 ComputeVelocity();
                 hitLock = false;

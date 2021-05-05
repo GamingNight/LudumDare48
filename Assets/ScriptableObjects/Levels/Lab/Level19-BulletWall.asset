@@ -10,46 +10,40 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1d07c7dbf4291d4da164a711897be58, type: 3}
-  m_Name: Grid
+  m_Name: Level19-BulletWall
   m_EditorClassIdentifier: 
-  levelIndex: 16
+  levelIndex: 19
   playerSpawnPosition:
-    position: {x: 1.35, y: 5.78}
+    position: {x: 0.67, y: 6}
   switchTileDataList:
-  - position: {x: 11.59, y: 0.84}
+  - position: {x: 10.9, y: 0.7}
     actionType: 0
     color: {r: 1, g: 1, b: 1, a: 1}
-    targetLevelIndex: 17
+    targetLevelIndex: 20
+    textSprite: {fileID: 0}
+    levelDigitSprites: []
+  - position: {x: 0.67, y: 5.1}
+    actionType: 0
+    color: {r: 1, g: 1, b: 1, a: 1}
+    targetLevelIndex: 0
     textSprite: {fileID: 0}
     levelDigitSprites: []
   levelIndicatorSpriteData:
     sprite: {fileID: 0}
   backgroundSpriteData:
     sprite: {fileID: 0}
-  layer0SpawnerDataList:
-  - position: {x: 12.6, y: 4.51}
-    rotation: 180
-    frequency: 3
-    offsetInSeconds: 0
-  - position: {x: 12.6, y: 2.25}
-    rotation: 180
-    frequency: 3
-    offsetInSeconds: 0
-  - position: {x: 3.5, y: 0.1}
-    rotation: 90
-    frequency: 3
-    offsetInSeconds: 0
-  - position: {x: 6.5, y: 0.1}
-    rotation: 90
-    frequency: 3
-    offsetInSeconds: 0
-  - position: {x: 9.5, y: 0.1}
-    rotation: 90
-    frequency: 3
-    offsetInSeconds: 0
+  layer0SpawnerDataList: []
   layer1SpawnerDataList: []
   layer2SpawnerDataList: []
-  layer0WaveDataList: []
+  layer0WaveDataList:
+  - position: {x: 12.94, y: 6.95}
+    rotation: 180
+    offsetInSeconds: 0
+    nbSpawner: 22
+    spawnerOffsetInSeconds: 0
+    spawnerFrequency: 6
+    spawnerShift: {x: 0, y: 0.3, z: 0}
+    initForceFactor: 150
   layer1WaveDataList: []
   layer2WaveDataList: []
   isEndLevel: 0

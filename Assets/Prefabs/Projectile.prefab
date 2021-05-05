@@ -5046,7 +5046,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layerData: {fileID: 11400000, guid: 5eda72367ca2c7849a5125f3f52a8123, type: 2}
-  projectileData: {fileID: 11400000, guid: 618a51e836313c24ca71f9eb97569075, type: 2}
+  defaultData: {fileID: 11400000, guid: 618a51e836313c24ca71f9eb97569075, type: 2}
+  customData:
+    initForceFactor: 0
   direction: 3
   globalGameData: {fileID: 11400000, guid: 3adb5f1c9bbdc0a42b037bc093611954, type: 2}
 --- !u!50 &6354696774233248581
