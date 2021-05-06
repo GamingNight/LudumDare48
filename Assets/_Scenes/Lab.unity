@@ -990,7 +990,7 @@ PrefabInstance:
       objectReference: {fileID: 1407539159}
     - target: {fileID: 7707824868078148992, guid: 154015de86951e54493adf821b83f0ac, type: 3}
       propertyPath: defaultLevelIndex
-      value: 14
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7707824868078148992, guid: 154015de86951e54493adf821b83f0ac, type: 3}
       propertyPath: levelDataSOList.Array.size
