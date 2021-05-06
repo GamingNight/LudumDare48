@@ -19,7 +19,7 @@ MonoBehaviour:
   - position: {x: 10.9, y: 0.7}
     actionType: 0
     color: {r: 1, g: 1, b: 1, a: 1}
-    targetLevelIndex: 14
+    targetLevelIndex: 16
     textSprite: {fileID: 0}
     levelDigitSprites: []
   - position: {x: 0.67, y: 5.1}
