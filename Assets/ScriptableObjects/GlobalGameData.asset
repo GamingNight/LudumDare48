@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcd62d0f246a0eb4c9acd127e7aca3d3, type: 3}
   m_Name: GlobalGameData
   m_EditorClassIdentifier: 
+  upLeftBoundary: {x: 0, y: 7}
+  downRightBoundary: {x: 12.75, y: 0}
   allLayers:
   - {fileID: 11400000, guid: 5eda72367ca2c7849a5125f3f52a8123, type: 2}
   - {fileID: 11400000, guid: 8e7db0481878b4846b3df3a30371d53e, type: 2}

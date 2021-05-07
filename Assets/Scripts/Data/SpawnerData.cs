@@ -12,6 +12,7 @@ public class SpawnerData
     /// The init force factor of the projectile. Leave it to 0 if you want to use the default force factor.
     /// </summary>
     public float initForceFactor;
+    public bool populate;
 
     public SpawnerData Copy() {
 
@@ -21,6 +22,7 @@ public class SpawnerData
         clone.frequency = frequency;
         clone.offsetInSeconds = offsetInSeconds;
         clone.initForceFactor = initForceFactor;
+        clone.populate = populate;
         return clone;
     }
 
@@ -31,6 +33,7 @@ public class SpawnerData
         equal &= other.frequency == frequency;
         equal &= other.offsetInSeconds == offsetInSeconds;
         equal &= other.initForceFactor == initForceFactor;
+        equal &= other.populate == populate;
         return equal;
     }
 
@@ -40,7 +43,8 @@ public class SpawnerData
         s += "(rotation=" + rotation + "), ";
         s += "(frequency=" + frequency + "), ";
         s += "(offset=" + offsetInSeconds + "), ";
-        s += "(initForceFactor =" + initForceFactor + ")]";
+        s += "(populate=" + populate + "), ";
+        s += "(initForceFactor=" + initForceFactor + ")]";
         return s;
     }
 }

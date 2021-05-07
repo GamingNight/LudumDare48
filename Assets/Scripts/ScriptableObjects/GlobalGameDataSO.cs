@@ -5,6 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Scriptable Objects/Global Game Data")]
 public class GlobalGameDataSO : ScriptableObject
 {
+    public Vector2 upLeftBoundary;
+    public Vector2 downRightBoundary;
     public LayerDataSO[] allLayers;
     public PlayerInputSO horizontalInput;
     public PlayerInputSO verticalInput;

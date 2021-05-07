@@ -5,6 +5,7 @@ using UnityEngine;
 public class ProjectileSpawner : MonoBehaviour
 {
 
+    private static readonly float DEFAULT_PROJECTILE_X_SHIFT = 0.2f;
     public bool active = true;
     public GameObject projectilePrefab;
     public SpawnerData spawnerData;
@@ -41,16 +42,16 @@ public class ProjectileSpawner : MonoBehaviour
             return;
         timeSinceLastSpawn += (Time.deltaTime * speedFactor);
         if (timeSinceLastSpawn >= 1f / spawnerData.frequency) {
-            InstantiateProjectile();
+            InstantiateProjectile(DEFAULT_PROJECTILE_X_SHIFT);
             timeSinceLastSpawn = 0;
         }
     }
 
-    private void InstantiateProjectile() {
+    private GameObject InstantiateProjectile(float xShift) {
 
         GameObject projectile = Instantiate(projectilePrefab, transform.position, transform.rotation, transform);
         projectile.name = "Projectile " + projectiles.Count + " " + gameObject.name;
-        projectile.transform.localPosition = new Vector3(projectile.transform.localPosition.x + 0.2f, projectile.transform.localPosition.y, projectile.transform.localPosition.z);
+        projectile.transform.localPosition = new Vector3(projectile.transform.localPosition.x + xShift, projectile.transform.localPosition.y, projectile.transform.localPosition.z);
         if (transform.eulerAngles.z == 0) {
             projectile.GetComponent<ProjectileMove>().direction = ProjectileMove.Direction.RIGHT;
         } else if (transform.eulerAngles.z == 90) {
@@ -65,12 +66,39 @@ public class ProjectileSpawner : MonoBehaviour
         }
         projectiles.Add(projectile);
         CleanProjectileList();
+
+        return projectile;
     }
 
     public void Init() {
         DestroyAllProjectiles();
         timeSinceStart = 0;
         timeSinceLastSpawn = 1f / spawnerData.frequency; //in order to spawn immediatly after the offset
+        if (spawnerData.populate) {
+            Populate();
+        }
+    }
+
+    private void Populate() {
+
+        if (spawnerData.frequency == 0)
+            return;
+        bool reachBoundary = false;
+        int i = 1;
+        float force = spawnerData.initForceFactor != 0 ? spawnerData.initForceFactor : projectilePrefab.GetComponent<ProjectileMove>().defaultData.initForceFactor;
+        float velocity = (force / projectilePrefab.GetComponent<Rigidbody2D>().mass) * Time.fixedDeltaTime;
+        float distanceBetweenProjectiles = velocity / spawnerData.frequency;
+        while (!reachBoundary) {
+            float xShift = DEFAULT_PROJECTILE_X_SHIFT + i * distanceBetweenProjectiles;
+            GameObject projectile = InstantiateProjectile(xShift);
+            Vector2 projectilePosition = projectile.transform.position;
+            if (projectilePosition.x < globalGameData.upLeftBoundary.x || projectilePosition.x > globalGameData.downRightBoundary.x ||
+                projectilePosition.y > globalGameData.upLeftBoundary.y || projectilePosition.y < globalGameData.downRightBoundary.y) {
+                reachBoundary = true;
+            }
+            i++;
+        }
+
     }
 
     public void DestroyAllProjectiles() {

@@ -416,34 +416,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 367577489491354, guid: 324df8d3623d3b943b9364dfcfc7e81b, type: 3}
-      propertyPath: m_TagString
-      value: Wall
-      objectReference: {fileID: 0}
-    - target: {fileID: 1544136994939013592, guid: 324df8d3623d3b943b9364dfcfc7e81b, type: 3}
-      propertyPath: m_TagString
-      value: Wall
-      objectReference: {fileID: 0}
-    - target: {fileID: 1788269490419355819, guid: 324df8d3623d3b943b9364dfcfc7e81b, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3712422070289080951, guid: 324df8d3623d3b943b9364dfcfc7e81b, type: 3}
-      propertyPath: m_TagString
-      value: Wall
-      objectReference: {fileID: 0}
-    - target: {fileID: 3838285457681526156, guid: 324df8d3623d3b943b9364dfcfc7e81b, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4339904144395689667, guid: 324df8d3623d3b943b9364dfcfc7e81b, type: 3}
-      propertyPath: m_TagString
-      value: Wall
-      objectReference: {fileID: 0}
-    - target: {fileID: 5128969141658502056, guid: 324df8d3623d3b943b9364dfcfc7e81b, type: 3}
-      propertyPath: m_Offset.x
-      value: 13
-      objectReference: {fileID: 0}
     - target: {fileID: 5800584071490065249, guid: 324df8d3623d3b943b9364dfcfc7e81b, type: 3}
       propertyPath: m_Name
       value: Background
@@ -491,10 +463,6 @@ PrefabInstance:
     - target: {fileID: 5800584071490065278, guid: 324df8d3623d3b943b9364dfcfc7e81b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7913920902836366110, guid: 324df8d3623d3b943b9364dfcfc7e81b, type: 3}
-      propertyPath: m_Offset.y
-      value: 7.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 324df8d3623d3b943b9364dfcfc7e81b, type: 3}
@@ -786,16 +754,16 @@ PrefabInstance:
       objectReference: {fileID: 1248935796}
     - target: {fileID: 7707824868078148992, guid: 154015de86951e54493adf821b83f0ac, type: 3}
       propertyPath: defaultLevelIndex
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7707824868078148992, guid: 154015de86951e54493adf821b83f0ac, type: 3}
       propertyPath: levelDataSOList.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7707824868078148992, guid: 154015de86951e54493adf821b83f0ac, type: 3}
       propertyPath: levelDataSOList.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 8e3bc1e961e5712479aa9b5554faaaf9, type: 2}
+      objectReference: {fileID: 11400000, guid: b1189684f8e23a742a6f2a402d3966ac, type: 2}
     - target: {fileID: 7707824868078148992, guid: 154015de86951e54493adf821b83f0ac, type: 3}
       propertyPath: levelDataSOList.Array.data[1]
       value: 
