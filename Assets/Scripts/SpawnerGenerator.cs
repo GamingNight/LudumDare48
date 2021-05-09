@@ -49,6 +49,7 @@ public class SpawnerGenerator : MonoBehaviour
             if (waveData.initForceFactor != 0) {
                 projectileSpawner.spawnerData.initForceFactor = waveData.initForceFactor;
             }
+            projectileSpawner.spawnerData.populate = waveData.populate;
             spawners.Add(projectileSpawner);
         }
     }

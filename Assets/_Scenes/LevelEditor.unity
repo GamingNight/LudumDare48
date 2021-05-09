@@ -763,7 +763,7 @@ PrefabInstance:
     - target: {fileID: 7707824868078148992, guid: 154015de86951e54493adf821b83f0ac, type: 3}
       propertyPath: levelDataSOList.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: b1189684f8e23a742a6f2a402d3966ac, type: 2}
+      objectReference: {fileID: 11400000, guid: d08bacae3efcbf141a22053a6b230831, type: 2}
     - target: {fileID: 7707824868078148992, guid: 154015de86951e54493adf821b83f0ac, type: 3}
       propertyPath: levelDataSOList.Array.data[1]
       value: 
