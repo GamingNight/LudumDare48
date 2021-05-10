@@ -20,7 +20,13 @@ MonoBehaviour:
     sprite: {fileID: 0}
   backgroundSpriteData:
     sprite: {fileID: 0}
-  layer0SpawnerDataList: []
+  layer0SpawnerDataList:
+  - position: {x: 12, y: 3.11}
+    rotation: 180
+    frequency: 5
+    offsetInSeconds: 0
+    initForceFactor: 0
+    populate: 0
   layer1SpawnerDataList: []
   layer2SpawnerDataList: []
   layer0WaveDataList: []
