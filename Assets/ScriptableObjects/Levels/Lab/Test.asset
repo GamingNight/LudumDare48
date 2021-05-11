@@ -23,7 +23,7 @@ MonoBehaviour:
   layer0SpawnerDataList:
   - position: {x: 12, y: 3.11}
     rotation: 180
-    frequency: 5
+    frequency: 2.5
     offsetInSeconds: 0
     initForceFactor: 0
     populate: 0

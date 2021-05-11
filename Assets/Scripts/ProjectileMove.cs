@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class ProjectileMove : MonoBehaviour
 {
-    public enum Direction
-    {
-        UP, DOWN, LEFT, RIGHT, NONE
-    }
-
     public LayerDataSO layerData;
     public ProjectileDefaultDataSO defaultData;
     public ProjectileData customData;
-    public Direction direction = Direction.UP;
+    public Vector2 direction = new Vector2(0, 1);
     public GlobalGameDataSO globalGameData;
     private Rigidbody2D rgbd;
     private SpriteRenderer spriteRenderer;
@@ -22,7 +17,7 @@ public class ProjectileMove : MonoBehaviour
     private ParticleSystem.EmissionModule particleEmission;
     private ParticleSystem.MainModule particleMain;
 
-    private Direction hitDirection;
+    private Vector2 hitDirection;
     private float hitTranslationLength;
     private bool hitLock;
 
@@ -31,33 +26,15 @@ public class ProjectileMove : MonoBehaviour
 
         rgbd = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        Vector2 initForce;
-        switch (direction) {
-            case Direction.UP:
-                initForce = new Vector2(0, 1);
-                break;
-            case Direction.DOWN:
-                initForce = new Vector2(0, -1);
-                break;
-            case Direction.LEFT:
-                initForce = new Vector2(-1, 0);
-                break;
-            case Direction.RIGHT:
-                initForce = new Vector2(1, 0);
-                break;
-            default:
-                initForce = new Vector2(0, 0);
-                break;
-        }
         if (customData.initForceFactor == 0)
             customData.initForceFactor = defaultData.initForceFactor;
-        rgbd.AddForce(initForce * customData.initForceFactor);
+        rgbd.AddForce(direction * customData.initForceFactor);
         previousLayerIndex = -1;
         firstUpdate = true;
         particleEmission = GetComponent<ParticleSystem>().emission;
         particleMain = GetComponent<ParticleSystem>().main;
 
-        hitDirection = Direction.NONE;
+        hitDirection = Vector2.zero;
         hitTranslationLength = 0;
         hitLock = false;
 
@@ -80,37 +57,19 @@ public class ProjectileMove : MonoBehaviour
         }
 
         //Move when hit
-        if (hitDirection != Direction.NONE) {
+        if (hitDirection != Vector2.zero) {
             hitLock = true;
             //Pause the regular movement while hit
             rgbd.velocity = Vector2.zero;
 
-            Vector2 directionVector = new Vector2(0, 0);
-            switch (hitDirection) {
-                case Direction.UP:
-                    directionVector.y = 1;
-                    break;
-                case Direction.DOWN:
-                    directionVector.y = -1;
-                    break;
-                case Direction.LEFT:
-                    directionVector.x = -1;
-                    break;
-                case Direction.RIGHT:
-                    directionVector.x = 1;
-                    break;
-                default:
-                    break;
-            }
-
             float translationValue = defaultData.hitTranslationSpeedPerLayer[globalGameData.GetCurrentLayerIndex()] * Time.deltaTime;
-            rgbd.transform.Translate(directionVector * translationValue, Space.World);
+            rgbd.transform.Translate(hitDirection * translationValue, Space.World);
 
             hitTranslationLength += translationValue;
 
             //end of hit movement
             if (hitTranslationLength >= defaultData.hitTranslationLenght) {
-                hitDirection = Direction.NONE;
+                hitDirection = Vector2.zero;
                 ComputeVelocity();
                 hitLock = false;
             }
@@ -134,7 +93,7 @@ public class ProjectileMove : MonoBehaviour
         }
     }
 
-    public void HitProjectile(Direction direction) {
+    public void HitProjectile(Vector2 direction) {
 
         if (hitLock)
             return;
@@ -144,11 +103,6 @@ public class ProjectileMove : MonoBehaviour
 
     public void ExplodeProjectile() {
         GetComponent<Animator>().SetBool("Death", true);
-    }
-
-    public Direction GetHitDirection() {
-
-        return hitDirection;
     }
 
     private void OnTriggerStay2D(Collider2D collision) {

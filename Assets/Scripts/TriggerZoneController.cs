@@ -60,20 +60,20 @@ public class TriggerZoneController : MonoBehaviour
             if (projectile == null) // happen when the projectile has been destroyed by a collision with another projectile while still in the trigger zone
                 projectileList.Remove(projectile);
             else {
-                ProjectileMove.Direction projectileDirection = ProjectileMove.Direction.NONE;
+                Vector2 hitDirection = new Vector2(0, 0);
                 Vector3 projectilePos = projectile.transform.position;
                 float distX = projectilePos.x - transform.position.x;
                 float distY = projectilePos.y - transform.position.y;
                 if (distX > 0 && Mathf.Abs(distX) >= Mathf.Abs(distY)) {
-                    projectileDirection = ProjectileMove.Direction.RIGHT;
+                    hitDirection.x = 1;
                 } else if (distX < 0 && Mathf.Abs(distX) >= Mathf.Abs(distY)) {
-                    projectileDirection = ProjectileMove.Direction.LEFT;
+                    hitDirection.x = -1;
                 } else if (distY > 0 && Mathf.Abs(distY) >= Mathf.Abs(distX)) {
-                    projectileDirection = ProjectileMove.Direction.UP;
+                    hitDirection.y = 1;
                 } else if (distY < 0 && Mathf.Abs(distY) >= Mathf.Abs(distX)) {
-                    projectileDirection = ProjectileMove.Direction.DOWN;
+                    hitDirection.y = -1;
                 }
-                projectile.HitProjectile(projectileDirection);
+                projectile.HitProjectile(hitDirection);
             }
         }
         //}

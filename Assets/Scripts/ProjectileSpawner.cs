@@ -52,15 +52,8 @@ public class ProjectileSpawner : MonoBehaviour
         GameObject projectile = Instantiate(projectilePrefab, transform.position, transform.rotation, transform);
         projectile.name = "Projectile " + projectiles.Count + " " + gameObject.name;
         projectile.transform.localPosition = new Vector3(projectile.transform.localPosition.x + xShift, projectile.transform.localPosition.y, projectile.transform.localPosition.z);
-        if (transform.eulerAngles.z == 0) {
-            projectile.GetComponent<ProjectileMove>().direction = ProjectileMove.Direction.RIGHT;
-        } else if (transform.eulerAngles.z == 90) {
-            projectile.GetComponent<ProjectileMove>().direction = ProjectileMove.Direction.UP;
-        } else if (transform.eulerAngles.z == 180) {
-            projectile.GetComponent<ProjectileMove>().direction = ProjectileMove.Direction.LEFT;
-        } else if (transform.eulerAngles.z == 270) {
-            projectile.GetComponent<ProjectileMove>().direction = ProjectileMove.Direction.DOWN;
-        }
+        float spawnerAngle = transform.eulerAngles.z;
+        projectile.GetComponent<ProjectileMove>().direction = new Vector2(Mathf.Cos(Mathf.Deg2Rad * spawnerAngle), Mathf.Sin(Mathf.Deg2Rad * spawnerAngle));
         if (spawnerData.initForceFactor != 0) {
             projectile.GetComponent<ProjectileMove>().customData.initForceFactor = spawnerData.initForceFactor;
         }
