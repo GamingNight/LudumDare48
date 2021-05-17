@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class GoToLevelAction : AbstractSwitchTileAction
+public class GoToLevelActionSO : AbstractSwitchTileActionSO
 {
     public int LevelIndex { get; set; }
     public LevelManager LevelManager { get; set; }

@@ -66,32 +66,57 @@ public class ProjectileSpawner : MonoBehaviour
     public void Init() {
         DestroyAllProjectiles();
         timeSinceStart = 0;
-        timeSinceLastSpawn = 1f / spawnerData.frequency; //in order to spawn immediatly after the offset
+        timeSinceLastSpawn = 1f / spawnerData.frequency; //next spawn occurs immediatly after the offset
         if (spawnerData.populate) {
-            Populate();
+            timeSinceStart = spawnerData.offsetInSeconds; //no more offset, as the spawner has already started (it will be taken into account in the Populate méthod)
+            timeSinceLastSpawn = Populate();
         }
     }
 
-    private void Populate() {
+    /// <summary>
+    /// Populate the spawner by instantiating projectiles. Given the offsetInSeconds, return the adjusted time since last spawn
+    /// </summary>
+    /// <returns></returns>
+    private float Populate() {
 
-        if (spawnerData.frequency == 0)
-            return;
-        bool reachBoundary = false;
-        int i = 1;
-        float force = spawnerData.initForceFactor != 0 ? spawnerData.initForceFactor : projectilePrefab.GetComponent<ProjectileMove>().defaultData.initForceFactor;
-        float velocity = (force / projectilePrefab.GetComponent<Rigidbody2D>().mass) * Time.fixedDeltaTime;
-        float distanceBetweenProjectiles = velocity / spawnerData.frequency;
-        while (!reachBoundary) {
-            float xShift = DEFAULT_PROJECTILE_X_SHIFT + i * distanceBetweenProjectiles;
-            GameObject projectile = InstantiateProjectile(xShift);
-            Vector2 projectilePosition = projectile.transform.position;
-            if (projectilePosition.x < globalGameData.upLeftBoundary.x || projectilePosition.x > globalGameData.downRightBoundary.x ||
-                projectilePosition.y > globalGameData.upLeftBoundary.y || projectilePosition.y < globalGameData.downRightBoundary.y) {
-                reachBoundary = true;
+        float newTimeSinceLastSpawn = timeSinceLastSpawn;
+        if (spawnerData.frequency != 0) {
+            bool reachBoundary = false;
+            int i = 0;
+            float force = spawnerData.initForceFactor != 0 ? spawnerData.initForceFactor : projectilePrefab.GetComponent<ProjectileMove>().defaultData.initForceFactor;
+            float velocity = (force / projectilePrefab.GetComponent<Rigidbody2D>().mass) * Time.fixedDeltaTime;
+            float distanceBetweenProjectiles = velocity / spawnerData.frequency;
+            float firstProjectileXShift = 0;
+            bool updateFirstProjectileXShift = true;
+            while (!reachBoundary) {
+                float xShift = DEFAULT_PROJECTILE_X_SHIFT //add the default shift of the spawner (static constant value)
+                        + (i * distanceBetweenProjectiles) //add the distance given the index of the projectile in the line
+                        - (velocity * spawnerData.offsetInSeconds); //remove the distance given by the offset of the spawner
+                GameObject projectile = InstantiateProjectile(xShift);
+                if (updateFirstProjectileXShift) { //Register the shift of the first projectile
+                    firstProjectileXShift = xShift;
+                    updateFirstProjectileXShift = false;
+                }
+                bool isBelowSpawnPoint = projectile.transform.localPosition.x - DEFAULT_PROJECTILE_X_SHIFT < -0.001f;
+                if (isBelowSpawnPoint) { //Projectile is below the spawner because of the offset
+                    //Destroy the projectile
+                    Destroy(projectile);
+                    //Next projectile becomes the new first projectile
+                    updateFirstProjectileXShift = true;
+                } else {
+                    //Stop populating as soon as the projectile has reached a level boundary
+                    Vector2 projectilePosition = projectile.transform.position;
+                    if (projectilePosition.x < globalGameData.upLeftBoundary.x || projectilePosition.x > globalGameData.downRightBoundary.x ||
+                        projectilePosition.y > globalGameData.upLeftBoundary.y || projectilePosition.y < globalGameData.downRightBoundary.y) {
+                        reachBoundary = true;
+                    }
+                }
+                i++;
             }
-            i++;
+            //Compute the new time since last spawn (given the position of the first populated projectile)
+            newTimeSinceLastSpawn = (firstProjectileXShift - DEFAULT_PROJECTILE_X_SHIFT) / velocity;
         }
-
+        return newTimeSinceLastSpawn;
     }
 
     public void DestroyAllProjectiles() {

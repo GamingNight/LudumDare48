@@ -7,7 +7,7 @@ public class SwitchTileController : MonoBehaviour
     public SwitchTileData tileData;
     public SpriteRenderer[] levelDigitSpriteRenderers;
     public SpriteRenderer textSpriteRenderer;
-    public AbstractSwitchTileAction tileActionSO;
+    public AbstractSwitchTileActionSO tileActionSO;
     public GlobalGameDataSO globalGameData;
     public LevelManager levelManager; //TODO Transformer ça en ScriptableObject (attention gros chantier)
 
@@ -25,13 +25,13 @@ public class SwitchTileController : MonoBehaviour
             levelDigitSpriteRenderers[i].sprite = null;
         }
         switch (tileData.actionType) {
-            case AbstractSwitchTileAction.ActionType.QUIT:
-                tileActionSO = (QuitAction)ScriptableObject.CreateInstance("QuitAction");
+            case AbstractSwitchTileActionSO.ActionType.QUIT:
+                tileActionSO = ScriptableObject.CreateInstance<QuitActionSO>();
                 break;
-            case AbstractSwitchTileAction.ActionType.LEVEL_SELECTOR:
-                tileActionSO = (GoToLevelAction)ScriptableObject.CreateInstance("GoToLevelAction");
-                ((GoToLevelAction)tileActionSO).LevelManager = levelManager;
-                ((GoToLevelAction)tileActionSO).LevelIndex = tileData.targetLevelIndex;
+            case AbstractSwitchTileActionSO.ActionType.LEVEL_SELECTOR:
+                tileActionSO = ScriptableObject.CreateInstance<GoToLevelActionSO>();
+                ((GoToLevelActionSO)tileActionSO).LevelManager = levelManager;
+                ((GoToLevelActionSO)tileActionSO).LevelIndex = tileData.targetLevelIndex;
                 break;
             default:
                 break;

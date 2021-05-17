@@ -110,9 +110,9 @@ public class LevelManager : MonoBehaviour
 
         string name = "Tile " + (currentLevelTileList.Count + 1) + " " + data.actionType.ToString();
         switch (data.actionType) {
-            case AbstractSwitchTileAction.ActionType.QUIT:
+            case AbstractSwitchTileActionSO.ActionType.QUIT:
                 break;
-            case AbstractSwitchTileAction.ActionType.LEVEL_SELECTOR:
+            case AbstractSwitchTileActionSO.ActionType.LEVEL_SELECTOR:
                 name += " " + data.targetLevelIndex;
                 break;
             default:

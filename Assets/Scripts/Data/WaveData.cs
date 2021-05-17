@@ -10,6 +10,7 @@ public class WaveData
     public float offsetInSeconds;
     public int nbSpawner;
     public float spawnerOffsetInSeconds;
+    public bool reverseOffsetOrder;
     public float spawnerFrequency;
     public Vector3 spawnerShift;
     /// <summary>
@@ -26,6 +27,7 @@ public class WaveData
         clone.offsetInSeconds = offsetInSeconds;
         clone.nbSpawner = nbSpawner;
         clone.spawnerOffsetInSeconds = spawnerOffsetInSeconds;
+        clone.reverseOffsetOrder = reverseOffsetOrder;
         clone.spawnerFrequency = spawnerFrequency;
         clone.spawnerShift = spawnerShift;
         clone.initForceFactor = initForceFactor;
@@ -39,6 +41,7 @@ public class WaveData
         equal &= other.rotation == rotation;
         equal &= other.spawnerOffsetInSeconds == spawnerOffsetInSeconds;
         equal &= other.offsetInSeconds == offsetInSeconds;
+        equal &= other.reverseOffsetOrder == reverseOffsetOrder;
         equal &= other.spawnerFrequency == spawnerFrequency;
         equal &= other.spawnerShift == spawnerShift;
         equal &= other.nbSpawner == nbSpawner;

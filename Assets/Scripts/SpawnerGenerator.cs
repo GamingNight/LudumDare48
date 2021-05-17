@@ -43,7 +43,8 @@ public class SpawnerGenerator : MonoBehaviour
             spawner.name = "Spawner " + spawners.Count + " " + gameObject.name;
             spawner.transform.localPosition = new Vector3(spawner.transform.localPosition.x, spawner.transform.localPosition.y, spawner.transform.localPosition.z) + i * waveData.spawnerShift + firstSpawnerAtOrigin;
             ProjectileSpawner projectileSpawner = spawner.GetComponent<ProjectileSpawner>();
-            projectileSpawner.spawnerData.offsetInSeconds = waveData.offsetInSeconds + (i * waveData.spawnerOffsetInSeconds);
+            float spawnerOffsetInSeconds = (waveData.reverseOffsetOrder ? (waveData.nbSpawner - i - 1) : i) * waveData.spawnerOffsetInSeconds;
+            projectileSpawner.spawnerData.offsetInSeconds = waveData.offsetInSeconds + spawnerOffsetInSeconds;
             projectileSpawner.spawnerData.frequency = waveData.spawnerFrequency;
             projectileSpawner.SetFromGenerator(true);
             if (waveData.initForceFactor != 0) {
