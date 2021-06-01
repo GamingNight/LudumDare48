@@ -819,6 +819,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6742973195348162864, guid: 672e0ed567d019b4e96edd5213de8eaf, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 672e0ed567d019b4e96edd5213de8eaf, type: 3}
 --- !u!114 &1506720221 stripped
@@ -978,7 +982,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7707824868078148992, guid: 154015de86951e54493adf821b83f0ac, type: 3}
       propertyPath: levelDataSOList.Array.size
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7707824868078148992, guid: 154015de86951e54493adf821b83f0ac, type: 3}
       propertyPath: levelDataSOList.Array.data[0]
@@ -1007,7 +1011,7 @@ PrefabInstance:
     - target: {fileID: 7707824868078148992, guid: 154015de86951e54493adf821b83f0ac, type: 3}
       propertyPath: levelDataSOList.Array.data[6]
       value: 
-      objectReference: {fileID: 11400000, guid: ec1bccbaafc396246b4d696238cd1144, type: 2}
+      objectReference: {fileID: 11400000, guid: ca024cce2f7842c41965fdb84f1b0f57, type: 2}
     - target: {fileID: 7707824868078148992, guid: 154015de86951e54493adf821b83f0ac, type: 3}
       propertyPath: levelDataSOList.Array.data[7]
       value: 

@@ -6,13 +6,13 @@ public class TriggerZoneController : MonoBehaviour
 {
     public GlobalGameDataSO globalGameData;
 
-    private List<ProjectileMove> projectileList;
+    private List<ProjectileStraightMove> projectileList;
 
     private float previousRotation;
 
     // Start is called before the first frame update
     void Start() {
-        projectileList = new List<ProjectileMove>();
+        projectileList = new List<ProjectileStraightMove>();
         previousRotation = 0;
     }
 
@@ -55,8 +55,8 @@ public class TriggerZoneController : MonoBehaviour
 
         //if (Input.GetKey(KeyCode.Space))
         //{
-        List<ProjectileMove> _projectileList = new List<ProjectileMove>(projectileList);
-        foreach (ProjectileMove projectile in _projectileList) {
+        List<ProjectileStraightMove> _projectileList = new List<ProjectileStraightMove>(projectileList);
+        foreach (ProjectileStraightMove projectile in _projectileList) {
             if (projectile == null) // happen when the projectile has been destroyed by a collision with another projectile while still in the trigger zone
                 projectileList.Remove(projectile);
             else {
@@ -82,7 +82,7 @@ public class TriggerZoneController : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision) {
 
         if (collision.gameObject.tag == "Projectile") {
-            ProjectileMove projectileMove = collision.gameObject.GetComponent<ProjectileMove>();
+            ProjectileStraightMove projectileMove = collision.gameObject.GetComponent<ProjectileStraightMove>();
             int layerIndex = globalGameData.GetCurrentLayerIndex();
             if (layerIndex == projectileMove.layerData.layerIndex + 1)
                 projectileList.Add(projectileMove);
@@ -93,7 +93,7 @@ public class TriggerZoneController : MonoBehaviour
     void OnTriggerExit2D(Collider2D collision) {
 
         if (collision.gameObject.tag == "Projectile") {
-            ProjectileMove projectileMove = collision.gameObject.GetComponent<ProjectileMove>();
+            ProjectileStraightMove projectileMove = collision.gameObject.GetComponent<ProjectileStraightMove>();
             int layerIndex = globalGameData.GetCurrentLayerIndex();
             if (layerIndex == projectileMove.layerData.layerIndex + 1)
                 projectileList.Remove(projectileMove);

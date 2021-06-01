@@ -143,17 +143,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   globalGameData: {fileID: 11400000, guid: 3adb5f1c9bbdc0a42b037bc093611954, type: 2}
-  levelDataSOList: []
+  levelDataSOList:
+  - {fileID: 11400000, guid: ca024cce2f7842c41965fdb84f1b0f57, type: 2}
   playerController: {fileID: 0}
   backgroundSpriteRenderer: {fileID: 7707824867459571846}
   levelNameSpriteRenderer: {fileID: 7707824868284731178}
   switchTilePrefab: {fileID: 4820911583298865522, guid: 5ecced57032f91f41b20d905994f5915, type: 3}
   layer0SpawnerPrefab: {fileID: 8217823277699247230, guid: 65b648ba0c52bfc48929d8e7359a3986, type: 3}
   layer1SpawnerPrefab: {fileID: 8217823277699247230, guid: cf136900a39bbe149a68da9b0f9d35b9, type: 3}
-  layer2SpawnerPrefab: {fileID: 0}
+  layer2SpawnerPrefab: {fileID: 8217823277699247230, guid: bf19415c9d44e0c459ebe552b9aadfc9, type: 3}
   layer0WavePrefab: {fileID: 8015413239426139150, guid: 5564b74d4c18eb64bbbce514287a1fa3, type: 3}
   layer1WavePrefab: {fileID: 3030940901072921354, guid: cc096176d189b1b4983a824c43ac0b6b, type: 3}
-  layer2WavePrefab: {fileID: 0}
+  layer2WavePrefab: {fileID: 3030940901072921354, guid: 29cd659d0e3bf294c8d3a01cd092a91e, type: 3}
   endFireworkPrefab: {fileID: 3346318207842022616, guid: 9c501cab3d27c074db816d158da7b74b, type: 3}
   defaultLevelIndex: 0
 --- !u!1 &7707824868284731191

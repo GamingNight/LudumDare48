@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+using System.Linq;
 
 [System.Serializable]
 public class SpawnerData
@@ -27,6 +28,8 @@ public class SpawnerData
     }
 
     public bool Equals(SpawnerData other) {
+        if (other == null)
+            return false;
         bool equal = true;
         equal &= other.position == position;
         equal &= other.rotation == rotation;

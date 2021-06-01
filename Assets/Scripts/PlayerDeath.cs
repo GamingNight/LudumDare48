@@ -19,7 +19,7 @@ public class PlayerDeath : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision) {
 
         if (collision.gameObject.tag == "Projectile") {
-            ProjectileMove projectileMove = collision.gameObject.GetComponent<ProjectileMove>();
+            ProjectileStraightMove projectileMove = collision.gameObject.GetComponent<ProjectileStraightMove>();
             LayerDataSO projectileLayer = projectileMove.layerData;
             if (projectileLayer.layerIndex == layer.layerIndex && !dying) {
                 globalGameData.LockInputs();

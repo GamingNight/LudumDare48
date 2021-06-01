@@ -53,9 +53,9 @@ public class ProjectileSpawner : MonoBehaviour
         projectile.name = "Projectile " + projectiles.Count + " " + gameObject.name;
         projectile.transform.localPosition = new Vector3(projectile.transform.localPosition.x + xShift, projectile.transform.localPosition.y, projectile.transform.localPosition.z);
         float spawnerAngle = transform.eulerAngles.z;
-        projectile.GetComponent<ProjectileMove>().direction = new Vector2(Mathf.Cos(Mathf.Deg2Rad * spawnerAngle), Mathf.Sin(Mathf.Deg2Rad * spawnerAngle));
+        projectile.GetComponent<ProjectileStraightMove>().direction = new Vector2(Mathf.Cos(Mathf.Deg2Rad * spawnerAngle), Mathf.Sin(Mathf.Deg2Rad * spawnerAngle));
         if (spawnerData.initForceFactor != 0) {
-            projectile.GetComponent<ProjectileMove>().customData.initForceFactor = spawnerData.initForceFactor;
+            projectile.GetComponent<ProjectileStraightMove>().customData.initForceFactor = spawnerData.initForceFactor;
         }
         projectiles.Add(projectile);
         CleanProjectileList();
@@ -83,7 +83,7 @@ public class ProjectileSpawner : MonoBehaviour
         if (spawnerData.frequency != 0) {
             bool reachBoundary = false;
             int i = 0;
-            float force = spawnerData.initForceFactor != 0 ? spawnerData.initForceFactor : projectilePrefab.GetComponent<ProjectileMove>().defaultData.initForceFactor;
+            float force = spawnerData.initForceFactor != 0 ? spawnerData.initForceFactor : projectilePrefab.GetComponent<ProjectileStraightMove>().defaultData.initForceFactor;
             float velocity = (force / projectilePrefab.GetComponent<Rigidbody2D>().mass) * Time.fixedDeltaTime;
             float distanceBetweenProjectiles = velocity / spawnerData.frequency;
             float firstProjectileXShift = 0;

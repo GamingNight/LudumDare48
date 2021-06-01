@@ -72,7 +72,7 @@ public class LevelManagerOld : MonoBehaviour
         foreach (SpawnerGenerator spawnerGenerator in level.GetComponentsInChildren<SpawnerGenerator>()) {
             spawnerGenerator.Init();
         }
-        foreach (ProjectileMove projectile in level.GetComponentsInChildren<ProjectileMove>()) {
+        foreach (ProjectileStraightMove projectile in level.GetComponentsInChildren<ProjectileStraightMove>()) {
         	Destroy(projectile.gameObject);
         	//projectile.gameObject.SetActive(false);
         }

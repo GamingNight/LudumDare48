@@ -4961,7 +4961,7 @@ GameObject:
   - component: {fileID: 682611117}
   - component: {fileID: 8812871321216727111}
   m_Layer: 0
-  m_Name: ProjectileDeeper
+  m_Name: Projectile
   m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5023,7 +5023,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ba753701a7198f549b40c85d14c03c91, type: 3}
-  m_Color: {r: 0.3882353, g: 0, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5045,11 +5045,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c42fdba0f670fe4391ec0cae5c271e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  layerData: {fileID: 11400000, guid: 8e7db0481878b4846b3df3a30371d53e, type: 2}
-  defaultData: {fileID: 11400000, guid: 9e43cf5e01c4187448c0851a0cd66e25, type: 2}
+  layerData: {fileID: 11400000, guid: 5eda72367ca2c7849a5125f3f52a8123, type: 2}
+  defaultData: {fileID: 11400000, guid: 618a51e836313c24ca71f9eb97569075, type: 2}
   customData:
     initForceFactor: 0
-  direction: 3
+  behaviour: {fileID: 0}
+  direction: {x: 0, y: 1}
   globalGameData: {fileID: 11400000, guid: 3adb5f1c9bbdc0a42b037bc093611954, type: 2}
 --- !u!50 &6354696774233248581
 Rigidbody2D:
@@ -5358,7 +5359,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.3882353, g: 0, b: 1, a: 1}
+      maxColor: {r: 1, g: 0, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -11295,8 +11296,8 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.3882353, g: 0, b: 1, a: 1}
-        key1: {r: 0.3882353, g: 0, b: 1, a: 1}
+        key0: {r: 1, g: 0, b: 1, a: 1}
+        key1: {r: 1, g: 0, b: 1, a: 1}
         key2: {r: 0, g: 1, b: 1, a: 0.32941177}
         key3: {r: 0, g: 1, b: 1, a: 0.8392157}
         key4: {r: 0, g: 1, b: 1, a: 0.2901961}

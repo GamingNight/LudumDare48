@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProjectileMove : MonoBehaviour
+public class ProjectileStraightMove : MonoBehaviour
 {
     public LayerDataSO layerData;
     public ProjectileDefaultDataSO defaultData;
     public ProjectileData customData;
     public Vector2 direction = new Vector2(0, 1);
     public GlobalGameDataSO globalGameData;
+
     private Rigidbody2D rgbd;
     private SpriteRenderer spriteRenderer;
     private Vector2 initVelocity;
@@ -21,7 +22,6 @@ public class ProjectileMove : MonoBehaviour
     private float hitTranslationLength;
     private bool hitLock;
 
-    // Start is called before the first frame update
     void Start() {
 
         rgbd = GetComponent<Rigidbody2D>();
@@ -108,8 +108,8 @@ public class ProjectileMove : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision) {
 
         if (collision.gameObject.tag == "Projectile") {
-            if (collision.gameObject.GetComponent<ProjectileMove>().layerData.layerIndex == layerData.layerIndex) {
-                collision.gameObject.GetComponent<ProjectileMove>().ExplodeProjectile();
+            if (collision.gameObject.GetComponent<ProjectileStraightMove>().layerData.layerIndex == layerData.layerIndex) {
+                collision.gameObject.GetComponent<ProjectileStraightMove>().ExplodeProjectile();
                 ExplodeProjectile();
             }
         }
